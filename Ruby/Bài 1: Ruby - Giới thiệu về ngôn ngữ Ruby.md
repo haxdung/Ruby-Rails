@@ -8,19 +8,24 @@ Ruby hỗ trợ hầu hết các mô hình lập trình truyền thống, bao g�
 
 Website chính thức của Ruby có địa chỉ ruby-lang.org.
 
-Trình thông dịch Ruby
+#Trình thông dịch Ruby
 
 Trong series này mình dùng Ruby phiên bản 2.2.4 trên Windows. Bạn có thể tải và cài đặt Ruby cho Windows tại địa chỉ http://rubyinstaller.org/, Khi cài bạn nhớ check lựa chọn cho trình cài đặt tự động gán đường dẫn đến thư mục bin trong biến PATH luôn cho tiện.
 
 Sau khi cài xong, bạn mở Command Prompt (cmd) lên và chạy lệnh irb để mở trình thông dịch Ruby, màn hình cùng với dấu nhắc lệnh của Ruby có dạng như sau:
 
+```
 C:\User\PhoCode> irb
-irb(main):001:0> 
+irb(main):001:0>
+```
 
 Từ đây bạn có thể gõ các lệnh trong Ruby.
 
+```
 irb(main):001:0> puts RUBY_VERSION
 2.2.4 => nil
+```
+
 
 Ở trên chúng ta chạy lệnh puts, lệnh này sẽ in một đoạn text ra màn hình, ở đây chúng ta in hằng số RUBY_VERSION, hằng số này cho biết phiên bản Ruby mà chúng ta sử dụng.
 Viết code Ruby trong file
