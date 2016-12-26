@@ -4,7 +4,7 @@ Một ngôn ngữ lập trình bao gồm nhiều thành phần cấu thành nên
 
 # Bình luận – Comment
 
-Các đoạn comment được dùng để ghi chú mã nguồn. Cú pháp comment của Ruby có 2 loại là comment cho một dòng và comment cho nhiều dòng. Comment trên một dòng được bắt đầu bởi dấu #, comment trên nhiều dòng được bọc bởi cặp kí hiệu **=begin** và **=end**.
+Các đoạn comment được dùng để ghi chú mã nguồn. Cú pháp comment của Ruby có 2 loại là comment cho một dòng và comment cho nhiều dòng. Comment trên một dòng được bắt đầu bởi dấu **#**, comment trên nhiều dòng được bọc bởi cặp kí hiệu **=begin** và **=end**.
 comments.rb
 
 ```
@@ -51,7 +51,7 @@ Tên biến có thể được bắt đầu bởi 2 kí tự đặc biệt là @
 
 Biến trong Ruby là có phân biệt HOA-thường, tức là price và pRice là 2 biến khác nhau.
 
-#Hằng số – Constant
+# Hằng số – Constant
 
 Trong các ngôn ngữ khác thì hằng số cũng là các biến thôi nhưng chỉ lưu một giá trị trong suốt chương trình, không thể thay đổi được. Nhưng không giống với các ngôn ngữ khác, giá trị của các hằng số trong Ruby là có thể thay đổi được, khi chúng ta thay đổi giá trị hằng thì Ruby không báo lỗi mà chỉ đưa ra mấy dòng cảnh báo.
 
@@ -132,7 +132,7 @@ end
 
 Trong ví dụ trên chúng ta sử dụng cả 2 loại khối lệnh.
 
-Ngoài các câu lệnh tính toán bình thường thì trong lập trình còn có các câu lệnh điều khiển, ví dụ như câu lệnh if, đây là câu lệnh điều kiện, theo sau if là một biểu thức rồi tới một khối lệnh nằm trong cặp từ khóa then-end. Chúng ta sẽ tìm hiểu thêm về các câu lệnh điều kiện sau.
+Ngoài các câu lệnh tính toán bình thường thì trong lập trình còn có các câu lệnh điều khiển, ví dụ như câu lệnh **if**, đây là câu lệnh điều kiện, theo sau **if** là một biểu thức rồi tới một khối lệnh nằm trong cặp từ khóa **then-end**. Chúng ta sẽ tìm hiểu thêm về các câu lệnh điều kiện sau.
 
 ```
 if true then
@@ -141,9 +141,9 @@ if true then
 end
 ```
 
-#Sigil
+# Sigil
 
-Sigil là các kí tự $ và @ dùng để khai báo phạm vi hoạt động của biến. Trong đó $ cho biết biến đó là một biến toàn cục, @ cho biết đó là biến instance, @@ là biến class. Chúng ta sẽ tìm hiểu thêm trong bài lập trình hướng đối tượng.
+Sigil là các kí tự $ và @ dùng để khai báo phạm vi hoạt động của biến. Trong đó **$** cho biết biến đó là một biến toàn cục, **@** cho biết đó là biến instance, **@@** là biến class. Chúng ta sẽ tìm hiểu thêm trong bài lập trình hướng đối tượng.
 
 ```
 $car_name = "Peugeot"
@@ -153,7 +153,7 @@ $car_name = "Peugeot"
 
 Sigil luôn được đặt trước tên biến.
 
-#Toán tử
+# Toán tử
 
 Toán tử là các kí tự thực hiện các hành động nào đó trên một giá trị nào đó.
 
@@ -168,7 +168,7 @@ and    or    ?:    &&    ||
 
 Chúng ta sẽ tìm hiểu thêm về toán tử sau.
 
-#Từ khóa
+# Từ khóa
 
 Từ khóa là các từ ưu tiên trong Ruby, thường dùng làm các câu lệnh thực hiện hành động nào đó, chẳng hạn như in giá trị ra màn hình, thực hiện các công việc lặp đi lặp lại hay thực hiện tính toán. Khi đặt tên biến chúng ta không được đặt tên trùng với từ khóa.
 
