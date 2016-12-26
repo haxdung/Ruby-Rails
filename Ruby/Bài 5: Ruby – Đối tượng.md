@@ -62,7 +62,7 @@ false
 Fixnum
 ```
 
-Tạo đối tượng
+# Tạo đối tượng
 
 Một đối tượng phải được tạo ra thì mới có thể sử dụng được. Đối tượng trong Ruby có thể được tạo ra một cách rõ ràng hoặc tạo ngầm. Ví dụ về đối tượng ngầm là mấy cái đối tượng được tạo ra từ giá trị như số 6 hay chuỗi “Ruby language” ở trên. Còn để tạo đối tượng một cách rõ ràng thì chúng ta dùng từ khóa new. Đối tượng thuộc lớp do chúng ta tự định nhĩa cũng dùng từ khóa new.
 object_creation.rb
@@ -116,7 +116,7 @@ Hello world
 #<Being:0x8492o3a>
 ```
 
-**Đối tượng giá trị**
+# Đối tượng giá trị
 
 Như đã nói ở trên là chúng ta có thể tạo đối tượng một cách ngầm định từ các giá trị. Ở đây chúng ta sẽ làm việc với một số phương thức của loại đối tượng này.
 literals.rb
@@ -176,7 +176,7 @@ Range
 true
 ```
 
-**Thừa kế**
+# Thừa kế
 
 Một trong những khái niệm trong lập trình hướng đối tượng là thừa kế và Ruby cũng thế. Thừa kế bao gồm các đối tượng cha và đối tượng con, đối tượng cha sẽ chứa những thuộc tính và phương thức mà đối tượng con có thể thừa kế lại. Tất cả các đối tượng trong Ruby đều thừa kế từ một đối tượng gốc có tên là **Object**. Tất cả các đối tượng trong Ruby đều có các phương thức mà đối tượng **Object** có, nhưng có thể định nghĩa lại.
 mother.rb
@@ -274,7 +274,7 @@ This is Living
 true
 ```
 
-**Đối tượng main**
+# Đối tượng main
 
 Trong các ngôn ngữ như C++, Java… thì chương trình bắt đầu chạy từ một hàm đặc biệt tên là hàm **main()**, khi chạy chương trình hàm này sẽ được gọi từ hệ điều hành.
 
