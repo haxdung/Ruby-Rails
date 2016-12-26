@@ -6,103 +6,107 @@ Series này lược dịch và tham khảo từ cuốn Agile web development wit
 
 # Mục lục
 
-Ruby – Giới thiệu về ngôn ngữ Ruby
+# (/Ruby)
 
-Ruby – Các thành phần của Ruby
+Bài 1: Ruby – Giới thiệu về ngôn ngữ Ruby
 
-Ruby – Cơ bản
+Bài 2: Ruby – Các thành phần của Ruby
 
-Ruby – Biến
+Bài 3: Ruby – Cơ bản
 
-Ruby – Đối tượng
+Bài 4: Ruby – Biến
 
-Ruby – Kiểu dữ liệu – Phần 1
+Bài 5: Ruby – Đối tượng
 
-Ruby – Kiểu dữ liệu – Phần 2
+Bài 6: Ruby – Kiểu dữ liệu – Phần 1
 
-Ruby – String 
+Bài 7: Ruby – Kiểu dữ liệu – Phần 2
 
-Ruby – Biểu thức
+Bài 8: Ruby – String 
 
-Ruby – Luồng điều khiển 
+Bài 9: Ruby – Biểu thức
 
-Ruby – Mảng 
+Bài 10: Ruby – Luồng điều khiển 
 
-Ruby – Bảng băm 
+Bài 11: Ruby – Mảng 
 
-Ruby – Hướng đối tượng – Phần 1 
+Bài 12: Ruby – Bảng băm 
 
-Ruby – Hướng đối tượng – Phần 2 
+Bài 13: Ruby – Hướng đối tượng – Phần 1 
 
-Ruby – Module và Exception 
+Bài 14: Ruby – Hướng đối tượng – Phần 2 
 
-Ruby – Biểu thức chính quy Regex 
+Bài 15: Ruby – Module và Exception 
 
-Ruby – Nhập xuất 
+Bài 16: Ruby – Biểu thức chính quy Regex 
 
-Rails – Giới thiệu
+Bài 17: Ruby – Nhập xuất 
 
-Rails – Tạo project Rails
+# (/Rails)
 
-Rails – Kiến trúc của Rails
+Bài 1: Rails – Giới thiệu
 
-Rails – Xây dựng ứng dụng MVC
+Bài 2: Rails – Tạo project Rails
 
-Rails – Tùy chỉnh View
+Bài 3: Rails – Kiến trúc của Rails
 
-Rails – Kiểm tra dữ liệu gửi lên form
+Bài 4: Rails – Xây dựng ứng dụng MVC
 
-Rails – Unit Testing
+Bài 5: Rails – Tùy chỉnh View
 
-Rails – Routing
+Bài 6: Rails – Kiểm tra dữ liệu gửi lên form
 
-Rails – Tùy chỉnh layout
+Bài 7: Rails – Unit Testing
 
-Rails – Helper
+Bài 8: Rails – Routing
 
-Rails – Functional Testing
+Bài 9: Rails – Tùy chỉnh layout
 
-Rails – Session
+Bài 10: Rails – Helper
 
-Rails – Quan hệ giữa model
+Bài 11: Rails – Functional Testing
 
-Rails – Tạo nút thêm giỏ hàng
+Bài 12: Rails – Session
 
-Rails – Migration
+Bài 13: Rails – Quan hệ giữa model
 
-Rails – Tùy chỉnh giỏ hàng
+Bài 14: Rails – Tạo nút thêm giỏ hàng
 
-Rails – Hàm render
+Bài 15: Rails – Migration
 
-Rails – AJAX trong Rails
+Bài 16: Rails – Tùy chỉnh giỏ hàng
 
-Rails – Sử dụng jQuery
+Bài 17: Rails – Hàm render
 
-Rails – Tạo phương thức Helper
+Bài 18: Rails – AJAX trong Rails
 
-Rails – Xây dựng chức năng đặt hàng
+Bài 19: Rails – Sử dụng jQuery
 
-Rails – Xây dựng tính năng RSS
+Bài 20: Rails – Tạo phương thức Helper
 
-Rails – Phân trang với will_paginate
+Bài 21: Rails – Xây dựng chức năng đặt hàng
 
-Rails – Gửi email
+Bài 22: Rails – Xây dựng tính năng RSS
 
-Rails – Xác thực user – Phần 1
+Bài 23: Rails – Phân trang với will_paginate
 
-Rails – Xác thực user – Phần 2
+Bài 24: Rails – Gửi email
 
-Rails – Filter
+Bài 25: Rails – Xác thực user – Phần 1
 
-Rails – Callback
+Bài 26: Rails – Xác thực user – Phần 2
 
-Rails – Đa ngôn ngữ – Phần 1
+Bài 27: Rails – Filter
 
-Rails – Đa ngôn ngữ – Phần 2
+Bài 28: Rails – Callback
 
-Rails – Đa ngôn ngữ – Phần 3
+Bài 29: Rails – Đa ngôn ngữ – Phần 1
 
-Rails – Initializers
+Bài 30: Rails – Đa ngôn ngữ – Phần 2
+
+Bài 31: Rails – Đa ngôn ngữ – Phần 3
+
+Bài 32: Rails – Initializers
 
 Ruby là một ngôn ngữ lập trình động, hướng đối tượng đa mục đích. Tác giả của Ruby là một lập trình viên người Nhật tên là Yukihiro Matsumoto. Ruby xuất hiện lần đầu tiên vào năm 1995. Ruby hỗ trợ nhiểu mô hình lập trình truyền thống như lập trình động, lập trình phản xạ, lập trình mệnh lệnh và lập trình hướng đối tượng.
 
