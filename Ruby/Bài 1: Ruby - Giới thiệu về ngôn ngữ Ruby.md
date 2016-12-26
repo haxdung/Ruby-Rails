@@ -28,7 +28,8 @@ irb(main):001:0> puts RUBY_VERSION
 
 
 Ở trên chúng ta chạy lệnh puts, lệnh này sẽ in một đoạn text ra màn hình, ở đây chúng ta in hằng số RUBY_VERSION, hằng số này cho biết phiên bản Ruby mà chúng ta sử dụng.
-Viết code Ruby trong file
+
+#Viết code Ruby trong file
 
 Ngoài cách chạy Ruby trực tiếp từ trình thông dịch thì chúng ta có thể viết code Ruby trong các file script riêng rồi trình thông dịch sẽ chạy đoạn code trong file đó. Bạn chỉ cần tạo một file text, viết code Ruby trong đó rồi lưu lại với phần mở rộng là .rb.
 hello.rb
