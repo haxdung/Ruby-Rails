@@ -9,12 +9,12 @@ first.rb
 puts "This is Ruby"
 ```
 
-Đoạn code trên rất đơn giản, chỉ là in chuỗi “This is Ruby” ra màn hình console. Từ khóa puts nhận vào một tham số phía sau nó là một chuỗi text, chuỗi text được bọc trong cặp dấu nháy kép "".
+Đoạn code trên rất đơn giản, chỉ là in chuỗi "This is Ruby" ra màn hình console. Từ khóa puts nhận vào một tham số phía sau nó là một chuỗi text, chuỗi text được bọc trong cặp dấu nháy kép "".
 Output
 
 ```
 This is Ruby
-``
+```
 
 Đọc dữ liệu vào từ terminal (trong Windows là Command Prompt – cmd):
 
@@ -74,7 +74,8 @@ syntax_check.rb:1: unterminated string meets end of file
 ```
 
 Trình thông dịch sẽ báo lỗi nếu có lỗi.
-Đưa tham số vào chương trình
+
+# Đưa tham số vào chương trình
 
 Khi chúng ta chạy một file script Ruby thì có thể đưa các tham số vào chương trình để sử dụng.
 
@@ -114,7 +115,7 @@ Python
 Perl
 ```
 
-Biến và hằng số
+# Biến và hằng số
 
 Biến là nơi để lưu trữ dữ liệu. Biến gồm có tên và kiểu dữ liệu, kiểu dữ liệu là các loại giá trị khác nhau, ví dụ như số nguyên, chuỗi, số thực… là các loại kiểu dữ liệu khác nhau. Không giống các ngôn ngữ như C++, Java… bạn phải khai báo rõ ràng kiểu dữ liệu cùng tên biến như int a, Ruby là ngôn ngữ động, tức là bạn chỉ cần khai báo tên biến và gán giá trị cho nó là Ruby sẽ tự quy định kiểu dữ liệu, ngoài ra bạn cũng có thể thay đổi giá trị và Ruby cũng sẽ tự động thay đổi kiểu dữ liệu cho bạn luôn.
 
