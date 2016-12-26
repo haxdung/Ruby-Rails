@@ -6,7 +6,7 @@ Series này lược dịch và tham khảo từ cuốn Agile web development wit
 
 # Mục lục
 
-# (/Ruby)
+**Ruby**
 
 Bài 1: Ruby – Giới thiệu về ngôn ngữ Ruby
 
@@ -42,7 +42,7 @@ Bài 16: Ruby – Biểu thức chính quy Regex
 
 Bài 17: Ruby – Nhập xuất 
 
-# (/Rails)
+**Rails**
 
 Bài 1: Rails – Giới thiệu
 
@@ -108,6 +108,6 @@ Bài 31: Rails – Đa ngôn ngữ – Phần 3
 
 Bài 32: Rails – Initializers
 
-Ruby là một ngôn ngữ lập trình động, hướng đối tượng đa mục đích. Tác giả của Ruby là một lập trình viên người Nhật tên là Yukihiro Matsumoto. Ruby xuất hiện lần đầu tiên vào năm 1995. Ruby hỗ trợ nhiểu mô hình lập trình truyền thống như lập trình động, lập trình phản xạ, lập trình mệnh lệnh và lập trình hướng đối tượng.
+**Ruby** là một ngôn ngữ lập trình động, hướng đối tượng đa mục đích. Tác giả của Ruby là một lập trình viên người Nhật tên là Yukihiro Matsumoto. Ruby xuất hiện lần đầu tiên vào năm 1995. Ruby hỗ trợ nhiểu mô hình lập trình truyền thống như lập trình động, lập trình phản xạ, lập trình mệnh lệnh và lập trình hướng đối tượng.
 
-Ruby on Rails (viết ngắn gọn là Rails) là một web framework được viết bằng ngôn ngữ Ruby. Rails được giới thiệu lần đầu vào năm 2004 bởi một lập trình viên người Đan Mạch là David Heinemeier Hansson, và sau đó đã nhanh chóng phát triển trở thành một trong những web framework phổ biến. Một số công ty lớn sử dụng Rails là Airbnb, Base-camp, Github, Kickstarter, Shopify…
+**Ruby on Rails** (viết ngắn gọn là Rails) là một web framework được viết bằng ngôn ngữ Ruby. Rails được giới thiệu lần đầu vào năm 2004 bởi một lập trình viên người Đan Mạch là David Heinemeier Hansson, và sau đó đã nhanh chóng phát triển trở thành một trong những web framework phổ biến. Một số công ty lớn sử dụng Rails là Airbnb, Base-camp, Github, Kickstarter, Shopify…
