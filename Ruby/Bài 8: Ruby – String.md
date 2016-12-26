@@ -50,7 +50,7 @@ aabbb
 Jane
 Towering      inferno
 ```
-Nếu muốn in ra cả ký tự **\** thì chúng ta đưa vào là **\\**.
+Nếu muốn in ra cả ký tự **\** thì chúng ta đưa vào là **\\\**.
 escape1.rb
 ```	
 puts "Escape character \\"
