@@ -53,7 +53,7 @@ Hello Hoang
 Ngoài cách chạy code Ruby từ file script thì chúng ta cũng có thể chạy code từng dòng trong terminal:
 
 ```
-C:\User\PhoCode>ruby -e "puts RUBY_VERSION"
+C:\User\xRuby>ruby -e "puts RUBY_VERSION"
 2.2.4
 ```
 
@@ -69,7 +69,7 @@ puts "This is Ruby
 Đoạn có trên có lỗi cú pháp là thiếu dấu " kết thúc chuỗi.
 
 ```
-C:\User\PhoCode>ruby -c syntax_check.rb 
+C:\User\xRuby>ruby -c syntax_check.rb 
 syntax_check.rb:1: unterminated string meets end of file
 ```
 
@@ -93,7 +93,7 @@ puts ARGV
 Chúng ta in toàn bộ tham số được đưa vào chương trình.
 
 ```
-C:\User\PhoCode>ruby args.rb 1 2 3
+C:\User\xRuby>ruby args.rb 1 2 3
 ```
 
 Chúng ta truyền tham số vào bằng cách gõ các giá trị vào sau tên file script. Trong đoạn code trên chúng ta truyền vào 3 con số.
@@ -109,7 +109,7 @@ puts $*
 Trong Ruby các biến toàn cục có tên bắt đầu bằng kí tự $ theo sau là tên biến. Ngoài ra Ruby còn có sẵn một số biến đặc biệt, chẳng hạn như $0 lưu tên file script được thực thi, $* cũng lưu các tham số truyền vào như ARGV.
 
 ```
-C:\User\PhoCode>ruby args2.rb Ruby Python Perl
+C:\User\xRuby>ruby args2.rb Ruby Python Perl
 Ruby
 Python
 Perl
@@ -167,7 +167,7 @@ city = "London"
 Đoạn code trên sẽ gán lại giá trị mới cho biến city.
 
 ```
-C:\User\PhoCode>ruby variables.rb 
+C:\User\xRuby>ruby variables.rb 
 New York
 Paul
 35
@@ -203,7 +203,7 @@ HEIGHT = 150
 Chúng ta chỉ cần đặt tên với chữ cái đầu viết hoa thì biến đó sẽ là hằng số. Trong thực tế thì chúng ta nên viết hoa toàn bộ các chữ cái trong tên hằng.
 
 ```
-C:\User\PhoCode>ruby constants.rb 
+C:\User\xRuby>ruby constants.rb 
 40
 50
 100
