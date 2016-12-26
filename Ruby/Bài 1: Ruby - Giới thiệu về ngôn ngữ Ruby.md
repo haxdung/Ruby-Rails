@@ -35,8 +35,10 @@ hello.rb
 puts "Hello world"
 
 Đoạn code trên sẽ in chuỗi Hello world ra màn hình.
-	
+
+```
 C:\Project\Ruby>first.rb 
 Hello world
+```
 
 Để chạy file .rb thì bạn mở cmd lên rồi trỏ đến thư mục chứa file này (bằng lệnh cd) sau đó gõ vào tên file là xong.
