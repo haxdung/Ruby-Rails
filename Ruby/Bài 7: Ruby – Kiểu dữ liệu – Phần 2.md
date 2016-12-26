@@ -3,7 +3,7 @@ Trong phần này chúng ta tiếp tục tìm hiểu về các kiểu dữ liệ
 
 # Số hữu tỉ – Rational
 
-Số hữu tỉ là số có thể biểu diễn dưới dạng phân số. Sử dụng số hữu tỉ sẽ giúp tránh các lỗi về làm tròn số vì chúng ta có thể biểu diễn chúng dưới dạng phân số. Ruby có lớp Rational hỗ trợ làm việc với số hữu tỉ. Một số đối tượng trong Ruby có phương thức to_r để chuyển một số thành số hữu tỉ.
+Số hữu tỉ là số có thể biểu diễn dưới dạng phân số. Sử dụng số hữu tỉ sẽ giúp tránh các lỗi về làm tròn số vì chúng ta có thể biểu diễn chúng dưới dạng phân số. Ruby có lớp **Rational** hỗ trợ làm việc với số hữu tỉ. Một số đối tượng trong Ruby có phương thức **to_r** để chuyển một số thành số hữu tỉ.
 rational_number.rb
 ```
 puts 5.to_r
@@ -18,11 +18,11 @@ Trong đoạn code trên chúng ta thực hiện một số thao tác với số
 ```
 puts 5.to_r
 ```
-Chúng ta có thể chuyển số nguyên 5 sang 5/1 bằng phương thức to_r.
+Chúng ta có thể chuyển số nguyên 5 sang 5/1 bằng phương thức **to_r**.
 ```
 p Rational 1.5
 ```
-Hoặc chúng ta có thể tạo ra từ lớp Rational.
+Hoặc chúng ta có thể tạo ra từ lớp **Rational**.
 Output
 ```
 5/1
@@ -35,7 +35,7 @@ Output
 
 # Đối tượng nil
 
-Trong C++, Java… có đối tượng NULL thì trong Ruby chúng được gọi là nil. Đây là một đối tượng mô tả giá trị “không có”, ý nói một biến không có giá trị gì cả. nil là một đối tượng tĩnh, tức là trong Ruby chỉ có một đối tượng nil duy nhất giống như đối tượng true hay false vậy, nil được tạo ra từ lớp NilClass.
+Trong C++, Java… có đối tượng **NULL** thì trong Ruby chúng được gọi là **nil**. Đây là một đối tượng mô tả giá trị “không có”, ý nói một biến **không có giá trị gì cả**. **nil** là một đối tượng tĩnh, tức là trong Ruby **chỉ có một đối tượng nil duy nhất** giống như đối tượng **true** hay **false** vậy, **nil** được tạo ra từ lớp **NilClass**.
 nil_object.rb
 ```
 puts nil
@@ -45,7 +45,7 @@ p $val
  
 p $val1 == $val2
 ```
-Đoạn code trên thực hiện một số thao tác với nil.
+Đoạn code trên thực hiện một số thao tác với **nil**.
 ```
 puts nil
 p nil
@@ -54,11 +54,11 @@ Phương thức puts sẽ in chuỗi rỗng của đối tượng nil, trong khi
 ```
 p $val
 ```
-Nếu chúng ta in một biến chưa có giá trị thì Ruby sẽ hiển thị là nil.
+Nếu chúng ta in một biến chưa có giá trị thì Ruby sẽ hiển thị là **nil**.
 ```
 p $val1 == $val2
 ```
-Dòng code trên sẽ trả về true vì đối tượng nil là một đối tượng tĩnh và nó chỉ có 1.
+Dòng code trên sẽ trả về true vì đối tượng **nil** là một đối tượng tĩnh và nó chỉ có 1.
 Output
 ```
 nil
@@ -68,7 +68,7 @@ true
 
 # Kiểu chuỗi – String
 
-Một string là một dãy các kí tự liên tiếp nhau. Trong Ruby chúng là các đối tượng thuộc lớp String. Các chuỗi string được bọc trong cặp dấu nháy đơn hoặc nháy kép.
+Một **string** là một dãy các kí tự liên tiếp nhau. Trong Ruby chúng là các đối tượng thuộc lớp **String**. Các chuỗi **string** được **bọc trong cặp dấu nháy đơn hoặc nháy kép**.
 
 String là một kiểu dữ liệu quan trọng, trong phần sau chúng ta sẽ tìm hiểu kĩ hơn về kiểu dữ liệu này.
 string_example.rb
@@ -81,21 +81,21 @@ p "Ruby".upcase
  
 p 2.to_s
 ```
-Trong đoạn code trên chúng ta in một số string và các tính chất của chúng ra màn hình.
+Trong đoạn code trên chúng ta in một số **string** và các tính chất của chúng ra màn hình.
 ```
 p "Hello"
 p 'Ruby'
 ```
-String có thể được bọc trong cặp dấu nháy đơn hoặc nháy kép.
+**String** có thể được bọc trong cặp dấu nháy đơn hoặc nháy kép.
 ```
 p "Ruby".size
 p "Ruby".upcase
 ```
-Ở 2 dòng trên chúng ta gọi đến phương thức size và phương thức upcase, phương thức size trả về độ lớn của string còn phương thức upcase chuyển một string thành dạng chữ in hoa.
+Ở 2 dòng trên chúng ta gọi đến phương thức **size** và phương thức **upcase**, phương thức **size trả về độ lớn** của string còn phương thức **upcase chuyển một string thành dạng chữ in hoa**.
 ```
 p 2.to_s
 ```
-Trong dòng trên phương thức to_s chuyển một số thành một string.
+Trong dòng trên phương thức **to_s chuyển một số thành một string**.
 Output
 ```
 "Hello"
@@ -109,7 +109,7 @@ Output
 
 Mảng và bảng băm lưu dữ liệu theo dạng tập hợp, tức là chúng không lưu từng giá trị cụ thể mà lưu một nhóm các phần tử có giá trị khác nhau.
 
-Mảng lưu các phần tử theo một thứ tự trong khi bảng băm lưu phần tử theo các cặp khóa-giá trị. Chúng ta sẽ tìm hiểu thêm về 2 kiểu dữ liệu này trong các bài sau.
+Mảng lưu các phần tử theo một thứ tự trong khi bảng băm lưu phần tử theo các cặp **khóa-giá trị**. Chúng ta sẽ tìm hiểu thêm về 2 kiểu dữ liệu này trong các bài sau.
 array_hash.rb
 ```
 nums = [1, 2, 3, 4]
@@ -164,7 +164,7 @@ Norway
 ```
 # Chuyển đổi kiểu dữ liệu
 
-Ruby có các phương thức hỗ trợ chuyển đổi kiểu dữ liệu như to_i, to_s hay to_f. Ngoài trong module Kernel còn có các phương thức như Integer, String hoặc Float cũng làm công việc tương tự.
+Ruby có các phương thức hỗ trợ chuyển đổi kiểu dữ liệu như **to_i**, **to_s** hay **to_f**. Ngoài trong module **Kernel** còn có các phương thức như Integer, **String** hoặc **Float** cũng làm công việc tương tự.
 kernel_conversion.rb
 ```
 p Array(1..6)
@@ -195,7 +195,7 @@ p 12.to_f
 p "11".to_f
 p nil.to_f
 ```
-Một số đối tượng trong Ruby chứa phương thức to_i và to_f giúp chuyển đổi sang kiểu số nguyên và số chấm động tương ứng.
+Một số đối tượng trong Ruby chứa phương thức **to_i** và **to_f** giúp chuyển đổi sang kiểu số nguyên và số chấm động tương ứng.
 Output
 ```
 12
@@ -223,7 +223,7 @@ Trong đoạn code trên chúng ta chuyển string sang số nguyên, số thự
 v = "Ruby Python Tcl PHP Perl".split
 p v.class
 ```
-Phương thức split sẽ tách từng kí tự trong string và lưu trong một mảng.
+Phương thức **split** sẽ tách từng kí tự trong string và lưu trong một mảng.
 Output
 ```
 12
