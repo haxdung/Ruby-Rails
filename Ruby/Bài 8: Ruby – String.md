@@ -3,65 +3,45 @@ Trong phần này chúng ta sẽ tìm hiểu kỹ hơn về kiểu dữ liệu S
 
 String là một chuỗi các kí tự được bọc trong cặp dấu nháy đơn hoặc nháy kép.
 quotes.rb
-1
-2
-	
+```
 puts 'Python'
 puts "Ruby"
-
+```
 Trong ví dụ trên chúng ta sử dụng cả 2 loại dấu nháy để tạo string.
 Output
-1
-2
-	
+```
 Python
 Ruby
-
+```
 Nếu bạn muốn in ra cả ký tự dấu nháy thì có 2 cách:
 quotes2.rb
-1
-2
-3
-4
-5
-	
+```
 puts "There are many stars"
 puts "He said, \"Which one is your favourite?\""
  
 puts 'There are many stars'
 puts 'He said, "Which one is your favourite?"'
-
+```
 Cách thứ nhất là đặt trước dấu nháy ký tự \ và Ruby sẽ in ra dấu nháy đó. Cách thứ 2 là trộn dấu nháy đơn với dấu nháy kép, chẳng hạn như chúng ta bọc string bằng cặp dấu nháy đơn và bên trong chúng ta cho in ra dấu nháy kép.
 Output
-1
-2
-	
+```	
 There are many stars.
 He said, "Which one is your favourite?"
+```
+
 Ký tự thoát
 
 Ký tự thoát là các ký tự đặc biệt dùng để điều khiển string chứ không được in ra màn hình.
 escape.rb
-1
-2
-3
-4
-	
+```	
 puts "one\ntwo\nthree\nfour"
 puts "bbb\raaa"
 puts "Joan\b\b\bane"
 puts "Towering\tinferno"
-
+```
 Kí tự \n có nghĩa là xuống dòng, bất kì kí tự nào nằm sau \n đều được xuống dòng. Kí tự \r đưa dấu nháy trên màn hình về vị trí đầu dòng.  Kí tự \t cách một đoạn dài bằng một dấu tab giống như khi chúng ta gõ nút tab, kí tự \b xóa một kí tự đứng trước nó.
 Output
-1
-2
-3
-4
-5
-6
-7
-	
+```	
 one
 two
 three
@@ -69,32 +49,21 @@ four
 aabbb
 Jane
 Towering      inferno
-
+```
 Nếu muốn in ra cả ký tự \ thì chúng ta đưa vào là \\.
 escape1.rb
-1
-	
+```	
 puts "Escape character \\"
+```
 Output
-1
-	
+```	
 Escape character \
+```
 Lấy từng phần tử của string
 
 Chúng ta có thể lấy từng phần tử của string.
 string_element.rb
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-	
+```
 msg = "Ruby language"
  
 puts msg["Ruby"]
@@ -106,47 +75,34 @@ puts msg[-1]
 puts msg[0, 3]
 puts msg[0..9]
 puts msg[0, msg.length]
-
+```
 Để có thể lấy các phần tử của string thì chúng ta sử dụng cặp dấu ngoặc vuông [] vừa đưa vào bên trong đó chỉ số, khoảng hoặc một string khác.
-1
-	
+```	
 puts msg["Ruby"]
-
+```
 Khi đưa vào một string bên trong cặp dấu [] thì Ruby sẽ tìm chuỗi đó trong chuỗi gốc, nếu tìm thấy thì in ra chuỗi, nếu không thì in ra chuỗi rỗng.
-1
-	
+```	
 puts msg[0]
-
+```
 Nếu đưa vào một con số nào thì chúng ta được kí tự tại vị trí đó, chuỗi trong Ruby được đánh số từ 0.
-1
-	
+```
 puts msg[-1]
-
+```
 Ruby cũng hỗ trợ chỉ số âm, đưa vào số âm thì sẽ được kí tự từ cuối string.
-1
-	
+```	
 puts msg[0, 3]
-
+```
 Khi đưa vào 2 chữ số cách nhau bởi dấu phẩy, ví dụ [i, n] thì chúng ta lấy được n kí tự từ vị trí i.
-1
-	
+```
 puts msg[0..9]
-
+```
 Chúng ta cũng có thể đưa vào một khoảng giá trị, [0..9] sẽ lấy về chuỗi kí tự từ vị trí 0 đến vị trí 9.
-1
-	
+```
 puts msg[0, msg.length]
-
+```
 Phương thức length trả về độ lớn của chuỗi nên dòng trên có nghĩa là lấy toàn bộ chuỗi.
 Output
-1
-2
-3
-4
-5
-6
-7
-	
+```
 Ruby
  
 R
@@ -154,45 +110,38 @@ e
 Rub
 Ruby langu
 Ruby language
+```
+
 Truyền biến vào string
 
 Chúng ta có thể truyền giá trị của các biến khác vào string để hiển thị, biến được truyền vào có dạng #{<tên biến>}. Ví dụ:
 interpolation.rb
-1
-2
-3
-4
-5
-6
-	
+
+```
 #!/usr/bin/ruby
  
 name = "Jane"
 age = 17
- 
+```
 puts "#{name} is #{age} years old"
 
 Giá trị của biến name và age sẽ được hiển thị tương ứng.
 Output
-1
-	
+```
 Jane is 17 years old
-
+```
 Chúng ta cũng có thể thực hiện các biểu thức với các biến được truyền vào:
 interpolation2.rb
-1
-2
-3
-4
-	
+```
 x = 5
 y = 6
  
 puts "#{x} x #{y} = #{x*y}"
+```
 Output
-1
-	
+```
 5 x 6 = 30
+```
 Nối chuỗi
 
 Nối chuỗi tức là tạo một chuỗi từ các chuỗi con.
