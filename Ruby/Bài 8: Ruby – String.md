@@ -1,7 +1,7 @@
 # Ruby – String
-Trong phần này chúng ta sẽ tìm hiểu kỹ hơn về kiểu dữ liệu String.
+Trong phần này chúng ta sẽ tìm hiểu kỹ hơn về kiểu dữ liệu **String**.
 
-String là một chuỗi các kí tự được bọc trong cặp dấu nháy đơn hoặc nháy kép.
+**String** là một chuỗi các kí tự được bọc trong cặp dấu nháy đơn hoặc nháy kép.
 quotes.rb
 ```
 puts 'Python'
@@ -22,14 +22,14 @@ puts "He said, \"Which one is your favourite?\""
 puts 'There are many stars'
 puts 'He said, "Which one is your favourite?"'
 ```
-Cách thứ nhất là đặt trước dấu nháy ký tự \ và Ruby sẽ in ra dấu nháy đó. Cách thứ 2 là trộn dấu nháy đơn với dấu nháy kép, chẳng hạn như chúng ta bọc string bằng cặp dấu nháy đơn và bên trong chúng ta cho in ra dấu nháy kép.
+Cách thứ nhất là đặt trước dấu nháy ký tự **\** và Ruby sẽ in ra dấu nháy đó. Cách thứ 2 là trộn dấu nháy đơn với dấu nháy kép, chẳng hạn như chúng ta bọc string bằng cặp dấu nháy đơn và bên trong chúng ta cho in ra dấu nháy kép.
 Output
 ```	
 There are many stars.
 He said, "Which one is your favourite?"
 ```
 
-Ký tự thoát
+# Ký tự thoát
 
 Ký tự thoát là các ký tự đặc biệt dùng để điều khiển string chứ không được in ra màn hình.
 escape.rb
@@ -39,7 +39,7 @@ puts "bbb\raaa"
 puts "Joan\b\b\bane"
 puts "Towering\tinferno"
 ```
-Kí tự \n có nghĩa là xuống dòng, bất kì kí tự nào nằm sau \n đều được xuống dòng. Kí tự \r đưa dấu nháy trên màn hình về vị trí đầu dòng.  Kí tự \t cách một đoạn dài bằng một dấu tab giống như khi chúng ta gõ nút tab, kí tự \b xóa một kí tự đứng trước nó.
+Kí tự **\n** có nghĩa là xuống dòng, bất kì kí tự nào nằm sau **\n** đều được xuống dòng. Kí tự **\r** đưa dấu nháy trên màn hình về vị trí đầu dòng.  Kí tự **\t** cách một đoạn dài bằng một dấu tab giống như khi chúng ta gõ nút tab, kí tự **\b** xóa một kí tự đứng trước nó.
 Output
 ```	
 one
@@ -50,7 +50,7 @@ aabbb
 Jane
 Towering      inferno
 ```
-Nếu muốn in ra cả ký tự \ thì chúng ta đưa vào là \\.
+Nếu muốn in ra cả ký tự **\** thì chúng ta đưa vào là **\\**.
 escape1.rb
 ```	
 puts "Escape character \\"
@@ -76,11 +76,11 @@ puts msg[0, 3]
 puts msg[0..9]
 puts msg[0, msg.length]
 ```
-Để có thể lấy các phần tử của string thì chúng ta sử dụng cặp dấu ngoặc vuông [] vừa đưa vào bên trong đó chỉ số, khoảng hoặc một string khác.
+Để có thể lấy các phần tử của string thì chúng ta sử dụng cặp dấu ngoặc vuông **[]** vừa đưa vào bên trong đó chỉ số, khoảng hoặc một string khác.
 ```	
 puts msg["Ruby"]
 ```
-Khi đưa vào một string bên trong cặp dấu [] thì Ruby sẽ tìm chuỗi đó trong chuỗi gốc, nếu tìm thấy thì in ra chuỗi, nếu không thì in ra chuỗi rỗng.
+Khi đưa vào một string bên trong cặp dấu **[]** thì Ruby sẽ tìm chuỗi đó trong chuỗi gốc, nếu tìm thấy thì in ra chuỗi, nếu không thì in ra chuỗi rỗng.
 ```	
 puts msg[0]
 ```
@@ -100,7 +100,7 @@ Chúng ta cũng có thể đưa vào một khoảng giá trị, [0..9] sẽ lấ
 ```
 puts msg[0, msg.length]
 ```
-Phương thức length trả về độ lớn của chuỗi nên dòng trên có nghĩa là lấy toàn bộ chuỗi.
+Phương thức **length** trả về độ lớn của chuỗi nên dòng trên có nghĩa là lấy toàn bộ chuỗi.
 Output
 ```
 Ruby
@@ -112,9 +112,9 @@ Ruby langu
 Ruby language
 ```
 
-Truyền biến vào string
+# Truyền biến vào string
 
-Chúng ta có thể truyền giá trị của các biến khác vào string để hiển thị, biến được truyền vào có dạng #{<tên biến>}. Ví dụ:
+Chúng ta có thể truyền giá trị của các biến khác vào string để hiển thị, biến được truyền vào có dạng **#{<tên biến>}**. Ví dụ:
 interpolation.rb
 
 ```
@@ -159,7 +159,7 @@ puts lang
 lang = "Java".concat(" programming").concat(" language")
 puts lang
 ```
-Có rất nhiều cách để nối một chuỗi. Để nối một chuỗi thì chúng ta có thể dùng toán tử cộng +, viết 2 chuỗi đứng liền nhau, dùng toán tử <<,  hoặc dùng phương thức concat().
+Có rất nhiều cách để nối một chuỗi. Để nối một chuỗi thì chúng ta có thể dùng toán tử cộng +, viết 2 chuỗi đứng liền nhau, dùng toán tử <<,  hoặc dùng phương thức **concat()**.
 Output
 ```
 Ruby programming languge
@@ -168,7 +168,7 @@ Perl programming language
 Java programming language
 ```
 
-So sánh chuỗi
+# So sánh chuỗi
 
 Ruby hỗ trợ một số toán tử và phương thức giúp so sánh chuỗi một cách dễ dàng.
 string_comparison.rb
@@ -177,14 +177,14 @@ puts "12" == "12"
 puts "aa" == "ab"
 puts "Ruby".eql? "Jan"
 ```
-Chúng ta có thể so sánh chuỗi bằng toán tử == hoặc phương thức eql?. Kết quả trả về True nếu 2 chuỗi giống nhau và ngược lại.
+Chúng ta có thể so sánh chuỗi bằng toán tử == hoặc phương thức **eql?**. Kết quả trả về True nếu 2 chuỗi giống nhau và ngược lại.
 Output
 ```
 true
 false
 false
 ```
-Ngoài ra Ruby còn có toán tử <==> dùng để so sánh chuỗi, toán tử này không trả về True hay False mà trả về 1, 0, -1:
+Ngoài ra Ruby còn có toán tử <==> dùng để so sánh chuỗi, toán tử này không trả về **True** hay **False** mà trả về 1, 0, -1:
 ```
     1: chuỗi bên trái lớn hơn chuỗi bên phải
     -1: chuỗi bên trái bé hơn chuỗi bên phải
@@ -203,7 +203,7 @@ Output
 1
 0
 ```
-Các phương thức trong String
+# Các phương thức trong String
 
 String cũng là một đối tượng trong Ruby do đó các đối tượng string có các phương thức hữu ích mà chúng ta có thể sử dụng.
 
@@ -227,16 +227,16 @@ Trong đoạn code trên chúng ta sử dụng 4 phương thức của đối t�
 ```
 puts "Size of #{word}: #{word.size}"
 ```
-Phương thức size lấy số lượng kí tự có trong string.
+Phương thức **size** lấy số lượng kí tự có trong string.
 ```
 puts word.include? "tho"
 ```
-Đoạn code trên dùng phương thức include?, phương thức này cho biết chuỗi “tho” có nằm trong chuỗi “Methods” hay không.
+Đoạn code trên dùng phương thức **include?**, phương thức này cho biết chuỗi “tho” có nằm trong chuỗi “Methods” hay không.
 ```
 puts word.empty?
 word.clear
 ```
-Phương thức empty? cho biết string có rỗng hay không, phương thức clear sẽ xóa toàn bộ string.
+Phương thức **empty?** cho biết string có rỗng hay không, phương thức **clear** sẽ xóa toàn bộ string.
 Output
 ```
 Size of Methods: 7
@@ -256,7 +256,7 @@ puts ruby.downcase
 puts ruby.capitalize
 puts ruby.swapcase
 ```
-Ruby có 4 phương thức để chuyển kí tự qua lại giữa chữ hoa với chữ thường. Phương thức upcase chuyển toàn bộ string thành in hoa. Phương thức downcase là chuyển thành chữ in thường. Phương thức capitalize viết hoa chữ cái đầu trong string, còn lại viết thường. Phương thức swapcase chuyển kí tự hoa thành thường và ngược lại.
+Ruby có 4 phương thức để chuyển kí tự qua lại giữa chữ hoa với chữ thường. Phương thức **upcase** chuyển toàn bộ string thành in hoa. Phương thức **downcase** là chuyển thành chữ in thường. Phương thức **capitalize** viết hoa chữ cái đầu trong string, còn lại viết thường. Phương thức **swapcase** chuyển kí tự hoa thành thường và ngược lại.
 Output
 ```
 RUBY
@@ -276,7 +276,7 @@ puts str2.start_with? "ruby."
 puts str1.end_with? ".com"
 puts str2.end_with? ".com"
 ```
-Trong ví dụ trên, phương thức start_with? cho biết chuỗi str1 và str2 có bắt đầu bằng chuỗi “ruby” hay không. Ngược lại, phương thức end_with? cho biết chuỗi có kết thúc bằng chuỗi “.com” hay không.
+Trong ví dụ trên, phương thức **start_with?** cho biết chuỗi str1 và str2 có bắt đầu bằng chuỗi “ruby” hay không. Ngược lại, phương thức **end_with?** cho biết chuỗi có kết thúc bằng chuỗi “.com” hay không.
 Output
 ```
 true
@@ -292,7 +292,7 @@ msg = "Ruby\nPython"
 puts msg
 puts msg.inspect
 ```
-Phương thức inspect sẽ in các ký tự thoát ra luôn chứ không dùng để điều khiển chuỗi nữa.
+Phương thức **inspect** sẽ in các ký tự thoát ra luôn chứ không dùng để điều khiển chuỗi nữa.
 Output
 ```
 Ruby
@@ -300,7 +300,7 @@ Python
 "Ruby\nPython"
 ```
 
-Định dạng chuỗi
+# Định dạng chuỗi
 
 Định dạng chuỗi là hiển thị chuỗi theo nhiều cách khác nhau bằng cách chèn các chuỗi đặc tả. Chuỗi đặc tả có kí tự bắt đầu là kí tự % được đặt bên trong cặp dấu nháy đơn hoặc nháy kép cùng với chuỗi gốc.
 
@@ -319,9 +319,9 @@ puts "There are %d oranges and %d apples in the basket." % [12, 10]
 puts "Speed: %f km/h" % 62.1
 puts "Name: %s" % "iPhone 5"
 ```
-Khi chúng ta đặt %d bên trong chuỗi thì khi dịch Ruby sẽ hiểu là phải đưa một số nguyên vào vị trí đó thay thế cho chuỗi %d. Các tham số sẽ được đưa vào sau dấu % phía sau chuỗi. Ngoài ra chúng ta cũng có thể đưa vào nhiều tham số bằng cách đặt chúng trong cặp dấu [] và ngăn cách nhau bởi dấu phẩy.
+Khi chúng ta đặt %d bên trong chuỗi thì khi dịch Ruby sẽ hiểu là phải đưa một số nguyên vào vị trí đó thay thế cho chuỗi **%d**. Các tham số sẽ được đưa vào sau dấu **%** phía sau chuỗi. Ngoài ra chúng ta cũng có thể đưa vào nhiều tham số bằng cách đặt chúng trong cặp dấu **[]** và ngăn cách nhau bởi dấu phẩy.
 
-Đặc tả %d hiển thị số nguyên, %f là số chấm động, %s là hiển thị một chuỗi.
+Đặc tả **%d** hiển thị số nguyên, **%f** là số chấm động, **%s** là hiển thị một chuỗi.
 Output
 ```
 There are 12 oranges in the basket.
@@ -338,7 +338,7 @@ puts "%o" % 300
 puts "%b" % 300
 puts "%e" % (5/3.0)
 ```
-Kiểu số nguyên có thể được hiển thị trên nhiều hệ cơ số khác nhau. Chẳng hạn %d là hệ 10, %x là hệ 16, %o là hệ 8, %b là hệ nhị phân (hệ 2), %e là hiển thị theo kiểu số mũ.
+Kiểu số nguyên có thể được hiển thị trên nhiều hệ cơ số khác nhau. Chẳng hạn **%d** là hệ 10, **%x** là hệ 16, **%o** là hệ 8, **%b** là hệ nhị phân (hệ 2), **%e** là hiển thị theo kiểu số mũ.
 Output
 ```
 300
@@ -347,7 +347,7 @@ Output
 100101100
 1.666667e+00
 ```
-Tham số độ chính xác là một con số đứng giữa kí tự % và kí tự đặc tả, tham số này có nhiều ý nghĩa khác nhau với từng kiểu dữ liệu khác nhau.
+Tham số độ chính xác là một con số đứng giữa kí tự **%** và kí tự đặc tả, tham số này có nhiều ý nghĩa khác nhau với từng kiểu dữ liệu khác nhau.
 
 Đối với số nguyên thì độ chính xác là số lượng chữ số được hiển thị, nếu giá trị không đủ thì Ruby sẽ tự động chèn thêm các chữ số 0 vào trước, mặc định thì tham số này là 1 tức là không chèn thêm vào.
 
@@ -367,11 +367,11 @@ puts "%.5d" % 16
 puts "%s" % "Ruby"
 puts "%.5s" % "Python"
 ```
-Trong ví dụ trên, %.1f tức là hiển thị 1 chữ số sau phần thập phân. Mặc định Ruby hiển thị 6 chữ số sau phần thập phân nên nếu không đủ thì Ruby sẽ tự động chèn thêm các số 0 vào trước.
+Trong ví dụ trên, **%.1f** tức là hiển thị 1 chữ số sau phần thập phân. Mặc định Ruby hiển thị 6 chữ số sau phần thập phân nên nếu không đủ thì Ruby sẽ tự động chèn thêm các số 0 vào trước.
 
-Tương tự, mặc định Ruby hiển thị độ chính xác là 1 với số nguyên, nhưng nếu chúng ta thiết lập là %.5d thì Ruby sẽ tự chèn thêm các số 0 vào trước cho đủ 5 chữ số.
+Tương tự, mặc định Ruby hiển thị độ chính xác là 1 với số nguyên, nhưng nếu chúng ta thiết lập là **%.5d** thì Ruby sẽ tự chèn thêm các số 0 vào trước cho đủ 5 chữ số.
 
-%.5s cũng giống 2 kiểu trên ở chỗ là sẽ chỉ cho phép hiển thị 5 chữ cái, nếu số lượng chữ cái quá nhiều thì các chữ cái sau cùng sẽ bị lược bỏ, nhưng nếu không đủ số lượng thì Ruby cũng chẳng chèn thêm kí tự nào vào.
+**%.5s** cũng giống 2 kiểu trên ở chỗ là sẽ chỉ cho phép hiển thị 5 chữ cái, nếu số lượng chữ cái quá nhiều thì các chữ cái sau cùng sẽ bị lược bỏ, nhưng nếu không đủ số lượng thì Ruby cũng chẳng chèn thêm kí tự nào vào.
 Output
 ```
 Height: 177.300000 cm
@@ -427,7 +427,7 @@ puts "%-10d" % 123
 puts "%-10d" % 1234
 puts "%-10d" % 12345
 ```
-Cờ 0 sẽ chèn thêm một số lượng số 0 vào trước số thay vì chèn khoảng trống. Cờ dấu trừ “-” sẽ canh lề trái các chữ số.
+Cờ **0** sẽ chèn thêm một số lượng số 0 vào trước số thay vì chèn khoảng trống. Cờ dấu trừ **“-”** sẽ canh lề trái các chữ số.
 Output
 ```
 0000000001
@@ -441,4 +441,4 @@ Output
 1234
 12345
 ```
-Ngoài ra còn có các cờ khác như dấu *, +, #, b, d, u, x….
+Ngoài ra còn có các cờ khác như dấu ***, +, #, b, d, u, x…**.
