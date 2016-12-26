@@ -41,7 +41,8 @@ p n1, n2, n3
 Trong đoạn code trên n1, n2 và n3 là các tên biến hợp lệ.
 
 Khi đặt tên biến chúng ta nên đặt tên sao cho dễ nhớ và dễ sử dụng.
-Sigil
+
+# Sigil
 
 Biến trong Ruby có thể bắt đầu bằng một số kí tự đặc biệt và được gọi là sigil, các kí tự sigil dùng để chỉ ra phạm vi hoạt động của biến.
 sigils.rb
@@ -82,11 +83,11 @@ Biến local_variables là một mảng lưu trữ toàn bộ các biến cục 
 ```
 p global_variables.include? :$car_name
 ```
-Tương tự, chúng ta có biến global_variables lưu toàn bộ các biến toàn cục, nhưng ở đây chúng ta không cho in ra toàn bộ vì số lượng biến toàn cục có sẵn rất nhiều, thay vào đó chúng ta dùng phương thức include? để kiểm tra xem biến $car_name của chúng ta có nằm trong danh sách đó hay không.
+Tương tự, chúng ta có biến global_variables lưu toàn bộ các biến toàn cục, nhưng ở đây chúng ta không cho in ra toàn bộ vì số lượng biến toàn cục có sẵn rất nhiều, thay vào đó chúng ta dùng phương thức **include?** để kiểm tra xem biến $car_name của chúng ta có nằm trong danh sách đó hay không.
 ```
 p self.instance_variables
 ```
-Ở trên chúng ta tham chiếu đến biến instance_variables, biến này lưu trữ toàn bộ biến instance trong đối tượng hiện tại, ở đây là những biến instance được khai báo trong chương trình – tức là @sea_name.
+Ở trên chúng ta tham chiếu đến biến instance_variables, biến này lưu trữ toàn bộ biến instance trong đối tượng hiện tại, ở đây là những biến instance được khai báo trong chương trình – tức là **@sea_name**.
 
 Ngoài ra ở đây chúng ta còn dùng thêm biến self nữa, biến self tham chiếu đến đối tượng hiện tại đang được sử dụng, ở đây là chương trình chính, nếu bạn đã từng làm việc với con trỏ this trong C++, Java… thì self cũng giống như con trỏ this vậy. Thực ra ở đây bạn cũng không cần dùng đến self vì chúng ta đang gọi hàm ngay trong chương trình chính chứ không phải bên trong một phương thức hay lớp nào đó.
 ```
@@ -100,7 +101,8 @@ true
 [:@sea_name]
 [:@@species]
 ```
-Biến cục bộ
+
+# Biến cục bộ
 
 Biến cục bộ là biến chỉ có hiệu lực trong một phạm vi nhất định trong toàn bộ code Ruby, cụ thể là biến nằm bên trong hàm, phương thức, class.
 locals.rb
@@ -114,7 +116,7 @@ method1
  
 p x
 ```
-Trong đoạn code trên chúng ta có phương thức method1 có một biến là x, biến này là biến cục bộ, chúng ta chỉ có thể sử dụng biến này giữa cặp từ khóa def...end.
+Trong đoạn code trên chúng ta có phương thức method1 có một biến là x, biến này là biến cục bộ, chúng ta chỉ có thể sử dụng biến này giữa cặp từ khóa **def...end**.
 ```
 method1 
 ```
@@ -222,7 +224,8 @@ Level 3
 m5
 m6
 ```
-Biến toàn cục
+
+# Biến toàn cục
 
 Biến toàn cục khác biến cục bộ ở chỗ là có hiệu lực trên toàn code. Biến toàn cục có tên bắt đầu bằng ký tự $.
 globals.rb
@@ -344,41 +347,41 @@ class Being
      
     @@is = true
 ```
-Biến @@is là một biến class, tất cả các đối tượng thuộc lớp Being đều dùng chung một biến @@is.
+Biến **@@is** là một biến class, tất cả các đối tượng thuộc lớp Being đều dùng chung một biến **@@is**.
 ```
 def initialize nm
     @name = nm
 end
 ```
-Phương thức initialize là phương thức khởi tạo. Phương thức này tự động được gọi khi chúng ta khai báo đối tượng. Mỗi đối tượng thuộc lớp Being có biến instance @name khác nhau.
+Phương thức initialize là phương thức khởi tạo. Phương thức này tự động được gọi khi chúng ta khai báo đối tượng. Mỗi đối tượng thuộc lớp Being có biến instance **@name** khác nhau.
 ```
 def to_s
     "This is #{@name}"
 end      
 ```
-Phương thức to_s tự động được gọi khi dùng với hàm như p hay puts. Ở đây phương thức này trả về một chuỗi.
+Phương thức **to_s** tự động được gọi khi dùng với hàm như p hay puts. Ở đây phương thức này trả về một chuỗi.
 ```
 def does_exist?
     @@is
 end
 ```
-Phương thức does_exist? trả về biến class của lớp đó.
+Phương thức **does_exist?** trả về biến class của lớp đó.
 ```
 b1 = Being.new "Being 1"
 b2 = Being.new "Being 2"
 b3 = Being.new "Being 3"
 ```
-Sau khi đã định nghĩa lớp, chúng ta khai báo 3 đối tượng thuộc lớp Being là b1, b2 và b3. Mỗi đối tượng khi khởi tạo được nhận một tham số dùng cho biến @name của riêng chúng.
+Sau khi đã định nghĩa lớp, chúng ta khai báo 3 đối tượng thuộc lớp Being là b1, b2 và b3. Mỗi đối tượng khi khởi tạo được nhận một tham số dùng cho biến **@name** của riêng chúng.
 ```
 puts b1, b2, b3
 ```
-Phương thức puts sẽ tự động gọi đến phương thức to_s tương ứng với từng đối tượng.
+Phương thức puts sẽ tự động gọi đến phương thức **to_s** tương ứng với từng đối tượng.
 ```
 p b1.does_exist?
 p b2.does_exist?
 p b3.does_exist?
 ```
-Phương thức does_exist? sẽ trả về giá trị của biến @@is, do cả 3 đối tượng này đều dùng chung biến class @@is nên kết quả trả về là như nhau.
+Phương thức **does_exist?** sẽ trả về giá trị của biến **@@is**, do cả 3 đối tượng này đều dùng chung biến class **@@is** nên kết quả trả về là như nhau.
 Output
 ```
 This is Being 1
