@@ -1,15 +1,23 @@
 # Ruby – Kiểu dữ liệu – Phần 1
+
 Trong phần này chúng ta sẽ tìm hiểu về các kiểu dữ liệu.
 
 Tất cả các chương trình máy tính trên thế giới đều sử dụng dữ liệu, từ trình soạn thảo văn bản, máy tính, game… dữ liệu cũng được chia làm nhiều loại khác nhau chẳng hạn như số, kí tự, hình ảnh, âm thanh… Kiểu dữ liệu là một tập các giá trị và các thao tác có thể có trên các giá trị đó.
 
 Tất cả các kiểu dữ liệu trong Ruby đều là lớp. Ruby hỗ trợ một số kiểu dữ liệu cơ bản sau đây:
-    **Boolean – kiểu luận lý**
-    **Symbol**
-    **Number – số**
-    **String – chuỗi kí tự**
-    **Array – mảng**
-    **Hashe – bảng băm**
+
+**Boolean – kiểu luận lý**
+
+**Symbol**
+
+**Number – số**
+
+**String – chuỗi kí tự**
+
+**Array – mảng**
+
+**Hashe – bảng băm**
+
 Ví dụ:
 types.rb
 ```
@@ -28,7 +36,7 @@ Trong đoạn code trên chúng ta in tên lớp của từng kiểu dữ liệu
 ```
 p true.class, false.class
 ```
-Kiểu boolean có 2 giá trị là True hoặc False.
+Kiểu boolean có 2 giá trị là **True** hoặc **False**.
 ```
 p "Ruby".class
 ```
@@ -81,15 +89,15 @@ else
     puts "We will use name Victoria"
 end
 ```
-Trong đoạn code trên chúng ta sử dụng phương thức rand() để lấy giá trị ngẫu nhiên từ 0→1.
+Trong đoạn code trên chúng ta sử dụng phương thức **rand()** để lấy giá trị ngẫu nhiên từ 0→1.
 ```
 bool = [true, false]
 ```
-Chúng ta có một biến tên là bool, đây là một mảng có 2 giá trị là true hoặc false. Một mảng được tạo bằng cách sử dụng cặp dấu [].
+Chúng ta có một biến tên là bool, đây là một mảng có 2 giá trị là **true** hoặc **false**. Một mảng được tạo bằng cách sử dụng cặp dấu **[]**.
 ```
 male = bool[rand(2)]
 ```
-Khi phương thức rand() trả về 0 hoặc 1, chúng ta dùng kết quả đó để lấy giá trị tương ứng trong mảng bool, tức là nếu 0 thì biến male có giá tri là true, nếu 1 thì male là false.
+Khi phương thức **rand()** trả về 0 hoặc 1, chúng ta dùng kết quả đó để lấy giá trị tương ứng trong mảng bool, tức là nếu 0 thì biến male có giá tri là **true**, nếu 1 thì male là **false**.
 ```
 if male
     puts "We will use name John"
@@ -97,7 +105,7 @@ else
     puts "We will use name Victoria"
 end
 ```
-Tùy vào giá trị của male mà chúng ta in ra câu lệnh tương ứng với từ khóa if..else..end.
+Tùy vào giá trị của male mà chúng ta in ra câu lệnh tương ứng với từ khóa **if..else..end**.
 Output
 ```
 We will use name Victoria
@@ -105,9 +113,9 @@ We will use name Victoria
 
 # Kiểu Symbol
 
-Nếu bạn biết kiểu enum trong C++, Java… thì trong Ruby chúng được gọi là Symbol. Symbol được dùng để biểu diễn các đối tượng khác. Dùng symbol sẽ tiết kiệm được nhiều tài nguyên hơn so với dùng biến thông thường. Tất cả các biến symbol đều là một đối tượng từ lớp Symbol. Để định nghĩa một symbol thì chúng ta thêm dấu hai chấm ":" vào trước giá trị, ví dụ :name. Hầu hết các đối tượng trong Ruby đều có phương thức to_sym để chuyển một đối tượng thành một symbol.
+Nếu bạn biết kiểu **enum** trong C++, Java… thì trong Ruby chúng được gọi là **Symbol**. Symbol được dùng để biểu diễn các đối tượng khác. **Dùng symbol sẽ tiết kiệm được nhiều tài nguyên hơn so với dùng biến thông thường**. Tất cả các biến symbol đều là một đối tượng từ lớp Symbol. Để định nghĩa một symbol thì chúng ta thêm dấu hai chấm **":"** vào trước giá trị, ví dụ :name. Hầu hết các đối tượng trong Ruby đều có phương thức **to_sym** để chuyển một đối tượng thành một symbol.
 
-Symbol không thể thay đổi được giá trị. Thường thì symbol được dùng để làm khóa trong bảng băm.
+**Symbol không thể thay đổi được giá trị. Thường thì symbol được dùng để làm khóa trong bảng băm**.
 symbols.rb
 ```
 p :name
@@ -313,7 +321,7 @@ Chúng ta in tên lớp biểu diễn số chấm động. Ngoài ra nếu chún
 p 5.fdiv 2
 p 12.to_f
 ```
-Chúng ta tạo các số chấm động bằng phương thức fdiv và phương thức to_f. Phương thức fdiv chẳng qua là thực hiện phép chia nhưng trả về số chấm động mặc dù phép chia đó thực hiện trên 2 số nguyên, còn phương thức to_f sẽ chuyển đổi một số bất kì thành số thực.
+Chúng ta tạo các số chấm động bằng phương thức **fdiv** và phương thức **to_f**. Phương thức **fdiv** chẳng qua là thực hiện phép chia nhưng trả về số chấm động mặc dù phép chia đó thực hiện trên 2 số nguyên, còn phương thức **to_f** sẽ chuyển đổi một số bất kì thành số thực.
 Output
 ```
 15.4
@@ -325,7 +333,7 @@ Float
 2.5
 12.0
 ```
-Mặc định thì phần thập phân chỉ hiển thị tối đa 16 chữ số nhưng chúng ta có thể định dạng kiểu hiển thị theo ý chúng ta với phương thức sprintf hoặc printf.
+Mặc định thì phần thập phân chỉ hiển thị tối đa 16 chữ số nhưng chúng ta có thể định dạng kiểu hiển thị theo ý chúng ta với phương thức **sprintf** hoặc **printf**.
 format_float.rb
 ```
 p 1/3.0
@@ -345,7 +353,7 @@ Phương thức p sẽ in các số chấm động một cách mặc định.
 puts sprintf "%.4f" % (1/3.0)
 puts sprintf "%.7f" % (5/3.0)
 ```
-Chúng ta định dạng lại số chấm động bằng phương thức sprintf, phương thức này nhận vào một chuỗi định dạng, chuỗi này có dạng %... ở đây %.4f tức là hiển thị 4 chữ số phía sau dấu chấm, tương tự %.7f là hiển thị 7 chữ số, kí tự f cho Ruby biết kiểu định dạng này được sử dụng với số chấm động.
+Chúng ta định dạng lại số chấm động bằng phương thức **sprintf**, phương thức này nhận vào một chuỗi định dạng, chuỗi này có dạng %... ở đây %.4f tức là hiển thị 4 chữ số phía sau dấu chấm, tương tự %.7f là hiển thị 7 chữ số, kí tự f cho Ruby biết kiểu định dạng này được sử dụng với số chấm động.
 Output
 ```
 0.3333333333333333
