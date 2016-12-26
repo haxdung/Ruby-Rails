@@ -42,7 +42,7 @@ Dòng code trên sẽ đọc một đoạn text từ người dùng và lưu và
 puts "Hello #{name}"
 ```
 
-#{name} sẽ thay bằng giá trị của biến name, bằng cách đó chúng ta có thể đưa giá trị của biến vào trong chuỗi.
+**#{name}** sẽ thay bằng giá trị của biến name, bằng cách đó chúng ta có thể đưa giá trị của biến vào trong chuỗi.
 Output
 
 ```
