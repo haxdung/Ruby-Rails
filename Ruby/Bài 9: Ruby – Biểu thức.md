@@ -48,7 +48,7 @@ Output
 1
 ```
 
-Toán tử gán
+# Toán tử gán
 
 Toán tử gán sẽ gán giá trị cho biến, như chúng ta đã biết biến có nhiệm vụ lưu trữ giá trị. Toán hạng nằm phía bên phải sẽ được gán cho toán hạng nằm bên trái.
 ```
@@ -118,7 +118,7 @@ Output
 ```
 Jane is 17 years old
 ```
-Toán tử toán học
+# Toán tử toán học
 
 Bao gồm các toán tử sau đây.
 ```
@@ -215,7 +215,7 @@ Output
 2.5
 ```
 
-Toán tử logic
+# Toán tử logic
 
 Ruby có các toán tử logic sau:
 ```
@@ -382,7 +382,7 @@ puts 1 << 6 # 64 puts 6 >> 1  # 3
 puts 1 >> 6  # 0
 ```
 
-Toán tử hợp
+# Toán tử hợp
 
 Toán tử hợp ở đây nghĩa là gộp các toán tử với toán tử gán = để thực hiện tính toán và gán giá trị luôn.
 
@@ -443,7 +443,7 @@ Output
 ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"]
 ```
 
-Toán tử điều kiện
+# Toán tử điều kiện
 
 Toán tử này trả về một trong 2 biểu thức tùy thuộc vào giá trị biểu thức điều kiện mà chúng ta đề ra. Cú pháp:
 ```	
