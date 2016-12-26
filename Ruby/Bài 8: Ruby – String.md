@@ -441,4 +441,4 @@ Output
 1234
 12345
 ```
-Ngoài ra còn có các cờ khác như dấu ** "*", +, #, b, d, u, x…**.
+Ngoài ra còn có các cờ khác như dấu **\*, +, #, b, d, u, x…**.
