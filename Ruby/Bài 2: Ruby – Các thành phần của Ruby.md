@@ -1,10 +1,10 @@
-#Ruby – Các thành phần của Ruby
+# Ruby – Các thành phần của Ruby
 
 Một ngôn ngữ lập trình bao gồm nhiều thành phần cấu thành nên nó. Trong phần này chúng ta sẽ tìm hiểu các thành phần cấu tạo nên ngôn ngữ lập trình Ruby.
 
-#Bình luận – Comment
+# Bình luận – Comment
 
-Các đoạn comment được dùng để ghi chú mã nguồn. Cú pháp comment của Ruby có 2 loại là comment cho một dòng và comment cho nhiều dòng. Comment trên một dòng được bắt đầu bởi dấu #, comment trên nhiều dòng được bọc bởi cặp kí hiệu =begin và =end.
+Các đoạn comment được dùng để ghi chú mã nguồn. Cú pháp comment của Ruby có 2 loại là comment cho một dòng và comment cho nhiều dòng. Comment trên một dòng được bắt đầu bởi dấu #, comment trên nhiều dòng được bọc bởi cặp kí hiệu **=begin** và **=end**.
 comments.rb
 
 ```
@@ -23,8 +23,9 @@ Các dòng comment sẽ không được dịch bởi trình thông dịch.
   comments.rb
   Pho Code
 =end
-Biến – Variable
 ```
+
+# Biến – Variable
 
 Biến chỉ là một cái tên, đại diện cho một thứ gì đó có công việc là lưu trữ một giá trị nào đó. Trong lập trình thì chúng ta nói là “gán giá trị cho biến”, giá trị ở đây có thể là một đoạn text, một con số hay một đối tượng nào đó.
 
@@ -72,7 +73,7 @@ C:\Project\Ruby>irb constants.rb
 constants.rb:4: warning: already initialized constant Name
 ```
 
-#Giá trị – Literal
+# Giá trị – Literal
 
 Giá trị là các kí tự mô tả một giá trị của một kiểu dữ liệu nào đó, có thể là một con số, một đoạn text… dùng để gán cho các biến. Chúng ta sẽ tìm hiểu về kiểu dữ liệu sau.
 
@@ -117,9 +118,9 @@ He weighs 68.5 kilograms
 He was born in 1986-11-12
 ```
 
-#Khối lệnh – Block
+# Khối lệnh – Block
 
-Khối lệnh là cách để chúng ta gộp nhóm các lênh lại với nhau, bạn sẽ hiểu về khối lệnh nhiều hơn khi thực hành. Khối lệnh trong Ruby được bắt đầu và kết thúc bởi cặp dấu {} hoặc cặp từ khóa do-end.
+Khối lệnh là cách để chúng ta gộp nhóm các lênh lại với nhau, bạn sẽ hiểu về khối lệnh nhiều hơn khi thực hành. Khối lệnh trong Ruby được bắt đầu và kết thúc bởi cặp dấu **{}** hoặc cặp từ khóa **do-end**.
 
 ```
 puts [2, -1, -4, 0].delete_if { |x| x < 0 }
