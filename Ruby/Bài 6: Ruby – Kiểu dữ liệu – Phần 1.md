@@ -4,14 +4,12 @@ Trong phần này chúng ta sẽ tìm hiểu về các kiểu dữ liệu.
 Tất cả các chương trình máy tính trên thế giới đều sử dụng dữ liệu, từ trình soạn thảo văn bản, máy tính, game… dữ liệu cũng được chia làm nhiều loại khác nhau chẳng hạn như số, kí tự, hình ảnh, âm thanh… Kiểu dữ liệu là một tập các giá trị và các thao tác có thể có trên các giá trị đó.
 
 Tất cả các kiểu dữ liệu trong Ruby đều là lớp. Ruby hỗ trợ một số kiểu dữ liệu cơ bản sau đây:
-```
-    Boolean – kiểu luận lý
-    Symbol
-    Number – số
-    String – chuỗi kí tự
-    Array – mảng
-    Hashe – bảng băm
-```
+    **Boolean – kiểu luận lý**
+    **Symbol**
+    **Number – số**
+    **String – chuỗi kí tự**
+    **Array – mảng**
+    **Hashe – bảng băm**
 Ví dụ:
 types.rb
 ```
