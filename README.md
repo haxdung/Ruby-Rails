@@ -5,15 +5,15 @@ Chào mừng bạn đến với series lập trình Ruby. Series này sẽ cung 
 Series này lược dịch và tham khảo từ cuốn Agile web development with Rails 4.
 
 # Mục lục
-Ruby – Giới thiệu về ngôn ngữ Ruby 
-Ruby – Các thành phần của Ruby 
-Ruby – Cơ bản 
-Ruby – Biến 
-Ruby – Đối tượng 
-Ruby – Kiểu dữ liệu – Phần 1 
-Ruby – Kiểu dữ liệu – Phần 2 
+Ruby – Giới thiệu về ngôn ngữ Ruby
+Ruby – Các thành phần của Ruby
+Ruby – Cơ bản
+Ruby – Biến
+Ruby – Đối tượng
+Ruby – Kiểu dữ liệu – Phần 1
+Ruby – Kiểu dữ liệu – Phần 2
 Ruby – String 
-Ruby – Biểu thức 
+Ruby – Biểu thức
 Ruby – Luồng điều khiển 
 Ruby – Mảng 
 Ruby – Bảng băm 
