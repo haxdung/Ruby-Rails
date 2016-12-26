@@ -94,6 +94,9 @@ Chúng ta in toàn bộ tham số được đưa vào chương trình.
 
 ```
 C:\User\xRuby>ruby args.rb 1 2 3
+1
+2
+3
 ```
 
 Chúng ta truyền tham số vào bằng cách gõ các giá trị vào sau tên file script. Trong đoạn code trên chúng ta truyền vào 3 con số.
