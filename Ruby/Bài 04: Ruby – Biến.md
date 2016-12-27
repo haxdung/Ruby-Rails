@@ -44,7 +44,7 @@ Khi đặt tên biến chúng ta nên đặt tên sao cho dễ nhớ và dễ s�
 
 # Sigil
 
-Biến trong Ruby có thể bắt đầu bằng một số kí tự đặc biệt và được gọi là sigil, các kí tự sigil dùng để chỉ ra phạm vi hoạt động của biến.
+Biến trong Ruby có thể bắt đầu bằng một số kí tự đặc biệt và được gọi là **sigil**, các kí tự sigil dùng để chỉ ra **phạm vi hoạt động của biến**.
 sigils.rb
 ```
 tree_name = "pine"
@@ -65,35 +65,35 @@ Biến không có kí tự đặc biệt nào được gọi là biến cục b�
 ```
 $car_name = "Peugeot"
 ```
-Kí tự $ cho biết biến đó là biến toàn cục, biến toàn cục có hiệu lực trong toàn bộ code Ruby.
+Kí tự **$** cho biết biến đó là biến toàn cục, biến toàn cục có hiệu lực trong toàn bộ code Ruby.
 ```
 @sea_name = "Black sea"
 ```
-Kí tự @ cho biết biến đó là biến instance, biến này chỉ có hiệu lực trong một đối tượng.
+Kí tự **@** cho biết biến đó là biến **instance**, biến này chỉ có hiệu lực trong một đối tượng.
 ```
 @@species = "Cat"
 ```
-Cuối cùng là kí tự @@ tức biến class, tất cả các đối tượng của một class đều có thể truy xuất biến này.
+Cuối cùng là kí tự **@@** tức biến **class**, tất cả các đối tượng của một class đều có thể truy xuất biến này.
 
 Chúng ta sẽ tìm hiểu thêm về các loại biến này ở dưới và trong các bài sau.
 ```
 p local_variables
 ```
-Biến local_variables là một mảng lưu trữ toàn bộ các biến cục bộ hiện có.
+Biến **local_variables** là một mảng lưu trữ toàn bộ các biến cục bộ hiện có.
 ```
 p global_variables.include? :$car_name
 ```
-Tương tự, chúng ta có biến global_variables lưu toàn bộ các biến toàn cục, nhưng ở đây chúng ta không cho in ra toàn bộ vì số lượng biến toàn cục có sẵn rất nhiều, thay vào đó chúng ta dùng phương thức **include?** để kiểm tra xem biến $car_name của chúng ta có nằm trong danh sách đó hay không.
+Tương tự, chúng ta có biến **global_variables** lưu toàn bộ các biến toàn cục, nhưng ở đây chúng ta không cho in ra toàn bộ vì số lượng biến toàn cục có sẵn rất nhiều, thay vào đó chúng ta dùng phương thức **include?** để kiểm tra xem biến $car_name của chúng ta có nằm trong danh sách đó hay không.
 ```
 p self.instance_variables
 ```
-Ở trên chúng ta tham chiếu đến biến instance_variables, biến này lưu trữ toàn bộ biến instance trong đối tượng hiện tại, ở đây là những biến instance được khai báo trong chương trình – tức là **@sea_name**.
+Ở trên chúng ta tham chiếu đến biến **instance_variables**, biến này lưu trữ toàn bộ biến **instance** trong đối tượng hiện tại, ở đây là những biến **instance** được khai báo trong chương trình – tức là **@sea_name**.
 
-Ngoài ra ở đây chúng ta còn dùng thêm biến self nữa, biến self tham chiếu đến đối tượng hiện tại đang được sử dụng, ở đây là chương trình chính, nếu bạn đã từng làm việc với con trỏ this trong C++, Java… thì self cũng giống như con trỏ this vậy. Thực ra ở đây bạn cũng không cần dùng đến self vì chúng ta đang gọi hàm ngay trong chương trình chính chứ không phải bên trong một phương thức hay lớp nào đó.
+Ngoài ra ở đây chúng ta còn dùng thêm biến **self** nữa, biến **self** tham chiếu đến đối tượng hiện tại đang được sử dụng, ở đây là chương trình chính, nếu bạn đã từng làm việc với con trỏ this trong C++, Java… thì **self** cũng giống như con trỏ **this** vậy. Thực ra ở đây bạn cũng không cần dùng đến **self** vì chúng ta đang gọi hàm ngay trong chương trình chính chứ không phải bên trong một phương thức hay lớp nào đó.
 ```
 p Object.class_variables
 ```
-Cuối cùng là biến class_variables,  biến này lưu trữ toàn bộ biến class có trong chương trình.
+Cuối cùng là biến **class_variables**,  biến này lưu trữ toàn bộ biến **class** có trong chương trình.
 Output
 ```
 [:tree_name]
@@ -156,7 +156,7 @@ def method1
     p x
 end
 ```
-Bên trong phươn thức method1 lại có một biến x khác nữa được gán giá trị là 10. Biến này chỉ có hiệu lực bên trong cặp từ khóa def...end.
+Bên trong phương thức method1 lại có một biến x khác nữa được gán giá trị là 10. Biến này chỉ có hiệu lực bên trong cặp từ khóa **def...end**.
 Output
 ```
 10
@@ -172,7 +172,7 @@ end
  
 puts rectangle_area 5, 6
 ```
-Ở trên chúng ta có phương thức rectangle_area nhận vào 2 tham số a và b. Phương thức này tính và trả về diện tích hình chữ nhật.
+Ở trên chúng ta có phương thức **rectangle_area** nhận vào 2 tham số a và b. Phương thức này tính và trả về diện tích hình chữ nhật.
 ```
 puts rectangle_area 5, 6
 ```
@@ -305,13 +305,14 @@ p $LOAD_PATH
 p $:
 ```
 Ở trên chúng ta dùng 2 biến $LOAD_PATH và $:, đây đều là các biến lưu trữ thông tin về các đường dẫn thư mục có trong biến môi trường Path của Windows.
-Biến instance và biến class
 
-Ở đây chúng ta sẽ tìm hiểu sơ qua về biến instance và biến class. Chúng ta sẽ tìm hiểu thêm trong bài hướng đối tượng.
+# Biến instance và biến class
 
-Biến instance là biến nằm trong một đối tượng cụ thể. Mỗi đối tượng có những biến instance riêng của chúng, biến instance có tên bắt đầu bằng kí tự @.
+Ở đây chúng ta sẽ tìm hiểu sơ qua về biến **instance** và biến **class**. Chúng ta sẽ tìm hiểu thêm trong bài hướng đối tượng.
 
-Biến class là biến nằm trong một lớp. Những đối tượng được tạo ra từ lớp đó sẽ dùng chung biến class, biến class có tên bắt đầu bằng kí tự @@.
+Biến **instance** là biến nằm trong một đối tượng cụ thể. Mỗi đối tượng có những biến **instance** riêng của chúng, biến **instance** có tên bắt đầu bằng kí tự **@**.
+
+Biến **class** là biến nằm trong một lớp. Những đối tượng được tạo ra từ lớp đó sẽ dùng chung biến **class**, biến **class** có tên bắt đầu bằng kí tự **@@**.
 instance_class.rb
 ```
 class Being
@@ -341,7 +342,7 @@ p b1.does_exist?
 p b2.does_exist?
 p b3.does_exist?
 ```
-Trong đoạn code trên chúng ta định nghĩa lớp Being. Lớp này có một biến instance và một biến class.
+Trong đoạn code trên chúng ta định nghĩa lớp Being. Lớp này có một biến **instance** và một biến **class**.
 ```
 class Being
      
@@ -353,19 +354,19 @@ def initialize nm
     @name = nm
 end
 ```
-Phương thức initialize là phương thức khởi tạo. Phương thức này tự động được gọi khi chúng ta khai báo đối tượng. Mỗi đối tượng thuộc lớp Being có biến instance **@name** khác nhau.
+Phương thức **initialize** là phương thức khởi tạo. Phương thức này tự động được gọi khi chúng ta khai báo đối tượng. Mỗi đối tượng thuộc lớp Being có biến instance **@name** khác nhau.
 ```
 def to_s
     "This is #{@name}"
 end      
 ```
-Phương thức **to_s** tự động được gọi khi dùng với hàm như p hay puts. Ở đây phương thức này trả về một chuỗi.
+Phương thức **to_s** tự động được gọi khi dùng với hàm như **p** hay **puts**. Ở đây phương thức này trả về một chuỗi.
 ```
 def does_exist?
     @@is
 end
 ```
-Phương thức **does_exist?** trả về biến class của lớp đó.
+Phương thức **does_exist?** trả về biến **class** của lớp đó.
 ```
 b1 = Being.new "Being 1"
 b2 = Being.new "Being 2"
@@ -375,7 +376,7 @@ Sau khi đã định nghĩa lớp, chúng ta khai báo 3 đối tượng thuộc
 ```
 puts b1, b2, b3
 ```
-Phương thức puts sẽ tự động gọi đến phương thức **to_s** tương ứng với từng đối tượng.
+Phương thức **puts** sẽ tự động gọi đến phương thức **to_s** tương ứng với từng đối tượng.
 ```
 p b1.does_exist?
 p b2.does_exist?
