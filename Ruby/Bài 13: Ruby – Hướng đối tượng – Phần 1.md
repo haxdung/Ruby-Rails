@@ -13,7 +13,7 @@ OOP có các khái niệm cơ bản sau đây:
     Đóng gói (Encapsulation)
     Thừa kế (Inheritance)
 ```
-Khái niệm đối tượng
+# Khái niệm đối tượng
 
 Đây là các thành phần cấu tạo nên một chương trình hướng đối tượng. Một đối tượng trong OOP chứa 2 thành phần là thuộc tính và phương thức, trong đó thuộc tính đơn giản chỉ là các biến chứa dữ liệu, phương thức chỉ là các hàm/thủ tục. Các đối tượng sẽ giao tiếp với nhau thông qua phương thức của chúng. Mỗi đối tượng có thể nhận/gửi thông điệp cho nhau và xử lý dữ liệu của chúng.
 
@@ -37,23 +37,23 @@ class Being
    
 end
 ```
-Để định nghĩa lớp thì chúng ta dùng cặp từ khóa class...end với tên lớp mà chúng ta muốn đặt sau từ khóa class. Hiện tại lớp này là lớp rỗng, không có gì cả.
+Để định nghĩa lớp thì chúng ta dùng cặp từ khóa **class...end** với tên lớp mà chúng ta muốn đặt sau từ khóa **class**. Hiện tại lớp này là lớp rỗng, không có gì cả.
 ```
 b = Being.new
 ```
-Để tạo một đối tượng thuộc lớp Being thì chúng ta ghi tên lớp rồi dùng phương thức new. Phương thức này sẽ trả về địa chỉ tham chiếu đến đối tượng vừa tạo, ở trên chúng ta lưu lại đối tượng này vào biến b.
+Để tạo một đối tượng thuộc lớp Being thì chúng ta ghi tên lớp rồi dùng phương thức **new**. Phương thức này sẽ trả về địa chỉ tham chiếu đến đối tượng vừa tạo, ở trên chúng ta lưu lại đối tượng này vào biến b.
 ```
 puts b
 ```
-Khi chúng ta gọi phương thức puts lên một đối tượng, phương thức này sẽ gọi phương thức to_s có trong mỗi đối tượng. Trong trường hợp của chúng ta thì do chưa định nghĩa phương thức to_s nên phương thức puts sẽ trả về địa chỉ tham chiếu đến đối tượng.
+Khi chúng ta gọi phương thức **puts** lên một đối tượng, phương thức này sẽ gọi phương thức **to_s** có trong mỗi đối tượng. Trong trường hợp của chúng ta thì do chưa định nghĩa phương thức **to_s** nên phương thức **puts** sẽ trả về địa chỉ tham chiếu đến đối tượng.
 Output
 ```
 #<Being:0x9f3c290>
 ```
 
-Phương thức khởi tạo
+# Phương thức khởi tạo
 
-Phương thức khởi tạo là một phương thức đặc biệt, phương thức này từ động được gọi khi chúng ta tạo một đối tượng. Phương thức khởi tạo không trả về một giá trị nào cả. Mục đích chính của phương thức khởi tạo chỉ là thiết lập trạng thái cho đối tượng. Tất cả các phương thức khởi tạo trong Ruby đều có tên là initialize.
+Phương thức khởi tạo là một phương thức đặc biệt, phương thức này từ động được gọi khi chúng ta tạo một đối tượng. Phương thức khởi tạo không trả về một giá trị nào cả. Mục đích chính của phương thức khởi tạo chỉ là thiết lập trạng thái cho đối tượng. Tất cả các phương thức khởi tạo trong Ruby đều có tên là **initialize**.
 
 Ví dụ 1:
 constructor1.rb
@@ -68,9 +68,9 @@ end
  
 Being.new
 ```
-Trong ví dụ trên chúng ta định nghĩa phương thức initialize. Trong phương thức này chúng ta in một chuỗi string ra màn hình. Khi chúng ta gọi phương thức new, phương thức này sẽ tự động gọi phương thức initialize.
+Trong ví dụ trên chúng ta định nghĩa phương thức **initialize**. Trong phương thức này chúng ta in một chuỗi string ra màn hình. Khi chúng ta gọi phương thức **new**, phương thức này sẽ tự động gọi phương thức **initialize**.
 
-Để định nghĩa một phương thức thì chúng ta dùng cặp từ khóa def...end với tên phương thức nằm phía sau từ khóa def.
+Để định nghĩa một phương thức thì chúng ta dùng cặp từ khóa **def...end** với tên phương thức nằm phía sau từ khóa **def**.
 Output
 ```
 Being is created
@@ -96,7 +96,7 @@ p2 = Person.new "Beky"
 puts p1.get_name
 puts p2.get_name
 ```
-Thuộc tính của một đối tượng là các biến lưu trữ giá trị của đối tượng đó. Các biến này còn được gọi là biến instance. Mỗi đối tượng đều có thuộc tính của riêng nó, tức là các đối tượng thuộc cùng một lớp thì có các biến instance khác nhau.
+Thuộc tính của một đối tượng là các biến lưu trữ giá trị của đối tượng đó. Các biến này còn được gọi là biến **instance**. Mỗi đối tượng đều có thuộc tính của riêng nó, tức là các đối tượng thuộc cùng một lớp thì có các biến **instance** khác nhau.
 ```
 class Person
  
@@ -104,25 +104,25 @@ class Person
         @name = name
     end
 ```
-Trong đoạn code trên, hàm khởi tạo initialize nhận vào một biến tham số có tên là name, chúng ta gán giá trị của tham số đó vào biến instance @name.
+Trong đoạn code trên, hàm khởi tạo **initialize** nhận vào một biến tham số có tên là name, chúng ta gán giá trị của tham số đó vào biến **instance @name**.
 ```
 def get_name
     @name
 end
 ```
-Chúng ta định nghĩa phương thức get_name, phương thức này trả về giá trị của biến @name. Trong Ruby các biến instance chỉ có thể truy xuất trong các phương thức.
+Chúng ta định nghĩa phương thức **get_name**, phương thức này trả về giá trị của biến **@name**. Trong Ruby các biến **instance** chỉ có thể truy xuất trong các phương thức.
 ```
 p1 = Person.new "Jane"
 p2 = Person.new "Beky"
 ```
-Để truyền tham số thì chúng ta ghi phía sau tên phương thức khi gọi. Trong đoạn code trên các chuỗi “Jane”, “Beky” sẽ được truyền vào hàm initialize.
+Để truyền tham số thì chúng ta ghi phía sau tên phương thức khi gọi. Trong đoạn code trên các chuỗi “Jane”, “Beky” sẽ được truyền vào hàm **initialize**.
 Output
 ```
 Jane
 Beky
 ```
 
-Phương thức thành phần
+# Phương thức thành phần
 
 Phương thức thành phần (hay gọi ngắn gọn là phương thức) là các hàm được định nghĩa bên trong một lớp, mục đích của phương thức là thực hiện một công việc nào đó. Thường thì phương thức sẽ làm việc với các thuộc tính của đối tượng. Phương thức rất quan trọng với tính năng đóng gói trong lập trình hướng đối tượng, đóng gói tức là chúng ta không quan tâm phương thức làm những gì mà chỉ quan tâm đến kết quả cuối cùng của phương thức mà thôi.
 
@@ -154,7 +154,7 @@ Cách đầu tiên và cũng là phổ biến nhất là ghi tên đối tượn
 ```
 puts per.send :get_name
 ```
-Cách thứ hai là gọi phương thức send, theo sau là tên phương thức nhưng viết dưới dạng một Symbol, tức là thêm dấu 2 chấm ":" vào trước tên phương thức.
+Cách thứ hai là gọi phương thức **send**, theo sau là tên phương thức nhưng viết dưới dạng một **Symbol**, tức là thêm dấu 2 chấm **":"** vào trước tên phương thức.
 
 Ví dụ 2:
 method2.rb
@@ -186,13 +186,13 @@ Trong đoạn code trên chúng ta định nghĩa lớp Circle có 2 phương th
 ```
 @@PI = 3.141592
 ```
-Trong lớp Circle chúng ta định nghĩa một biến class là @@PI, biến class là biến dùng chung cho tất cả các đối tượng.
+Trong lớp Circle chúng ta định nghĩa một biến **class** là **@@PI**, biến **class** là biến dùng chung cho tất cả các đối tượng.
 ```
 def initialize
     @radius = 0
 end
 ```
-Chúng ta định nghĩa một biến instance là @radius.
+Chúng ta định nghĩa một biến **instance** là @radius.
 ```
 def set_radius radius
     @radius = radius
@@ -210,17 +210,17 @@ c = Circle.new
 c.set_radius 5
 puts c.area
 ```
-Nếu như trong các ngôn ngữ khác, chúng ta có từ khóa return để trả về một giá trị của một phương thức thì trong Ruby giá trị này sẽ tự động được trả về ngầm bằng giá trị của câu lệnh cuối cùng được thực hiện trong phương thức. Trong đoạn code trên, phương thức puts c.area sẽ in ra giá trị được trả về là diện tích được tính bên trong phương thức area.
+Nếu như trong các ngôn ngữ khác, chúng ta có từ khóa **return** để trả về một giá trị của một phương thức thì trong Ruby giá trị này sẽ tự động được trả về ngầm bằng giá trị của câu lệnh cuối cùng được thực hiện trong phương thức. Trong đoạn code trên, phương thức puts c.area sẽ in ra giá trị được trả về là diện tích được tính bên trong phương thức area.
 Output
 ```
 78.5398
 ```
 
-Quyền truy cập
+# Quyền truy cập
 
-Quyền truy cập tức là phạm vi truy xuất các thuộc tính và phương thức của mỗi đối tượng. Ruby có 3 loại quyền truy cập là public, protected và private. Trong Ruby, tất cả các thuộc tính đều có quyền truy cập là private và không thể thay đổi được, còn các phương thức thì mặc định có quyền truy cập là public nhưng có thể thay đổi được.
+Quyền truy cập tức là phạm vi truy xuất các thuộc tính và phương thức của mỗi đối tượng. Ruby có 3 loại quyền truy cập là **public**, **protected** và **private**. Trong Ruby, tất cả các thuộc tính đều có quyền truy cập là **private** và không thể thay đổi được, còn các phương thức thì mặc định có quyền truy cập là **public** nhưng có thể thay đổi được.
 
-Quyền truy cập loại public cho phép chúng ta truy cập thành phần của đối tượng ở bên trong lẫn bên ngoài lớp. Quyền protected và private giống nhau ở chỗ đều không cho phép truy cập thành phần của đối tượng ở bên ngoài lớp, khác nhau ở chỗ private không gọi được với từ khóa self, còn protected thì được.
+Quyền truy cập loại **public** cho phép chúng ta truy cập thành phần của đối tượng ở bên trong lẫn bên ngoài lớp. Quyền **protected** và **private** giống nhau ở chỗ đều không cho phép truy cập thành phần của đối tượng ở bên ngoài lớp, khác nhau ở chỗ **private** không gọi được với từ khóa **self**, còn **protected** thì được.
 
 Quyền truy cập đảm bảo an toàn cho dữ liệu không bị thay đổi cho dù là cố ý hay vô ý.
 
@@ -251,13 +251,13 @@ s.method1
 s.method2
 s.method3
 ```
-Trong ví dụ này chúng ta sử dụng quyền truy cập public.
+Trong ví dụ này chúng ta sử dụng quyền truy cập **public**.
 ```
 def method1
     puts "public method1 called"
 end
 ```
-Phương thức method1 có quyền truy cập mặc định là public.
+Phương thức method1 có quyền truy cập mặc định là **public**.
 ```
 public
  
@@ -267,14 +267,14 @@ public
  
   ...
 ```
-Ngoài ra chúng ta có thể chỉ rõ cho Ruby biết là phương thức nào có quyền public bằng cách ghi từ khóa public lên trước phần định nghĩa phương thức đó, trong trường hợp này cả method2 và method3 đều có quyền truy cập là public.
+Ngoài ra chúng ta có thể chỉ rõ cho Ruby biết là phương thức nào có quyền **public** bằng cách ghi từ khóa **public** lên trước phần định nghĩa phương thức đó, trong trường hợp này cả method2 và method3 đều có quyền truy cập là **public**.
 ```
 s = Some.new
 s.method1
 s.method2
 s.method3
 ```
-Chỉ có các phương thức public mới có thể truy cập ở bên ngoài phần định nghĩa lớp.
+Chỉ có các phương thức **public** mới có thể truy cập ở bên ngoài phần định nghĩa lớp.
 Output
 ```
 public method1 called
@@ -305,7 +305,7 @@ end
 s = Some.new
 # s.method1
 ```
-Để chỉ định phương thức nào là private thì chúng ta đặt từ khóa private lên trước định nghĩa phương thức đó. Các phương thức private chỉ có thể gọi được trong phần định nghĩa lớp nhưng không được sử dụng từ khóa self.
+Để chỉ định phương thức nào là **private** thì chúng ta đặt từ khóa **private** lên trước định nghĩa phương thức đó. Các phương thức **private** chỉ có thể gọi được trong phần định nghĩa lớp nhưng không được sử dụng từ khóa **self**.
 Output
 ```
 private method called
@@ -332,7 +332,7 @@ end
 s = Some.new
 # s.method1
 ```
-Tương tự như private, để chỉ định phương thức protected thì chúng ta đặt từ khóa protected lên trước định nghĩa phương thức. Phương thức protected khác private ở chỗ là chúng có thể truy cập với từ khóa self, giống private ở chỗ là không thể truy cập được ở bên ngoài phần định nghĩa lớp.
+Tương tự như **private**, để chỉ định phương thức **protected** thì chúng ta đặt từ khóa **protected** lên trước định nghĩa phương thức. Phương thức **protected** khác **private** ở chỗ là chúng có thể truy cập với từ khóa **self**, giống **private** ở chỗ là không thể truy cập được ở bên ngoài phần định nghĩa lớp.
 Thừa kế
 
 Thừa kế là tính năng cho phép định nghĩa các lớp dựa trên các lớp đã có. Lớp thừa kế từ một lớp khác được gọi là lớp dẫn xuất, lớp được lớp khác thừa kế lại được gọi là lớp cơ sở. Lớp dẫn xuất thừa hưởng các thành phần của lớp cơ sở và có thể có thêm các thành phần của riêng chúng. Tính năng thừa kế cho phép lập trình viên giảm thiểu sự phức tạp của chương trình.
@@ -362,14 +362,14 @@ Trong ví dụ trên chúng ta có 2 lớp là lớp Being và lớp Human, tron
 ```
 class Human < Being
 ```
-Để một lớp kế thừa từ một lớp khác thì chúng ta ghi dấu "<" vào sau tên lớp và ghi tên lớp dẫn xuất phía sau.
+Để một lớp kế thừa từ một lớp khác thì chúng ta ghi dấu **"<"** vào sau tên lớp và ghi tên lớp dẫn xuất phía sau.
 ```
 def initialize
     super
     puts "Human class created"
 end
 ```
-Phương thức super có tác dụng gọi đến hàm khởi tạo của lớp cha.
+Phương thức **super** có tác dụng gọi đến hàm khởi tạo của lớp cha.
 Output
 ```
 Being class created
@@ -378,7 +378,7 @@ Human class created
 ```
 Ví dụ 2:
 
-Một lớp có thể có nhiều lớp cơ sở. Mỗi lớp trong Ruby mặc định có phương thức ancestors, phương thức này trả về danh sách các lớp cơ sở của lớp đó. Và mặc định tất cả các lớp trong Ruby đều kế thừa từ một lớp gốc có tên là Object và BasicObject trong module Kernel.
+Một lớp có thể có nhiều lớp cơ sở. Mỗi lớp trong Ruby mặc định có phương thức **ancestors**, phương thức này trả về danh sách các lớp cơ sở của lớp đó. Và mặc định tất cả các lớp trong Ruby đều kế thừa từ một lớp gốc có tên là **Object** và **BasicObject** trong **module Kernel**.
 inheritance2.rb
 ```
 class Being 
@@ -400,15 +400,16 @@ Trong ví dụ này chúng ta có bốn lớp là Human kế thừa từ Mammal,
 ```
 p Human.ancestors
 ```
-Phương thức ancestors sẽ in danh sách các lớp cơ sở.
+Phương thức **ancestors** sẽ in danh sách các lớp cơ sở.
 Output
 ```
 [Human, Mammal, Living, Being, Object, Kernel, BasicObject]
 ```
-Lưu ý là tính năng thừa kế trong Ruby hơi khác so với các ngôn ngữ như C++, C#, Java… ở chỗ là trong các ngôn ngữ khác thì các thành phần public và protected đều được truyền lại từ lớp cha đến lớp con còn thành phần private thì không, nhưng trong Ruby thì cả 3 loại public, protected và private đều được truyền lại cho lớp con, tức là tính năng thừa kế trong Ruby không có liên quan gì đến quyền truy cập cả.
-Phương thức super
+Lưu ý là tính năng thừa kế trong Ruby hơi khác so với các ngôn ngữ như C++, C#, Java… ở chỗ là trong các ngôn ngữ khác thì các thành phần **public** và **protected** đều được truyền lại từ lớp cha đến lớp con còn thành phần **private** thì không, nhưng trong Ruby thì cả 3 loại **public**, **protected** và **private** đều được truyền lại cho lớp con, tức là tính năng thừa kế trong Ruby không có liên quan gì đến quyền truy cập cả.
 
-Phương thức super có tác dụng gọi đến phương thức cùng tên ở lớp cha.
+# Phương thức super
+
+Phương thức **super** có tác dụng gọi đến phương thức cùng tên ở lớp cha.
 super_method.rb
 ```
 class Base
@@ -432,7 +433,7 @@ end
 d = Derived.new
 d.show 3, 3
 ```
-Trong ví dụ trên chúng ta có lớp Base và lớp Derived, trong đó lớp Derived kế thừa từ lớp Base. Cả 2 lớp này đều có phương thức show.
+Trong ví dụ trên chúng ta có lớp **Base** và lớp **Derived**, trong đó lớp **Derived** kế thừa từ lớp **Base**. Cả 2 lớp này đều có phương thức **show**.
 ```
 def show x, y
     super
@@ -441,7 +442,7 @@ def show x, y
     super()
 end
 ```
-Việc gọi super trong phương thức show ở lớp con sẽ gọi đến phương thức show ở lớp cha. Nếu phương thức ở lớp cha có nhận tham số mà chúng ta không truyền vào phương thức super thì phương thức này sẽ tự động nhận tham số của phương thức con, tức là các tham số truyền vào phương thức con sẽ tự động truyền vào trong lời gọi phương thức super luôn. Hoặc chúng ta có thể gọi super() để không truyền vào một tham số nào cả.
+Việc gọi **super** trong phương thức **show** ở lớp con sẽ gọi đến phương thức show ở lớp cha. Nếu phương thức ở lớp cha có nhận tham số mà chúng ta không truyền vào phương thức **super** thì phương thức này sẽ tự động nhận tham số của phương thức con, tức là các tham số truyền vào phương thức con sẽ tự động truyền vào trong lời gọi phương thức **super** luôn. Hoặc chúng ta có thể gọi **super()** để không truyền vào một tham số nào cả.
 Output
 ```
 "Base class, x: 3, y: 3"
