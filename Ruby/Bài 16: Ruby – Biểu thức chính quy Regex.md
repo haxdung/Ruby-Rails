@@ -49,26 +49,26 @@ Phương thức **match** sẽ trả về một đối tượng **MatchData** n�
 Như đã mô tả trong bảng các kí tự đặc biệt ở trên, kí tự dấu chấm **“.”** sẽ tìm bất kì một kí tự nào. Ví dụ:
 dot_character.rb
 ```
-p "PhoCode".match /.Code/
+p "RubyCode".match /.Code/
 p "Code".match /.Code/
-p "MiCode".match /.Code/
-p "Phode".match /.Code/
+p "PHPCode".match /.Code/
+p "PHode".match /.Code/
 ```
 Trong đoạn code trên, chuỗi tìm kiếm là .Code, tức là khi tìm thì Ruby sẽ tìm bất kì kí tự nào theo sau bởi chuỗi “Code”. Nếu tìm thấy thì in ra chuỗi đó, không thì trả về đối tượng **nil**.
 Output
 ```
-#<MatchData "oCode">
+#<MatchData "yCode">
 nil
-#<MatchData "iCode">
+#<MatchData "PCode">
 nil
 ```
 Ví dụ 2:
 example.rb
 ```
-p "PhoCode".match /.Code/
+p "RubyCode".match /.Code/
 p "Code".match /.?Code/
-p "MiCode".match /.Code/
-p "Phode".match /.Code/
+p "PHPCode".match /.Code/
+p "PHode".match /.Code/
 ```
 Chúng ta có thể thêm dấu chấm hỏi **“?”** sau kí tự chấm **“.”** để báo cho Ruby biết rằng kí tự đó có thể có hoặc không có cũng được.
 ```
@@ -77,9 +77,9 @@ p "Code".match /.?Code/
 Trong ví dụ trước, đoạn code trên không có dấu chấm hỏi, tức là Ruby sẽ hiểu là phải tìm xem có chuỗi “Code” nào có 1 kí tự bất kì ở phía trước không, còn trong ví dụ này có dấu chấm hỏi tức là tìm xem có chuỗi “Code” nào không và có thể có hoặc không có 1 kí tự đứng trước nó.
 Output
 ```
-#<MatchData "oCode">
+#<MatchData "yCode">
 #<MatchData "Code">
-#<MatchData "iCode">
+#<MatchData "PCode">
 nil
 ```
 
@@ -286,19 +286,19 @@ Chúng ta sẽ tìm hiểu thêm qua các ví dụ ở dưới.
 Ví dụ 1:
 quantifiers1.rb
 ```
-p "PhoCode open source is the future".scan /\w{3}/
-p "PhoCode open source is the future".scan /\b\w{3}\b/
+p "PHPCode open source is the future".scan /\w{3}/
+p "PHPCode open source is the future".scan /\b\w{3}\b/
 ```
 Trong ví dụ này, **\w** là tìm một kí tự chữ cái, tức là tương đương với [a-zA-Z], thêm {3} vô nghĩa là tìm chuỗi có 3 kí tự chữ cái. Dòng tiếp theo chúng ta có thêm **\b** tức là chỉ tìm những chuỗi con có đúng 3 chữ cái.
 Output
 ```
-["Pho", "Cod", "ope", "sou", "rce", "the", "fut", "ure"]
+["PHP", "Cod", "ope", "sou", "rce", "the", "fut", "ure"]
 ["the"]
 ```
 Ví dụ 2:
 quantifiers2.rb
 ```
-p "PhoCode open source is the future".scan /\b\w{2,4}\b/
+p "RubyCode open source is the future".scan /\b\w{2,4}\b/
 ```
 Ví dụ này cũng tương đương ví dụ trên, ở đây chúng ta dùng {2, 4} tức là tìm các chuỗi chỉ chứa các kí tự chữ cái có từ 2 đến 4 kí tự.
 Output
