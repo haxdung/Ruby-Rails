@@ -21,9 +21,9 @@ Output
 5
 ```
 
-Khởi tạo mảng
+# Khởi tạo mảng
 
-Mảng là một đối tượng, do đó chúng ta có thể sử dụng phương thức new để tạo mảng.
+Mảng là một đối tượng, do đó chúng ta có thể sử dụng phương thức **new** để tạo mảng.
 
 Ví dụ 1:
 array_init1.rb
@@ -42,11 +42,11 @@ Trong đoạn code trên chúng ta tạo một mảng có 5 số nguyên.
 ```
 arr = Array.new
 ```
-Để tạo một mảng thì chúng ta dùng phương thức new của lớp Array.
+Để tạo một mảng thì chúng ta dùng phương thức **new** của lớp **Array**.
 ```
 arr.push 1
 ```
-Phương thức push sẽ thêm một phần tử vào cuối mảng.
+Phương thức **push** sẽ thêm một phần tử vào cuối mảng.
 
 Ví dụ 2:
 array_init2.rb
@@ -58,15 +58,15 @@ a4 = Array.new [11]
  
 puts [a1, a2, a3, a4].inspect
 ```
-Phương thức new có thể nhận một vài tham số khi khởi tạo.
+Phương thức **new** có thể nhận một vài tham số khi khởi tạo.
 ```
 a1 = Array.new
 ```
-Nếu chúng ta chỉ gọi phương thức new thì Ruby sẽ tạo một mảng rỗng.
+Nếu chúng ta chỉ gọi phương thức **new** thì Ruby sẽ tạo một mảng rỗng.
 ```
 a2 = Array.new 3
 ```
-Tham số đầu tiên mà phương thức này nhận là số lượng phần tử mảng, dòng code trên sẽ tạo một mảng có 3 phần tử là các đối tượng nil.
+Tham số đầu tiên mà phương thức này nhận là số lượng phần tử mảng, dòng code trên sẽ tạo một mảng có 3 phần tử là các đối tượng **nil**.
 ```
 a3 = Array.new 6, "coin"
 ```
@@ -74,11 +74,11 @@ Tham số thứ 2 là giá trị mặc định, dòng code trên sẽ tạo mộ
 ```
 a4 = Array.new [11]
 ```
-Hoặc chúng ta có thể khởi tạo các phần tử và giá trị luôn bằng cặp dấu ngoặc vuông []. Dòng code trên tạo một mảng có một phần tử là số 11.
+Hoặc chúng ta có thể khởi tạo các phần tử và giá trị luôn bằng cặp dấu ngoặc vuông **[]**. Dòng code trên tạo một mảng có một phần tử là số 11.
 ```
 puts [a1, a2, a3, a4].inspect
 ```
-Một mảng cũng có thể chứa các mảng khác, trong dòng trên chúng ta đưa 4 mảng a1, a2, a3 và a4 vào một mảng. Phương thức inspect sẽ trả về một chuỗi mô tả các phần tử của mảng nằm trong cặp dấu [].
+Một mảng cũng có thể chứa các mảng khác, trong dòng trên chúng ta đưa 4 mảng a1, a2, a3 và a4 vào một mảng. Phương thức **inspect** sẽ trả về một chuỗi mô tả các phần tử của mảng nằm trong cặp dấu **[]**.
 Output
 ```
 [[], [nil, nil, nil], ["coin", "coin", "coin", "coin", "coin", "coin"], [11]]
@@ -129,21 +129,21 @@ Phương thức length sẽ trả về 4 vì một mảng lồng trong một m�
 ```
 puts arr[0], arr[1]
 ```
-Toán tử [] sẽ lấy giá trị của các phần tử mảng tương ứng. Trong dòng code trên chúng ta in ra giá trị của phần tử thứ 0 và thứ 1.
+Toán tử **[]** sẽ lấy giá trị của các phần tử mảng tương ứng. Trong dòng code trên chúng ta in ra giá trị của phần tử thứ 0 và thứ 1.
 ```
 puts arr[3][0]
 puts arr[3][1]
 ```
-Để lấy giá trị của phần tử nằm trong mảng con bên trong thì chúng ta lại dùng thêm một toán tử [] khác nữa. Ở đây [3][0] tức là lấy phần tử đầu tiên của phần tử thứ 4 trong mảng [2, 4, 6, [11, 12]] (vì chỉ số được đánh từ 0).
+Để lấy giá trị của phần tử nằm trong mảng con bên trong thì chúng ta lại dùng thêm một toán tử **[]** khác nữa. Ở đây [3][0] tức là lấy phần tử đầu tiên của phần tử thứ 4 trong mảng [2, 4, 6, [11, 12]] (vì chỉ số được đánh từ 0).
 ```
 puts arr[3][3][0]
 puts arr[3][3][1]
 ```
-Tương tự với các phần tử mảng nằm sâu bên trong, chúng ta chỉ cần dùng toán tử [] là lấy được.
+Tương tự với các phần tử mảng nằm sâu bên trong, chúng ta chỉ cần dùng toán tử **[]** là lấy được.
 ```
 puts arr.flatten!.inspect
 ```
-Phương thức flatten! sẽ lấy các phần tử của mảng con nhập vào mảng cha và tạo thành một mảng mới.
+Phương thức **flatten!** sẽ lấy các phần tử của mảng con nhập vào mảng cha và tạo thành một mảng mới.
 Output
 ```
 4
@@ -156,7 +156,7 @@ Output
 [1, 2, 3, 2, 4, 6, 11, 12]
 ```
 
-Xuất mảng ra màn hình
+# Xuất mảng ra màn hình
 
 Có rất nhiều cách để in các phần tử mảng ra màn hình.
 print_array.rb
@@ -174,17 +174,17 @@ Trong ví dụ trên chúng ta in mảng ra bằng 3 cách.
 ```
 puts arr
 ```
-Cách đơn giản nhất là dùng phương thức puts hoặc print, 2 phương thức này sẽ in các phần tử mảng trên từng dòng.
+Cách đơn giản nhất là dùng phương thức puts hoặc **print**, 2 phương thức này sẽ in các phần tử mảng trên từng dòng.
 ```
 puts arr.inspect
 ```
-Phương thức inspect sẽ in các phần tử mảng trong cặp dấu [], mỗi phần tử ngăn cách nhau bởi dấu phẩy.
+Phương thức **inspect** sẽ in các phần tử mảng trong cặp dấu **[]**, mỗi phần tử ngăn cách nhau bởi dấu phẩy.
 ```
 arr.each do |e|
     puts e
 end
 ```
-Phương thức each sẽ duyệt qua từng phần tử trong mảng, mỗi lần duyệt sẽ thực hiện các câu lệnh phía sau từ khóa do.
+Phương thức **each** sẽ duyệt qua từng phần tử trong mảng, mỗi lần duyệt sẽ thực hiện các câu lệnh phía sau từ khóa **do**.
 Output
 ```
 1
@@ -200,7 +200,7 @@ Output
 5
 ```
 
-Tuy xuất các phần tử mảng
+# Tuy xuất các phần tử mảng
 
 Các đối tượng mảng có một số phương thức dùng để lấy các phần tử tại bất kì vị trí nào.
 
@@ -212,11 +212,11 @@ puts alpha.first
 puts alpha.last
 puts alpha.at(3)
 ```
-Trong ví dụ trên chúng ta dùng phương thức first để lấy phần tử đầu tiên, phương thức last lấy phần tử ở vị trí cuối cùng, phương thức at(i) lấy phần tử tại vị trí thứ i.
+Trong ví dụ trên chúng ta dùng phương thức **first** để lấy phần tử đầu tiên, phương thức **last** lấy phần tử ở vị trí cuối cùng, phương thức **at(i)** lấy phần tử tại vị trí thứ **i**.
 ```
 alpha = %w{a b c d e f g h}
 ```
-Ngoài ra chúng ta còn có cách tạo nhanh một mảng chứa các phần tử là chuỗi theo cú pháp %w{}, theo cú pháp này %w{a b} tương đương với ['a', 'b'].
+Ngoài ra chúng ta còn có cách tạo nhanh một mảng chứa các phần tử là chuỗi theo cú pháp **%w{}**, theo cú pháp này **%w{a b}** tương đương với **['a', 'b']**.
 Output
 ```
 a
@@ -225,7 +225,7 @@ d
 ```
 Ví dụ 2:
 
-Thông thường chúng ta sẽ dùng toán tử [] để truy xuất phần tử mảng.
+Thông thường chúng ta sẽ dùng toán tử **[]** để truy xuất phần tử mảng.
 read_array2.rb
 ```
 alpha = %w{ a b c d e f g h }
@@ -236,7 +236,7 @@ puts alpha[0, 3].inspect
 puts alpha[2..6].inspect
 puts alpha[2...6].inspect
 ```
-Trong ví dụ trên chúng ta có 5 cách sử dụng toán tử [] để truy xuất phần tử mảng.
+Trong ví dụ trên chúng ta có 5 cách sử dụng toán tử **[]** để truy xuất phần tử mảng.
 ```
 puts alpha[0]
 puts alpha[-1]
@@ -245,7 +245,7 @@ puts alpha[-1]
 ```
 puts alpha[0, 3].inspect
 ```
-Chúng ta có thể sử dụng toán tử [] theo cú pháp [i, n] và Ruby sẽ lấy n phần tử từ vị trí i. Phương thức inspect chẳng qua là để in các phần tử mảng trong cặp dấu [] trên một dòng ngăn cách bằng dấu phẩy cho dễ đọc.
+Chúng ta có thể sử dụng toán tử **[]** theo cú pháp [i, n] và Ruby sẽ lấy n phần tử từ vị trí i. Phương thức **inspect** chẳng qua là để in các phần tử mảng trong cặp dấu **[]** trên một dòng ngăn cách bằng dấu phẩy cho dễ đọc.
 ```
 puts alpha[2..6].inspect
 puts alpha[2...6].inspect
@@ -262,7 +262,7 @@ puts alpha.values_at(1, 3, 5).inspect
 puts alpha.values_at(1, 3, 5, 6, 8).inspect
 puts alpha.values_at(-1, -3).inspect
 ```
-Chúng ta có thể sử dụng phương thức values_at để lấy nhiều phần tử tại những vị trí riêng biệt. Giá trị trả về của phương thức values_at là một mảng chứa các phần tử được lấy ra..
+Chúng ta có thể sử dụng phương thức **values_at** để lấy nhiều phần tử tại những vị trí riêng biệt. Giá trị trả về của phương thức **values_at** là một mảng chứa các phần tử được lấy ra..
 ```
 puts alpha.values_at(1..5).inspect
 ```
@@ -274,7 +274,7 @@ Dòng trên lấy các phần tử ở vị trí 1, 3, và 5.
 ```
 puts alpha.values_at(-1, -3).inspect
 ```
-Chúng ta cũng có thể đưa vào các chỉ số âm như với toán tử [].
+Chúng ta cũng có thể đưa vào các chỉ số âm như với toán tử **[]**.
 Output
 ```
 ["b", "c", "d", "e", "f"]
@@ -293,7 +293,7 @@ puts alpha.slice(0, 3).inspect
 puts alpha.slice(2..6).inspect
 puts alpha.slice(2...6).inspect
 ```
-Mảng trong Ruby có phương thức slice có chức năng và cách dùng y hệt như toán tử [].
+Mảng trong Ruby có phương thức **slice** có chức năng và cách dùng y hệt như toán tử **[]**.
 Output
 ```
 a
@@ -310,7 +310,7 @@ alpha = %w{ a b c d e f g h}
 puts alpha.sample
 puts alpha.sample(3).inspect
 ```
-Phương thức sample có tác dụng lấy một hoặc một số phần tử tại vị trí bất kì.
+Phương thức **sample** có tác dụng lấy một hoặc một số phần tử tại vị trí bất kì.
 Output
 ```
 b
@@ -328,7 +328,7 @@ arr2 = [6, 7, 8, 9, 10]
 puts arr1 + arr2
 puts arr1.concat arr2
 ```
-Chúng ta có thể nối 2 mảng vào nhau bằng toán tử + hoặc dùng phương thức concat.
+Chúng ta có thể nối 2 mảng vào nhau bằng toán tử **+** hoặc dùng phương thức **concat**.
 
 Ví dụ 2:
 array_methods2.rb
@@ -351,28 +351,28 @@ Trong ví dụ trên chúng ta làm việc với một số phương thức mớ
 ```
 puts "Array size: #{alpha.length}"
 ```
-Chúng ta đã biết, phương thức length cho biết số lượng phần tử trong mảng.
+Chúng ta đã biết, phương thức **length** cho biết số lượng phần tử trong mảng.
 ```
 puts "First element: #{alpha.first}"
 puts "Last element: #{alpha.last}"
 ```
-Phương thức first và last lấy phần tử đầu tiên và phần tử cuối cùng.
+Phương thức **first** và **last** lấy phần tử đầu tiên và phần tử cuối cùng.
 ```
 puts alpha.eql? alpha.dup
 ```
-Phương thức eql! so sánh 2 mảng và trả về True nếu 2 mảng bằng nhau. Trong đoạn code trên là trả về True vì ở đây chúng ta dùng phương thức dup để tạo ra một mảng mới copy từ mảng gốc.
+Phương thức **eql!** so sánh 2 mảng và trả về **True** nếu 2 mảng bằng nhau. Trong đoạn code trên là trả về True vì ở đây chúng ta dùng phương thức dup để tạo ra một mảng mới copy từ mảng gốc.
 ```
 puts alpha.eql? alpha.dup.delete_at(0)
 ```
-Phương thức delete_at(i) sẽ xóa phần tử tại vị trí thứ i. Dòng trên sẽ trả về False vì 2 mảng không giống nhau.
+Phương thức **delete_at(i)** sẽ xóa phần tử tại vị trí thứ i. Dòng trên sẽ trả về False vì 2 mảng không giống nhau.
 ```
 alpha.clear
 ```
-Phương thức clear sẽ xóa toàn bộ mảng.
+Phương thức **clear** sẽ xóa toàn bộ mảng.
 ```
 puts alpha.empty?
 ```
-Phương thức empty? cho biết mảng có rỗng hay không.
+Phương thức **empty?** cho biết mảng có rỗng hay không.
 Output
 ```
 ["a", "b", "c", "d", "e", "f"]
@@ -397,9 +397,9 @@ alpha1 = alpha.reverse!
 puts alpha1.inspect
 puts alpha.inspect
 ```
-Khi sử dụng các phương thức mà có thay đổi giá trị phần tử mảng thì chúng ta phải thêm dấu chấm ! vào cuối tên phương thức.
+Khi sử dụng các phương thức mà có thay đổi giá trị phần tử mảng thì chúng ta phải thêm dấu chấm **!** vào cuối tên phương thức.
 
-Phương thức reverse sẽ đảo ngược các phần tử trong mảng, ví dụ phần tử đầu tiên đổi chỗ cho phần tử cuối cùng…
+Phương thức **reverse** sẽ đảo ngược các phần tử trong mảng, ví dụ phần tử đầu tiên đổi chỗ cho phần tử cuối cùng…
 Output
 ```
 ["e", "d", "c", "b", "a"]
@@ -431,20 +431,20 @@ Phương thức index i trả về chỉ số của phần tử đầu tiên có
 ```
 puts arr.rindex 2
 ```
-Phương thức rindex cũng có tác dụng như phương thức index nhưng tìm các phần tử từ phải qua trái.
+Phương thức **rindex** cũng có tác dụng như phương thức index nhưng tìm các phần tử từ phải qua trái.
 ```
 puts arr.include? 3
 puts arr.include? 10
 ```
-Phương thức include? cho biết một giá trị có tồn tại trong mảng hay không, phương thức này trả về True nếu có và False nếu ngược lại.
+Phương thức **include?** cho biết một giá trị có tồn tại trong mảng hay không, phương thức này trả về True nếu có và False nếu ngược lại.
 ```
 puts arr.join '-'
 ```
-Phương thức join sẽ tạo một chuỗi string có các phần tử ngăn cách nhau bởi kí tự được truyền vào, trong ví dụ trên là kí tự "-".
+Phương thức **join** sẽ tạo một chuỗi string có các phần tử ngăn cách nhau bởi kí tự được truyền vào, trong ví dụ trên là kí tự **"-"**.
 ```
 puts arr.uniq!.inspect
 ```
-Phương thức uniq! sẽ loại bỏ các phần tử có giá trị giống nhau.
+Phương thức **uniq!** sẽ loại bỏ các phần tử có giá trị giống nhau.
 Output
 ```
 1
@@ -456,7 +456,7 @@ false
 [1, 2, 3, 4, 5, 8, 11]
 ```
 
-Thêm bớt phần tử
+# Thêm bớt phần tử
 
 Ví dụ 1:
 insert_array.rb
@@ -476,24 +476,24 @@ puts alpha.inspect
 ```
 alpha.insert 0, 'E', 'F', 'G'
 ```
-Phương thức insert sẽ thêm các phần tử vào vị trí được chỉ định, trong đoạn code trên chúng ta thêm 3 kí tự E, F, G vào vị trí 0 nhưng vì mỗi vị trí chỉ có một phần tử nên F, G sẽ ở vị trí 1 và 2.
+Phương thức **insert** sẽ thêm các phần tử vào vị trí được chỉ định, trong đoạn code trên chúng ta thêm 3 kí tự E, F, G vào vị trí 0 nhưng vì mỗi vị trí chỉ có một phần tử nên F, G sẽ ở vị trí 1 và 2.
 ```
 alpha.push 'H'
 alpha.push 'I', 'J', 'K'
 ```
-Phương thức push sẽ thêm phần tử vào cuối mảng. Chúng ta có thể thêm một lúc nhiều phần tử bằng ngăn cách nhau bởi dấu phẩy.
+Phương thức **push** sẽ thêm phần tử vào cuối mảng. Chúng ta có thể thêm một lúc nhiều phần tử bằng ngăn cách nhau bởi dấu phẩy.
 ```
 alpha << 'L' << 'M'
 ```
-Toán tử << cũng có tác dụng như phương thức push.
+Toán tử **<<** cũng có tác dụng như phương thức **push**.
 ```
 alpha.unshift 'A', 'B', 'C'
 ```
-Phương thức unshift ngược lại với phương thức push là chèn các phần tử mới vào đầu mảng.
+Phương thức **unshift** ngược lại với phương thức push là chèn các phần tử mới vào đầu mảng.
 ```
 alpha.insert(3, 'D')
 ```
-Phương thức insert() sẽ chèn phần tử vào vị trí được chỉ định.
+Phương thức **insert()** sẽ chèn phần tử vào vị trí được chỉ định.
 Output
 ```
 ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"]
@@ -525,23 +525,23 @@ puts alpha.inspect
 ```
 alpha.pop
 ```
-Phương thức pop xóa phần tử cuối cùng của mảng.
+Phương thức **pop** xóa phần tử cuối cùng của mảng.
 ```
 alpha.shift
 ```
-Phương thức shift xóa phần tử đầu tiên của mảng.
+Phương thức **shift** xóa phần tử đầu tiên của mảng.
 ```
 alpha.delete_at(0)
 ```
-Phương thức delete_at(i) xóa phần tử tại vị trí thứ i.
+Phương thức **delete_at(i)** xóa phần tử tại vị trí thứ i.
 ```
 puts alpha.clear
 ```
-Phương thức clear xóa toàn bộ mảng.
+Phương thức **clear** xóa toàn bộ mảng.
 ```
 alpha.delete('d')
 ```
-Phương thức delete(i) xóa phần tử có giá tị là i.
+Phương thức **delete(i)** xóa phần tử có giá tị là i.
 Output
 ```
 ["a", "b", "c", "d", "e", "f"]
@@ -550,7 +550,7 @@ Output
 []
 ```
 
-Toán tử tập hợp
+# Toán tử tập hợp
 
 Tập hợp cũng là một danh sách các phần tử nhưng các phần tử không được phép trùng nhau.
 set.rb
@@ -574,16 +574,16 @@ Ruby có các toán tử có chức năng thực hiện các phép toán tập h
 ```
 union = A | B
 ```
-Toán tử | sẽ thực hiện phép hợp, phần tử nào cũng được lấy.
+Toán tử **|** sẽ thực hiện phép hợp, phần tử nào cũng được lấy.
 ```
 isect = A & B
 ```
-Toán tử ^ thực hiện phép giao, chỉ có các phần tử cùng nằm chung 2 mảng mới được lấy.
+Toán tử **^** thực hiện phép giao, chỉ có các phần tử cùng nằm chung 2 mảng mới được lấy.
 ```
 diff1  = A - B
 diff2  = B - A
 ```
-Toán tử "-" thực hiện phép hiệu, phép hiệu A – B sẽ lấy các phần tử thuộc tập A và các phần tử trong tập B mà cũng có trong tập A.
+Toán tử **"-"** thực hiện phép hiệu, phép hiệu A – B sẽ lấy các phần tử thuộc tập A và các phần tử trong tập B mà cũng có trong tập A.
 ```
 sdiff = (A - B) | (B - A)
 ```
@@ -597,7 +597,7 @@ Difference of arrays B - A: [6, 7, 8]
 Symmetric difference of arrays: [1, 2, 3, 6, 7, 8]
 ```
 
-Sắp xếp mảng
+# Sắp xếp mảng
 
 Ruby có một số phương thức sắp xếp các phần tử mảng rất mạnh.
 sorting.rb
@@ -609,11 +609,11 @@ puts "#{arr.sort}"
 puts "#{arr.reverse}"
 puts "#{arr.shuffle}"
 ```
-Phương thức sort sắp xếp các phần tử từ bé đến lớn, hoặc theo thứ thự bảng chữ cái nếu các phần tử là kiểu chuỗi.
+Phương thức **sort** sắp xếp các phần tử từ bé đến lớn, hoặc theo thứ thự bảng chữ cái nếu các phần tử là kiểu chuỗi.
 
-Phương thức reverse thì sắp xếp theo thứ tự ngược lại.
+Phương thức **reverse** thì sắp xếp theo thứ tự ngược lại.
 
-Phương thức shuffle sẽ xáo trộn vị trí các phần tử một cách ngẫu nhiên.
+Phương thức **shuffle** sẽ xáo trộn vị trí các phần tử một cách ngẫu nhiên.
 Output
 ```
 ["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Pluto", "Saturn", "Uranus", "Venus"]
