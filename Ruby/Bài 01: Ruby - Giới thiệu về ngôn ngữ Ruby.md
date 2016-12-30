@@ -21,7 +21,7 @@ irb(main):001:0>
 
 Từ đây bạn có thể gõ các lệnh trong Ruby.
 
-```
+```ruby
 irb(main):001:0> puts RUBY_VERSION
 2.2.4 => nil
 ```
@@ -37,7 +37,7 @@ puts "Hello world"
 
 Đoạn code trên sẽ in chuỗi Hello world ra màn hình.
 
-```
+```ruby
 C:\Project\Ruby>first.rb 
 Hello world
 ```
