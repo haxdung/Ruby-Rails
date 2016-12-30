@@ -14,14 +14,14 @@ Trong series này mình dùng Ruby phiên bản 2.2.4 trên Windows. Bạn có t
 
 Sau khi cài xong, bạn mở Command Prompt (cmd) lên và chạy lệnh **irb** để mở trình thông dịch Ruby, màn hình cùng với dấu nhắc lệnh của Ruby có dạng như sau:
 
-```ruby
+```
 C:\User\xRuby> irb
 irb(main):001:0>
 ```
 
 Từ đây bạn có thể gõ các lệnh trong Ruby.
 
-```ruby
+```
 irb(main):001:0> puts RUBY_VERSION
 2.2.4 => nil
 ```
@@ -37,7 +37,7 @@ puts "Hello world"
 
 Đoạn code trên sẽ in chuỗi Hello world ra màn hình.
 
-```ruby
+```
 C:\Project\Ruby>first.rb 
 Hello world
 ```
