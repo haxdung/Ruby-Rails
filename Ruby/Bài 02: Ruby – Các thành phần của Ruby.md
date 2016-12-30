@@ -10,7 +10,7 @@ comments.rb
 ```
 =begin
   comments.rb
-  Pho Code
+  Ruby Code
 =end
  
 puts "Comments example"
@@ -21,7 +21,7 @@ Các dòng comment sẽ không được dịch bởi trình thông dịch.
 ```
 =begin
   comments.rb
-  Pho Code
+  Ruby Code
 =end
 ```
 
