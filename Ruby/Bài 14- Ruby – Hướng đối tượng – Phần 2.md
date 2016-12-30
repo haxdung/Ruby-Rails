@@ -10,7 +10,7 @@ Phương thức **attr_reader** sẽ tạo các phương thức **getter** trong
 
 Ví dụ 1:
 example1.rb
-```
+```ruby
 class Car
   
     attr_reader :name, :price
@@ -38,20 +38,20 @@ p c1
 p c2
 ```
 Trong ví dụ này chúng ta định nghĩa lớp Car. Trong lớp này chúng ta định nghĩa các phương thức **getter** và **setter** bằng cách sử dụng phương thức **attr_reader** và **attr_writer**.
-```
+```ruby
 attr_reader :name, :price
 ```
 Để tạo các phương thức **getter** thì chúng ta ghi tên phương thức đó dưới dạng **Symbol** phía sau phương thức **attr_reader**.
-```
+```ruby
 attr_writer :name, :price 
 ```
 Tương tự với các phương thức **setter**, chúng ta cũng ghi sau phương thức **attr_writer**.
-```
+```ruby
 c1.name = "Porsche"
 c1.price = 23500
 ```
 Chúng ta gọi các phương thức **setter** như gọi các phương thức bình thường, rồi dùng toán tử gán **"="** để thiết lập dữ liệu.
-```
+```ruby
 puts "#{c1.name}: #{c1.price}"
 ```
 Tương tự, các phương thức **getter** cũng vậy.
@@ -63,7 +63,7 @@ Porsche: 23500
 ```
 Ví dụ 2:
 example2.rb
-```
+```ruby
 class Book
    attr_accessor :title, :pages   
 end
@@ -83,7 +83,7 @@ Output
 # Hằng số lớp
 
 constant_class.rb
-```
+```ruby
 class MMath
  
     PI = 3.141592
@@ -93,11 +93,11 @@ end
 puts MMath::PI
 ```
 Các hằng số được định nghĩa bên trong một lớp có tác dụng giống như biến **class** vậy, tức là chúng được dùng chung bởi tất cả các đối tượng thuộc lớp đó, chứ không có lớp nào có biến riêng cả. Trong ví dụ trên chúng ta định nghĩa lớp **NMath** có hằng **PI**.
-```
+```ruby
 PI = 3.141592
 ```
 Hằng số được đặt tên bắt đầu bằng chữ cái in hoa.
-```
+```ruby
 puts MMath::PI
 ```
 Để truy xuất giá trị của hằng số thì chúng ta dùng toán tử **::** theo sau tên lớp.
@@ -110,7 +110,7 @@ Output
 
 Tất cả các đối tượng trong Ruby đều có phương thức **to_s**, phương thức này được kế thừa từ lớp **Object** gốc trong Ruby. Phương thức trả về một chuỗi string mô tả về đối tượng đó, khi chúng ta dùng phương thức **puts** để in ra một đối tượng thì phương thức **puts** sẽ gọi đến phương thức **to_s** của đối tượng đó.
 to_s_method.rb
-```
+```ruby
 class Being
  
     def to_s
@@ -123,13 +123,13 @@ puts b.to_s
 puts b
 ```
 Trong ví dụ này chúng ta định nghĩa lớp Being có phương thức **to_s**.
-```
+```ruby
 def to_s
     "This is Being class"
 end
 ```
 Nếu chúng ta không định nghĩa lại phương thức **to_s** thì phương thức **puts** sẽ gọi phương thức **to_s** của lớp **Object** gốc, mà phương thức **to_s** gốc sẽ in ra địa chỉ bộ nhớ của đối tượng.
-```
+```ruby
 b = Being.new
 puts b.to_s
 puts b
@@ -145,7 +145,7 @@ This is Being class
 
 Quá tải toán tử tức là một toán tử có thể dùng cho nhiều kiểu dữ liệu khác nhau, giống như chúng ta có nhiều phương thức và mỗi phương thức nhận nhiều tham số khác nhau vậy.
 overload_operator.rb
-```
+```ruby
 class Circle
     
     attr_accessor :radius
@@ -171,7 +171,7 @@ c3 = c1 + c2
 p c3
 ```
 Trong ví dụ này chúng ta định nghĩa lớp Circle có toán tử **+**.
-```
+```ruby
 def +(other)
     Circle.new @radius + other.radius
 end
@@ -179,7 +179,7 @@ end
 Để định nghĩa một toán tử thì chúng ta cũng dùng cặp từ khóa **def...end** giống như định nghĩa một phương thức với tên toán tử phía sau từ khóa **def**, sau đó đặt tham số trong cặp dấu **()**.
 
 Ở đây lớp Circle có nghĩa là hình tròn, thuộc tính radius là bán kính. Toán tử **+** có chức năng cộng 2 bán kính của 2 hình tròn.
-```
+```ruby
 c1 = Circle.new 5
 c2 = Circle.new 6
 c3 = c1 + c2
@@ -198,7 +198,7 @@ Phương thức **class** không thể truy xuất các biến **instance** mà 
 
 Ví dụ:
 class_methods1.rb
-```
+```v
 class Circle
      
     def initialize x
@@ -221,23 +221,23 @@ c = Circle.new 3
 p c.area
 ```
 Trong ví dụ này chúng ta định nghĩa lớp Circle có một phương thức **class**.
-```
+```ruby
 def self.info
     "This is a Circle class"
 end
 ```
 Phương thức **class** được định nghĩa bằng cách thêm từ khóa **self** vào trước tên phương thức.
-```
+```ruby
 def area
     "Circle, radius: #{@r}"
 end
 ```
 Phương thức area là phương thức **instance** vì không chứa từ khóa **self**, vậy tức là các phương thức mà chúng ta đã định nghĩa từ trước tới giờ đều là phương thức **instance**.
-```
+```ruby
 p Circle.info
 ```
 Để gọi phương thức **class** thì chúng ta gọi từ tên lớp chứ không gọi từ tên đối tượng.
-```
+```ruby
 c = Circle.new 3
 p c.area
 ```
@@ -251,7 +251,7 @@ Ví dụ 2:
 
 Ngoài cách định nghĩa như trên chúng ta còn có 2 cách định nghĩa phương thức **class** khác.
 class_methods2.rb
-```
+```ruby
 class Wood
       
     def self.info
@@ -281,13 +281,13 @@ p Brick.info
 p Rock.info
 ```
 Trong ví dụ này chúng ta dùng 3 cách định nghĩa phương thức **class** khác nhau.
-```
+```ruby
 def self.info
     "This is a Wood class"
 end
 ```
 Cách đầu tiên đã giới thiệu ở trên là dùng từ khóa **self**.
-```
+```ruby
 class << self
     def info
         "This is a Brick class"
@@ -295,7 +295,7 @@ class << self
 end
 ```
 Cách thứ 2 là khai báo phần định nghĩa trong khối **class << self...end**.
-```
+```ruby
 def Rock.info
    "This is a Rock class"
 end
@@ -314,7 +314,7 @@ Tính đa hình là tính năng cho phép chúng ta thực thi toán tử hay ph
 
 Ví dụ:
 polymorphism.rb
-```
+```ruby
 class Animal
      
     def make_noise 
@@ -348,7 +348,7 @@ end
 end
 ```
 Trong ví dụ trên chúng ta có lớp cơ sở Animal, lớp dẫn xuất Dog và Cat kế thừa từ lớp Animal. Cả 3 lớp này đều có phương thức make_noise nhưng kết quả của phương thức này ở 3 lớp là khác nhau.
-```
+```ruby
 [Animal.new, Dog.new, Cat.new].each do |animal|
   puts animal.make_noise
   animal.sleep
