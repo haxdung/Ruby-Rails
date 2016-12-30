@@ -5,7 +5,7 @@ Trong phần này chúng ta sẽ học cách làm việc với ngôn ngữ Ruby.
 Ví dụ một đoạn code Ruby:
 first.rb
 
-```
+```ruby
 puts "This is Ruby"
 ```
 
@@ -18,7 +18,7 @@ This is Ruby
 
 Đọc dữ liệu vào từ terminal (trong Windows là Command Prompt – cmd):
 
-```
+```ruby
 print "What is your name? "
 name = gets
 puts "Hello #{name}"
@@ -26,19 +26,19 @@ puts "Hello #{name}"
 
 Đoạn code trên sẽ nhận một chuỗi do chúng ta nhập vào từ bàn phím rồi in ra màn hình.
 
-```
+```ruby
 print "What is your name? "
 ```
 
 Từ khóa print cũng có tác dụng in một chuỗi text lên màn hình nhưng không xuống dòng như từ khóa puts.
 
-```
+```ruby
 name = gets
 ```
 
 Dòng code trên sẽ đọc một đoạn text từ người dùng và lưu vào biến name bằng cách sử dụng phương thức gets,
 
-```
+```ruby
 puts "Hello #{name}"
 ```
 
@@ -52,7 +52,7 @@ Hello Hoang
 
 Ngoài cách chạy code Ruby từ file script thì chúng ta cũng có thể chạy code từng dòng trong terminal:
 
-```
+```ruby
 C:\User\xRuby>ruby -e "puts RUBY_VERSION"
 2.2.4
 ```
@@ -62,13 +62,13 @@ Khi chúng ta chạy code Ruby từ file script, chẳng hạn như ruby hello.r
 Ngoài ra trình thông dịch Ruby còn có tham số -c, khi dùng tham số này thì trình thông dịch Ruby sẽ thực hiện kiểm tra lỗi cú pháp của đoạn code chứ không thực hiện đoạn code bên trong, nếu không có lỗi thì sẽ in đoạn text “Syntax OK” ra màn hình.
 syntax_check.rb
 
-```
+```ruby
 puts "This is Ruby
 ```
 
 Đoạn có trên có lỗi cú pháp là thiếu dấu " kết thúc chuỗi.
 
-```
+```ruby
 C:\User\xRuby>ruby -c syntax_check.rb 
 syntax_check.rb:1: unterminated string meets end of file
 ```
@@ -79,20 +79,20 @@ Trình thông dịch sẽ báo lỗi nếu có lỗi.
 
 Khi chúng ta chạy một file script Ruby thì có thể đưa các tham số vào chương trình để sử dụng.
 
-```
+```ruby
 puts ARGV
 ```
 
 Trong Ruby biến toàn cục ARGV là biến lưu các tham số được truyền vào chương trình, đây là một mảng, mỗi phần tử trong mảng là một tham số.
 args.rb
 
-```
+```ruby
 puts ARGV
 ```
 
 Chúng ta in toàn bộ tham số được đưa vào chương trình.
 
-```
+```ruby
 C:\User\xRuby>ruby args.rb 1 2 3
 1
 2
@@ -104,14 +104,14 @@ Chúng ta truyền tham số vào bằng cách gõ các giá trị vào sau tên
 Ngoài ra chúng ta có thể lấy từng tham số đơn lẻ:
 args2.rb
 
-```
+```ruby
 puts $0
 puts $*
 ```
 
 Trong Ruby các biến toàn cục có tên bắt đầu bằng kí tự $ theo sau là tên biến. Ngoài ra Ruby còn có sẵn một số biến đặc biệt, chẳng hạn như $0 lưu tên file script được thực thi, $* cũng lưu các tham số truyền vào như ARGV.
 
-```
+```ruby
 C:\User\xRuby>ruby args2.rb Ruby Python Perl
 Ruby
 Python
@@ -125,7 +125,7 @@ Biến là nơi để lưu trữ dữ liệu. Biến gồm có tên và kiểu d
 Hằng số trong Ruby cũng khác với các ngôn ngữ khác, trong các ngôn ngữ như C++, Java… thì hằng số là không thể thay đổi được giá trị, còn hằng số trong Ruby thì có thể thay đổi được, khi dịch thì Ruby không báo lỗi mà chỉ đưa ra các lời cảnh báo.
 variables.rb
 
-```
+```ruby
 city = "New York"
 name = "Paul"; age = 35
 nationality = "American"
@@ -142,19 +142,19 @@ puts city
 
 Trong đoạn code trên chúng ta làm việc với 4 biến.
 
-```	
+```ruby
 city = "New York"
 ```
 
 Biến city lưu trữ một chuỗi text, Ruby tự động nhận diện kiểu dữ liệu.
 
-```
+```ruby
 name = "Paul"; age = 35
 ```
 
 Khi khai báo nhiều biến trên cùng một dòng thì chúng ta phải ngăn cách chúng bằng dấu chấm phẩy. Trong thực tế thì tốt hơn hết là chúng ta khai báo trên nhiều dòng khác nhau.
 
-```	
+```ruby
 puts city
 puts name
 puts age
@@ -163,7 +163,7 @@ puts nationality
 
 Chúng ta in các biến ra màn hình
 
-```
+```ruby
 city = "London"
 ```
 
@@ -181,7 +181,7 @@ London
 Trong đoạn code dưới đây chúng ta sẽ làm việc với hằng số.
 constants.rb
 
-```
+```ruby
 WIDTH = 100
 HEIGHT = 150
  
@@ -198,7 +198,7 @@ puts WIDTH
 
 Chúng ta khai báo 2 hằng và một biến.
 
-```
+```ruby
 WIDTH = 100
 HEIGHT = 150
 ```
