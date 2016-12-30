@@ -3,7 +3,7 @@ Trong phần này chúng ta sẽ tìm hiểu kỹ hơn về kiểu dữ liệu *
 
 **String** là một chuỗi các kí tự được bọc trong cặp dấu nháy đơn hoặc nháy kép.
 quotes.rb
-```
+```ruby
 puts 'Python'
 puts "Ruby"
 ```
@@ -15,7 +15,7 @@ Ruby
 ```
 Nếu bạn muốn in ra cả ký tự dấu nháy thì có 2 cách:
 quotes2.rb
-```
+```ruby
 puts "There are many stars"
 puts "He said, \"Which one is your favourite?\""
  
@@ -24,7 +24,7 @@ puts 'He said, "Which one is your favourite?"'
 ```
 Cách thứ nhất là đặt trước dấu nháy ký tự **\** và Ruby sẽ in ra dấu nháy đó. Cách thứ 2 là trộn dấu nháy đơn với dấu nháy kép, chẳng hạn như chúng ta bọc string bằng cặp dấu nháy đơn và bên trong chúng ta cho in ra dấu nháy kép.
 Output
-```	
+```
 There are many stars.
 He said, "Which one is your favourite?"
 ```
@@ -33,7 +33,7 @@ He said, "Which one is your favourite?"
 
 Ký tự thoát là các ký tự đặc biệt dùng để điều khiển string chứ không được in ra màn hình.
 escape.rb
-```	
+```ruby
 puts "one\ntwo\nthree\nfour"
 puts "bbb\raaa"
 puts "Joan\b\b\bane"
@@ -41,7 +41,7 @@ puts "Towering\tinferno"
 ```
 Kí tự **\n** có nghĩa là xuống dòng, bất kì kí tự nào nằm sau **\n** đều được xuống dòng. Kí tự **\r** đưa dấu nháy trên màn hình về vị trí đầu dòng.  Kí tự **\t** cách một đoạn dài bằng một dấu tab giống như khi chúng ta gõ nút tab, kí tự **\b** xóa một kí tự đứng trước nó.
 Output
-```	
+```
 one
 two
 three
@@ -52,18 +52,18 @@ Towering      inferno
 ```
 Nếu muốn in ra cả ký tự **\** thì chúng ta đưa vào là **\\\**.
 escape1.rb
-```	
+```ruby
 puts "Escape character \\"
 ```
 Output
-```	
+```
 Escape character \
 ```
 Lấy từng phần tử của string
 
 Chúng ta có thể lấy từng phần tử của string.
 string_element.rb
-```
+```ruby
 msg = "Ruby language"
  
 puts msg["Ruby"]
@@ -77,27 +77,27 @@ puts msg[0..9]
 puts msg[0, msg.length]
 ```
 Để có thể lấy các phần tử của string thì chúng ta sử dụng cặp dấu ngoặc vuông **[]** vừa đưa vào bên trong đó chỉ số, khoảng hoặc một string khác.
-```	
+```ruby
 puts msg["Ruby"]
 ```
 Khi đưa vào một string bên trong cặp dấu **[]** thì Ruby sẽ tìm chuỗi đó trong chuỗi gốc, nếu tìm thấy thì in ra chuỗi, nếu không thì in ra chuỗi rỗng.
-```	
+```ruby
 puts msg[0]
 ```
 Nếu đưa vào một con số nào thì chúng ta được kí tự tại vị trí đó, chuỗi trong Ruby được đánh số từ 0.
-```
+```ruby
 puts msg[-1]
 ```
 Ruby cũng hỗ trợ chỉ số âm, đưa vào số âm thì sẽ được kí tự từ cuối string.
-```	
+```ruby
 puts msg[0, 3]
 ```
 Khi đưa vào 2 chữ số cách nhau bởi dấu phẩy, ví dụ [i, n] thì chúng ta lấy được n kí tự từ vị trí i.
-```
+```ruby
 puts msg[0..9]
 ```
 Chúng ta cũng có thể đưa vào một khoảng giá trị, [0..9] sẽ lấy về chuỗi kí tự từ vị trí 0 đến vị trí 9.
-```
+```ruby
 puts msg[0, msg.length]
 ```
 Phương thức **length** trả về độ lớn của chuỗi nên dòng trên có nghĩa là lấy toàn bộ chuỗi.
@@ -117,14 +117,13 @@ Ruby language
 Chúng ta có thể truyền giá trị của các biến khác vào string để hiển thị, biến được truyền vào có dạng **#{<tên biến>}**. Ví dụ:
 interpolation.rb
 
-```
+```ruby
 #!/usr/bin/ruby
  
 name = "Jane"
 age = 17
-```
 puts "#{name} is #{age} years old"
-
+```
 Giá trị của biến name và age sẽ được hiển thị tương ứng.
 Output
 ```
@@ -132,7 +131,7 @@ Jane is 17 years old
 ```
 Chúng ta cũng có thể thực hiện các biểu thức với các biến được truyền vào:
 interpolation2.rb
-```
+```ruby
 x = 5
 y = 6
  
@@ -146,7 +145,7 @@ Nối chuỗi
 
 Nối chuỗi tức là tạo một chuỗi từ các chuỗi con.
 concat.rb
-```
+```ruby
 lang = "Ruby" + " programming" + " languge"
 puts lang
  
@@ -172,7 +171,7 @@ Java programming language
 
 Ruby hỗ trợ một số toán tử và phương thức giúp so sánh chuỗi một cách dễ dàng.
 string_comparison.rb
-```
+```ruby
 puts "12" == "12"
 puts "aa" == "ab"
 puts "Ruby".eql? "Jan"
@@ -192,7 +191,7 @@ Ngoài ra Ruby còn có toán tử <==> dùng để so sánh chuỗi, toán tử
 ```
 Chuỗi a được gọi là bé hơn chuỗi b nếu kí tự tương ứng của chuỗi a có thứ tự cao hơn kí tự tương ứng bên chuỗi b trong bảng mã ASCII. Ví dụ, khi so sánh "a" <==> "b" thì kí tự a nằm trước kí tự b trong bảng mã ASCII nên a sẽ lớn hơn b. Nếu 2 kí tự bằng nhau thì Ruby sẽ tiếp tục so sánh kí tự tiếp theo của 2 chuỗi cho đến hết.
 string_comparison2.rb
-```
+```ruby
 puts "a" <==> "b"
 puts "b" <==> "a"
 puts "a" <==> "a"
@@ -209,7 +208,7 @@ String cũng là một đối tượng trong Ruby do đó các đối tượng s
 
 Ví dụ 1:
 string_methods1.rb
-```
+```ruby
 word = "Methods"
  
 puts "Size of #{word}: #{word.size}"
@@ -224,15 +223,15 @@ word.clear
 puts word.empty?
 ```
 Trong đoạn code trên chúng ta sử dụng 4 phương thức của đối tượng string.
-```
+```ruby
 puts "Size of #{word}: #{word.size}"
 ```
 Phương thức **size** lấy số lượng kí tự có trong string.
-```
+```ruby
 puts word.include? "tho"
 ```
 Đoạn code trên dùng phương thức **include?**, phương thức này cho biết chuỗi “tho” có nằm trong chuỗi “Methods” hay không.
-```
+```ruby
 puts word.empty?
 word.clear
 ```
@@ -248,7 +247,7 @@ true
 ```
 Ví dụ 2:
 string_methods2.rb
-```
+```ruby
 ruby = "Ruby"
  
 puts ruby.upcase
@@ -266,7 +265,7 @@ rUBY
 ```
 Ví dụ 3:
 string_methods3.rb
-```
+```ruby
 str1 = "ruby.com"
 str2 = "python.com"
  
@@ -286,7 +285,7 @@ true
 ```
 Ví dụ 4:
 string_method4.rb
-```
+```ruby
 msg = "Ruby\nPython"
  
 puts msg
@@ -313,7 +312,7 @@ Trong đó cờ, độ lớn và độ chính xác là các tham số tùy chọ
 
 Ví dụ 1:
 string_format1.rb
-```
+```ruby
 puts "There are %d oranges in the basket." % 12
 puts "There are %d oranges and %d apples in the basket." % [12, 10]
 puts "Speed: %f km/h" % 62.1
@@ -331,7 +330,7 @@ Name: iPhone 5
 ```
 Ví dụ 2:
 string_format2.rb
-```
+```ruby
 puts "%d" % 300
 puts "%x" % 300
 puts "%o" % 300
@@ -357,7 +356,7 @@ Tham số độ chính xác là một con số đứng giữa kí tự **%** và
 
 Ví dụ 3:
 string_format3.rb
-```
+```ruby
 puts 'Height: %f %s' % [177.3, 'cm']
 puts 'Height: %.1f %s' % [177.3, 'cm']
  
@@ -383,7 +382,7 @@ Pytho
 ```
 Ví dụ 4: Tham số độ lớn quy định số lượng kí tự tối thiểu cần được hiển thị ra.
 string_format4.rb
-```
+```ruby
 puts "%d" % 1
 puts "%d" % 12
 puts "%d" % 123
@@ -414,7 +413,7 @@ Tham số cờ quy định một số kiểu hiển thị khác mà chúng ta s�
 
 Ví dụ 5:
 string_format5.rb
-```
+```ruby
 puts "%010d" % 1
 puts "%010d" % 12
 puts "%010d" % 123
