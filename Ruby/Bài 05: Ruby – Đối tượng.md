@@ -6,7 +6,7 @@ Ruby là một ngôn ngữ lập trình hướng đối tượng. Tất cả m�
 
 Muốn sử dụng đối tượng thì chúng ta phải khởi tạo trước. Một đối tượng chứa thuộc tính và phương thức bên trong nó. Thuộc tính là dữ liệu của đối tượng, đây là thành phần tĩnh, phương thức là phần động. Đối tượng có thể được chỉnh sửa hoặc giao tiếp với các đối tượng khác thông qua phương thức.
 
-```
+```ruby
 puts "Ruby language"
 ```
 
@@ -18,7 +18,7 @@ Ngoài ra phương thức tồn tại trong các đối tượng chứ không t�
 
 Ví dụ 1:
 simple2.rb
-```
+```ruby
 Kernel.puts "Ruby language"
 Kernel.puts "Ruby language".size
 ```
@@ -32,7 +32,7 @@ Ruby language
 ```
 Ví dụ 2:
 objectnumber.rb
-```
+```ruby
 puts 6.object_id
  
 puts 6.even?
@@ -41,16 +41,16 @@ puts 6.zero?
 puts 6.class
 ```
 Chúng ta có số 6 và cũng có thể gọi một số phương thức của số 6 này.
-```
+```ruby
 puts 6.object_id
 ```
 Mỗi đối tượng đều được gán một id và chúng ta có thể lấy giá trị đó ra bằng cách gọi phương thức object_id. Mỗi lời gọi phương thức đều được đặt sau dấu chấm sau tên đối tượng.
-```
+```ruby
 puts 6.even?
 puts 6.zero?
 ```
 Phương thức **even?** trả về **True** nếu số đó là số chẵn và ngược lại. Phương thức **zero?** trả về **True** nếu số đó là 0. Ở đây có một điểm lưu ý là nếu phương thức trả về **True** hoặc **False** thì phải kèm thêm dấu **?** sau tên phương thức.
-```
+```ruby
 puts 6.class
 ```
 Phương thức **class** cho biết tên lớp của đối tượng, ở đây số 6 là một đối tượng thuộc lớp Fixnum.
@@ -66,7 +66,7 @@ Fixnum
 
 Một đối tượng phải được tạo ra thì mới có thể sử dụng được. Đối tượng trong Ruby có thể được tạo ra một cách rõ ràng hoặc tạo ngầm. Ví dụ về đối tượng ngầm là mấy cái đối tượng được tạo ra từ giá trị như số 6 hay chuỗi “Ruby language” ở trên. Còn để tạo đối tượng một cách rõ ràng thì chúng ta dùng từ khóa new. Đối tượng thuộc lớp do chúng ta tự định nhĩa cũng dùng từ khóa new.
 object_creation.rb
-```
+```ruby
 class Being
 end
      
@@ -83,33 +83,33 @@ b = Being.new
 puts b
 ```
 Trong đoạn code trên chúng ta tạo một số đối tượng bằng các cách khác nhau.
-```
+```ruby
 class Being
 end
 ```
 Chúng ta định nghĩa lớp Being. Để định nghĩa một lớp thì chúng ta dùng từ khóa **class**.
-```
+```ruby
 puts 67
 puts "Hello world"
 ```
 Hai dòng code trên tạo đối tượng ngầm là 67 và chuỗi “Hello world”.
-```
+```ruby
 s = String.new "Hello world"
 puts s
 ```
 Tương tự, chúng ta có thể tạo đối tượng string một cách rõ ràng luôn với từ khóa **new**.
-```
+```ruby
 # n1 = Fixnum.new 67
 # puts n1
 ```
 Không phải tất cả các lớp có sẵn trong Ruby đều có thể được tạo ra bằng từ khóa **new**, Fixnum là một ví dụ, các đối tượng Fixnum chỉ có thể được tạo ngầm.
-```
+```ruby
 b = Being.new
 puts b
 ```
 Đoạn code trên tạo đối tượng b từ lớp Being do chúng ta định nghĩa.
 Output
-```
+```ruby
 67
 Hello world
 Hello world
@@ -120,7 +120,7 @@ Hello world
 
 Như đã nói ở trên là chúng ta có thể tạo đối tượng một cách ngầm định từ các giá trị. Ở đây chúng ta sẽ làm việc với một số phương thức của loại đối tượng này.
 literals.rb
-```
+```ruby
 4.times { puts "Ruby" }
  
 puts "Ruby".size
@@ -136,32 +136,32 @@ puts (1..6).class
 puts (1..6).include? 4
 ```
 Trong đoạn code trên chúng ta có các đối tượng Fixnum, String, Array, kiểu Symbol và kiểu Range. Chúng ta sẽ tìm hiểu kỹ hơn về các kiểu đối tượng này trong bài sau.
-```
+```ruby
 4.times { puts "Ruby" }
 ```
 Phương thức times của đối tượng Fixnum thực hiện phép nhân lên giá trị phía sau nó, ở đây là thực hiện puts "Ruby" 4 lần.
-```
+```ruby
 puts "Ruby".size
 puts "Ruby".downcase
 ```
 Phương thức **size** lấy về số kí tự trong chuỗi, phương thức **downcase** thực hiện chuyển chuỗi về kiểu chữ in thường.
-```
+```ruby
 puts [1, 2, 3].include? 3
 puts [1, 2, 3].empty?
 ```
 Trong 2 dòng code trên chúng ta sử dụng đối tượng kiểu mảng – Array, phương thức **include?** cho biết một giá trị nào đó có thuộc mảng hay không. Phương thức **empty?** cho biết mảng này rỗng hay không.
-```
+```ruby
 puts :name.class
 puts :name.frozen?
 ```
 Ở 2 dòng trên chúng ta thao tác với kiểu Symbol, symbol có tên bắt đầu bằng dấu 2 chấm ":" chúng ta sẽ tìm hiểu thêm trong bài sau.
-```
+```ruby
 puts (1..6).class
 puts (1..6).include? 4
 ```
 Cuối cùng là 2 đối tượng kiểu Range, về bản chất thì kiểu này cũng tương tự như kiểu mảng vậy. Phương thức class trả về tên của kiểu dữ liệu này, còn phương thức **include?** cho biết giá trị nào đó có nằm trong danh sách hay không.
 Output
-```
+```ruby
 Ruby
 Ruby
 Ruby
@@ -180,7 +180,7 @@ true
 
 Một trong những khái niệm trong lập trình hướng đối tượng là thừa kế và Ruby cũng thế. Thừa kế bao gồm các đối tượng cha và đối tượng con, đối tượng cha sẽ chứa những thuộc tính và phương thức mà đối tượng con có thể thừa kế lại. Tất cả các đối tượng trong Ruby đều thừa kế từ một đối tượng gốc có tên là **Object**. Tất cả các đối tượng trong Ruby đều có các phương thức mà đối tượng **Object** có, nhưng có thể định nghĩa lại.
 mother.rb
-```
+```ruby
 puts 4.is_a? Object
 puts "Ruby".is_a? Object
 puts [2, 3].is_a? Object
@@ -188,7 +188,7 @@ puts :name.is_a? Object
 puts (1..2).is_a? Object
 ```
 Đoạn code trên cho chúng ta thấy tất cả các đối tượng đều thừa kế từ đối tượng **Object**.
-```
+```ruby
 puts 4.is_a? Object
 ```
 Trong dòng code trên phương thức **is_a?** cho biết đối tượng 4 có được kế thừa từ đối tượng Object hay không.
@@ -201,7 +201,7 @@ true
 ```
 Trong ví dụ dưới đây, chúng ta sẽ định nghĩa các lớp có kế thừa nhau.
 custom_inher.rb
-```
+```ruby
 class Being
  
     def to_s
@@ -227,7 +227,7 @@ puts l.get_id
 puts l.is_a? Being
 ```
 Chúng ta định nghĩa 2 lớp Being và Living, lớp Living kế thừa từ lớp Being, do đó lớp Being là lớp cha, lớp Living là lớp con.
-```
+```ruby
 class Being
  
     def to_s
@@ -242,7 +242,7 @@ end
 Để định nghĩa một lớp thì chúng ta sử dụng cặp từ khóa **class...end**, sau từ khóa **class** là tên lớp mà chúng ta muốn đặt. Bên trong lớp chúng ta có thể định nghĩa các phương thức bằng cách dùng cặp từ khóa **def…end**, sau từ khóa **def** cũng từ tên phương thức mà chúng ta muốn đặt. Trong đoạn code trên chúng ta có 2 phương thức là **to_s** và **get_id**.
 
 Đối tượng nào cũng có phương thức **to_s** cả vì mặc định đối tượng **Object** cũng có phương thức này. Khi chúng ta dùng phương thức **puts** để in ra một giá trị nào đó thì phương thức này sẽ tự động gọi đến phương thức **to_s** có trong các đối tượng. Trong ví dụ này chúng ta định nghĩa lại phương thức **to_s**, nếu không thì puts sẽ sử dụng phương thức **to_s** mặc định của đối tượng **Object**.
-```
+```ruby
 class Living < Being
      
     def to_s
@@ -251,19 +251,19 @@ class Living < Being
 end
 ```
 Chúng ta định nghĩa lớp Living, lớp này kế thừa từ lớp Being, để một lớp được kế thừa từ lớp khác thì chúng ta thêm dấu **<** cùng với tên của lớp cha vào sau tên lớp con. Ở đây lớp Living cũng định nghĩa lại phương thức **to_s** của riêng nó.
-```
+```ruby
 l = Living.new
 ```
 Chúng ta tạo đối tượng Living bằng cách dùng từ khóa **new**.
-```
+```ruby
 puts l
 ```
 Phương thức **puts** sẽ gọi đến phương thức **to_s** trong lớp Living.
-```
+```ruby
 puts l.get_id
 ```
 Lớp Living không định nghĩa lại phương thức **get_id** nên Ruby sẽ tìm dần dần các lớp cha xem lớp nào có thì gọi phương thức **get_id** từ lớp đó.
-```
+```ruby
 puts l.is_a? Being
 ```
 Dòng code trên sẽ trả về **True** vì lớp Living kế thừa từ lớp Being nên một đối tượng Living cũng là một đối tượng Being.
@@ -280,7 +280,7 @@ Trong các ngôn ngữ như C++, Java… thì chương trình bắt đầu chạ
 
 Trong Ruby cũng thế, mỗi đoạn code trong file .rb đều nằm trong một đối tượng có tên là **main** mặc dù ở đây chúng ta không khai báo ra, đối tượng này cũng kế thừa từ đối tượng **Object**. Chính vì **main** cũng là một đối tượng nên các biến được khai báo trong **main** cũng là thuộc tính của **main**.
 toplevel.rb
-```
+```ruby
 n1 = 3
 n2 = 5
  
@@ -290,20 +290,20 @@ Kernel.puts self
 puts self.class
 ```
 Đoạn code trên ví dụ về đối tượng **main** trong Ruby.
-```
+```ruby
 n1 = 3
 n2 = 5
 ```
 Chúng ta có 2 đối tượng số nguyên. Cả hai đối tượng này đều thuộc về đối tượng **main**.
-```
+```ruby
 puts local_variables
 ```
 Biến local_variables thực chất là một phương thức của module Kernel, lưu trữ danh sách các biến cục bộ hiện có.
-```
+```ruby
 Kernel.puts self
 ```
 Biến **self** là biến tham chiếu đến đối tượng hiện tại, nói cho dễ hiểu thì **self chính là main**, nếu bạn biết con trỏ **this** trong C++, Java… thì **self cũng giống như con trỏ this** vậy.
-```
+```ruby
 puts self.class
 ```
 Biến class cho biết tên lớp của đối tượng hiện tại, hiện tại chúng ta dùng đối tượng **self** (hoặc main) mà đây là đối tượng thuộc lớp **Object** nên dòng trên sẽ in ra chuỗi Object.
