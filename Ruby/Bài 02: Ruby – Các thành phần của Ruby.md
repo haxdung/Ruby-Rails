@@ -110,7 +110,7 @@ puts "He was born in #{born}"
 Trong đoạn code trên thì chúng ta có các giá trị có kiểu dữ liệu boolean, kiểu string, kiểu float, kiểu nil – có thể hiểu là kiểu rỗng, kiểu Date.
 Output
 
-```ruby
+```
 His name is James
 He is single
 His job is 
