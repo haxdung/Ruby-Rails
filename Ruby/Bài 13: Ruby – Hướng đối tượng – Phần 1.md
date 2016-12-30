@@ -23,7 +23,7 @@ Ví dụ khi nói lớp Người thì chúng ta biết rằng một người bao
 
 Ví dụ:
 object_creation.rb
-```
+```ruby
 class Being
    
 end
@@ -32,17 +32,17 @@ b = Being.new
 puts b
 ```
 Trong đoạn code trên chúng ta định nghĩa lớp và tạo một đối tượng từ lớp đó.
-```
+```ruby
 class Being
    
 end
 ```
 Để định nghĩa lớp thì chúng ta dùng cặp từ khóa **class...end** với tên lớp mà chúng ta muốn đặt sau từ khóa **class**. Hiện tại lớp này là lớp rỗng, không có gì cả.
-```
+```ruby
 b = Being.new
 ```
 Để tạo một đối tượng thuộc lớp Being thì chúng ta ghi tên lớp rồi dùng phương thức **new**. Phương thức này sẽ trả về địa chỉ tham chiếu đến đối tượng vừa tạo, ở trên chúng ta lưu lại đối tượng này vào biến b.
-```
+```ruby
 puts b
 ```
 Khi chúng ta gọi phương thức **puts** lên một đối tượng, phương thức này sẽ gọi phương thức **to_s** có trong mỗi đối tượng. Trong trường hợp của chúng ta thì do chưa định nghĩa phương thức **to_s** nên phương thức **puts** sẽ trả về địa chỉ tham chiếu đến đối tượng.
@@ -57,7 +57,7 @@ Phương thức khởi tạo là một phương thức đặc biệt, phương t
 
 Ví dụ 1:
 constructor1.rb
-```
+```ruby
 class Being
  
     def initialize
@@ -77,7 +77,7 @@ Being is created
 ```
 Ví dụ 2:
 constructor2.rb
-```
+```ruby
 class Person
  
     def initialize name
@@ -97,7 +97,7 @@ puts p1.get_name
 puts p2.get_name
 ```
 Thuộc tính của một đối tượng là các biến lưu trữ giá trị của đối tượng đó. Các biến này còn được gọi là biến **instance**. Mỗi đối tượng đều có thuộc tính của riêng nó, tức là các đối tượng thuộc cùng một lớp thì có các biến **instance** khác nhau.
-```
+```ruby
 class Person
  
     def initialize name
@@ -105,13 +105,13 @@ class Person
     end
 ```
 Trong đoạn code trên, hàm khởi tạo **initialize** nhận vào một biến tham số có tên là name, chúng ta gán giá trị của tham số đó vào biến **instance @name**.
-```
+```ruby
 def get_name
     @name
 end
 ```
 Chúng ta định nghĩa phương thức **get_name**, phương thức này trả về giá trị của biến **@name**. Trong Ruby các biến **instance** chỉ có thể truy xuất trong các phương thức.
-```
+```ruby
 p1 = Person.new "Jane"
 p2 = Person.new "Beky"
 ```
@@ -128,7 +128,7 @@ Phương thức thành phần (hay gọi ngắn gọn là phương thức) là c
 
 Ví dụ 1:
 method1.rb
-```
+```ruby
 class Person
  
     def initialize name
@@ -147,18 +147,18 @@ puts per.get_name
 puts per.send :get_name
 ```
 Để gọi một phương thức thì chúng ta có 2 cách.
-```
+```ruby
 puts per.get_name
 ```
 Cách đầu tiên và cũng là phổ biến nhất là ghi tên đối tượng, dấu chấm rồi đến tên phương thức.
-```
+```ruby
 puts per.send :get_name
 ```
 Cách thứ hai là gọi phương thức **send**, theo sau là tên phương thức nhưng viết dưới dạng một **Symbol**, tức là thêm dấu 2 chấm **":"** vào trước tên phương thức.
 
 Ví dụ 2:
 method2.rb
-```
+```ruby
 class Circle
     
     @@PI = 3.141592
@@ -183,29 +183,29 @@ c.set_radius 5
 puts c.area
 ```
 Trong đoạn code trên chúng ta định nghĩa lớp Circle có 2 phương thức.
-```
+```ruby
 @@PI = 3.141592
 ```
 Trong lớp Circle chúng ta định nghĩa một biến **class** là **@@PI**, biến **class** là biến dùng chung cho tất cả các đối tượng.
-```
+```ruby
 def initialize
     @radius = 0
 end
 ```
 Chúng ta định nghĩa một biến **instance** là @radius.
-```
+```ruby
 def set_radius radius
     @radius = radius
 end
 ```
 Phương thức set_radius sẽ nhận một tham số đầu vào và gán giá trị đó cho biến @radius.
-```
+```ruby
 def area
     @radius * @radius * @@PI
 end
 ```
 Phương thức area sẽ tính diện tích hình tròn với biến @radius và @@PI.
-```
+```ruby
 c = Circle.new
 c.set_radius 5
 puts c.area
@@ -226,7 +226,7 @@ Quyền truy cập đảm bảo an toàn cho dữ liệu không bị thay đổi
 
 Ví dụ 1:
 access_modifier1.rb
-```
+```ruby
 class Some
          
      def method1
@@ -252,13 +252,13 @@ s.method2
 s.method3
 ```
 Trong ví dụ này chúng ta sử dụng quyền truy cập **public**.
-```
+```ruby
 def method1
     puts "public method1 called"
 end
 ```
 Phương thức method1 có quyền truy cập mặc định là **public**.
-```
+```ruby
 public
  
   def method2
@@ -268,7 +268,7 @@ public
   ...
 ```
 Ngoài ra chúng ta có thể chỉ rõ cho Ruby biết là phương thức nào có quyền **public** bằng cách ghi từ khóa **public** lên trước phần định nghĩa phương thức đó, trong trường hợp này cả method2 và method3 đều có quyền truy cập là **public**.
-```
+```ruby
 s = Some.new
 s.method1
 s.method2
@@ -276,7 +276,7 @@ s.method3
 ```
 Chỉ có các phương thức **public** mới có thể truy cập ở bên ngoài phần định nghĩa lớp.
 Output
-```
+```ruby
 public method1 called
 public method2 called
 public method3 called
@@ -285,7 +285,7 @@ public method1 called
 ```
 Ví dụ 2:
 access_modifier2.rb
-```
+```ruby
 class Some
      
     def initialize
@@ -307,12 +307,12 @@ s = Some.new
 ```
 Để chỉ định phương thức nào là **private** thì chúng ta đặt từ khóa **private** lên trước định nghĩa phương thức đó. Các phương thức **private** chỉ có thể gọi được trong phần định nghĩa lớp nhưng không được sử dụng từ khóa **self**.
 Output
-```
+```ruby
 private method called
 ```
 Ví dụ 3:
 access_modifier3.rb
-```
+```ruby
 class Some
      
     def initialize
@@ -339,7 +339,7 @@ Thừa kế là tính năng cho phép định nghĩa các lớp dựa trên các
 
 Ví dụ 1:
 inheritance1.rb
-```
+```ruby
 class Being
  
     def initialize
@@ -359,11 +359,11 @@ Being.new
 Human.new
 ```
 Trong ví dụ trên chúng ta có 2 lớp là lớp Being và lớp Human, trong đó lớp Being là lớp cơ sở, lớp Human là lớp dẫn xuất. Tức là lớp Human kế thừa từ lớp Being.
-```
+```ruby
 class Human < Being
 ```
 Để một lớp kế thừa từ một lớp khác thì chúng ta ghi dấu **"<"** vào sau tên lớp và ghi tên lớp dẫn xuất phía sau.
-```
+```ruby
 def initialize
     super
     puts "Human class created"
@@ -380,7 +380,7 @@ Ví dụ 2:
 
 Một lớp có thể có nhiều lớp cơ sở. Mỗi lớp trong Ruby mặc định có phương thức **ancestors**, phương thức này trả về danh sách các lớp cơ sở của lớp đó. Và mặc định tất cả các lớp trong Ruby đều kế thừa từ một lớp gốc có tên là **Object** và **BasicObject** trong **module Kernel**.
 inheritance2.rb
-```
+```ruby
 class Being 
 end
  
@@ -397,7 +397,7 @@ end
 p Human.ancestors
 ```
 Trong ví dụ này chúng ta có bốn lớp là Human kế thừa từ Mammal, lớp Mammal lại kế thừa từ lớp Living và lớp Living kế thừa từ lớp Being.
-```
+```ruby
 p Human.ancestors
 ```
 Phương thức **ancestors** sẽ in danh sách các lớp cơ sở.
@@ -411,7 +411,7 @@ Lưu ý là tính năng thừa kế trong Ruby hơi khác so với các ngôn ng
 
 Phương thức **super** có tác dụng gọi đến phương thức cùng tên ở lớp cha.
 super_method.rb
-```
+```ruby
 class Base
     
     def show x=0, y=0
@@ -434,7 +434,7 @@ d = Derived.new
 d.show 3, 3
 ```
 Trong ví dụ trên chúng ta có lớp **Base** và lớp **Derived**, trong đó lớp **Derived** kế thừa từ lớp **Base**. Cả 2 lớp này đều có phương thức **show**.
-```
+```ruby
 def show x, y
     super
     super x
