@@ -19,18 +19,18 @@ Chúng ta sẽ lần lượt đi vào tìm hiểu các kí tự trên.
 
 Ví dụ:
 example.rb
-```
+```ruby
 re = Regexp.new 'Jane'
 p "Jane is a girl".match re
 p "Jane is a girl" =~ /Jane/
 p "Jane is a girl".match %r{Jane}
 ```
 Để tìm xem chuỗi tìm kiếm có khớp với một chuỗi nào đó không thì chúng ta có 3 cách.
-```
+```ruby
 re = Regexp.new 'Jane'
 ```
 Để tạo các chuỗi tìm kiếm thì chúng ta dùng lớp **Regexp**, ở dòng trên chúng ta tạo một đối tượng **Regexp** với chuỗi tìm kiếm là “Jane”.
-```
+```ruby
 p "Jane is hot".match re
 p "Jane is hot" =~ /Jane/
 p "Jane is hot".match %r{Jane}
@@ -48,7 +48,7 @@ Phương thức **match** sẽ trả về một đối tượng **MatchData** n�
 
 Như đã mô tả trong bảng các kí tự đặc biệt ở trên, kí tự dấu chấm **“.”** sẽ tìm bất kì một kí tự nào. Ví dụ:
 dot_character.rb
-```
+```ruby
 p "RubyCode".match /.Code/
 p "Code".match /.Code/
 p "PHPCode".match /.Code/
@@ -64,14 +64,14 @@ nil
 ```
 Ví dụ 2:
 example.rb
-```
+```ruby
 p "RubyCode".match /.Code/
 p "Code".match /.?Code/
 p "PHPCode".match /.Code/
 p "PHode".match /.Code/
 ```
 Chúng ta có thể thêm dấu chấm hỏi **“?”** sau kí tự chấm **“.”** để báo cho Ruby biết rằng kí tự đó có thể có hoặc không có cũng được.
-```
+```ruby
 p "Code".match /.?Code/
 ```
 Trong ví dụ trước, đoạn code trên không có dấu chấm hỏi, tức là Ruby sẽ hiểu là phải tìm xem có chuỗi “Code” nào có 1 kí tự bất kì ở phía trước không, còn trong ví dụ này có dấu chấm hỏi tức là tìm xem có chuỗi “Code” nào không và có thể có hoặc không có 1 kí tự đứng trước nó.
@@ -86,7 +86,7 @@ nil
 # Một số biến đặc biệt
 
 special_variables.rb
-```
+```ruby
 puts "Her name is Jane" =~ /name/
  
 p $`
@@ -98,15 +98,15 @@ Khi chúng ta tìm kiếm chuỗi thì các chuỗi có liên quan đến quá t
 puts "Her name is Jane" =~ /name/
 ```
 Ở ví dụ này chúng ta tìm kiếm chuỗi “name” trong chuỗi gốc “Her name is Jane”. Như đã nói ở trên, toán tử **=~** sẽ trả về vị trí đầu tiên của chuỗi được tìm thấy, ở đây là vị trí số 4.
-```
+```ruby
 p $`
 ```
 Ngoài ra Ruby còn có biến **$'**, biến The **$'** lưu chuỗi nằm phía trước chuỗi được tìm thấy. Tức là trong chuỗi “Her name is Jane” thì chuỗi “Her “ đứng trước chuỗi “name” nên sẽ được lưu trong biến **$'**.
-```
+```ruby
 p $&
 ```
 Biến **$&** lưu chính chuỗi được tìm thấy, ở đây là “name”.
-```
+```ruby
 p $'
 ```
 Biến **$'** ngược lại với **$'** là lưu chuỗi nằm phía sau chuỗi được tìm thấy. Ở đây là ” is Jane”.
@@ -121,7 +121,7 @@ Anchor
 
 Ví dụ 1:
 anchor1.rb
-```
+```ruby
 sen1 = "Programming Ruby"
 sen2 = "Ruby programming language"
  
@@ -132,17 +132,17 @@ p sen1.match /Ruby$/
 p sen2.match /Ruby$/ 
 ```
 Kí tự **^** sẽ tìm chuỗi con tại vị trí đầu trong chuỗi gốc, trong khi kí tự **$** sẽ tìm chuỗi con bắt đầu từ cuối chuỗi.
-```
+```ruby
 sen1 = "Programming Ruby"
 sen2 = "Ruby programming language"
 ```
 Trong ví dụ này chúng ta có 2 chuỗi với chuỗi con “Ruby” nằm ở cuối chuỗi sen1 và đầu chuỗi sen2.
-```
+```ruby
 p sen1.match /^Ruby/ 
 p sen2.match /^Ruby/
 ```
 ^Ruby tức là tìm xem có chuỗi “Ruby” nào nằm ở đầu chuỗi gốc hay không.
-```
+```ruby
 p sen1.match /Ruby$/ 
 p sen2.match /Ruby$/  
 ```
@@ -156,14 +156,14 @@ nil
 ```
 Ví dụ 2:
 anchor2.rb
-```
+```ruby
 text = "The cat also known as the domestic cat is a small, 
 usually furry, domesticated, carnivorous mammal."
  
 p text.scan /cat/
 ```
 Chúng ta có một chuỗi text và chúng ta tìm chuỗi con “cat” bằng phương thức **scan**.
-```
+```ruby
 p text.scan /cat/
 ```
 Phương thức scan sẽ tìm tất cả những chuỗi con có nội dung là “cat” trong chuỗi gốc, ở đây phương thức này tìm thấy 3 chuỗi “cat”, chuỗi con “cat” thứ 3 nằm trong từ “domesticated”.
@@ -175,7 +175,7 @@ Nhưng đôi khi chúng ta lại không muốn tìm những chuỗi con nằm l�
 
 Ví dụ 3:
 anchor3.rb
-```
+```ruby
 text = "The cat also known as the domestic cat is a small, 
 usually furry, domesticated, carnivorous mammal."
  
@@ -193,7 +193,7 @@ Chúng ta có thể gộp các kí tự cần kiểm tra lại với nhau vào b
 
 Ví dụ 1:
 group_characters1.rb
-```
+```ruby
 words = %w/ sit MIT fit fat lot pad /
  
 pattern = /[fs]it/
@@ -207,7 +207,7 @@ words.each do |word|
 end
 ```
 Chúng ta có mảng words chứa các chuỗi. Chúng ta sẽ duyệt qua từng chuỗi và xem có chuỗi nào khớp với chuỗi tìm kiếm hay không.
-```
+```ruby
 pattern = /[fs]it/
 ```
 chuỗi tìm kiếm có dạng /[fs]it/ tức là khớp với chuỗi fit hoặc sit.
@@ -224,21 +224,21 @@ Kết quả chúng ta có 2 chuỗi khớp.
 
 Ví dụ 2:
 group_characters2.rb
-```
+```ruby
 p "car".match %r{[abc][a][rs]}
 p "car".match /[a-r]+/
 p "23af 433a 4ga".scan /\b[a-f0-9]+\b/
 ```
 Chúng ta kiểm tra 3 chuỗi tìm kiếm.
-```
+```ruby
 p "car".match %r{[abc][a][rs]}
 ```
 Đoạn chuỗi tìm kiếm ở trên khá dễ hiểu, tìm một chuỗi có 3 kí tự, kí tự đầu tiên là a hoặc b hoặc c, kí tự thứ 2 là a, kí tự thứ 3 là r hoặc s.
-```
+```ruby
 p "car".match /[a-r]+/
 ```
 Chúng ta có thể dùng dấu gạch nối **“-“** để biểu diễn một khoảng giá trị. thay vì viết [abcdefghijklmnopqrstuvwxyz] để tìm một kí tự từ a đến z, thì ở đây chúng ta chỉ cần ghi là [a-z] là Ruby sẽ hiểu. Sau đó chúng ta có thể dùng dấu **+** để báo rằng kí tự đứng trước dấu cộng có thể lặp lại 1 hoặc nhiều lần.
-```
+```ruby
 p "23af 433a 4ga".scan /\b[a-f0-9]+\b/
 ```
 Nếu muốn tìm một kí tự có nhiều khoảng giá trị khác nhau thì chúng ta cứ ghi chúng ra trong cặp dấu ngoặc vuông **[]**. Ở dòng code trên [a-f0-9]+ nghĩa là tìm một kí tự có giá trị trong khoảng a-z hoặc từ 0-9 và kí tự này có thể lặp lại nhiều lần. Ngoài ra ở đây chúng ta còn dùng thêm kí tự **\b** để báo cho Ruby biết rằng chúng ta không tìm chuỗi con trong chuỗi khác mà chỉ tìm các chuỗi đứng một mình.
@@ -250,16 +250,16 @@ Output
 ```
 Ví dụ 3:
 group_characters3.rb
-```
+```ruby
 p "ABC".match /[^a-z]{3}/
 p "abc".match /[^a-z]{3}/
 ```
 Chúng ta có thể thêm dấu **^** để chỉ định cho Ruby tìm những kí tự không thuộc khoảng giá trị đó. Tức là ngược với ví dụ 2.
-```
+```ruby
 p "ABC".match /[^a-z]{3}/
 ```
 Trong đoạn code trên [^a-z] tức là tìm một kí tự mà không thuộc khoảng giá trị từ a đến z. Ngoài ra [^a-z]{3} sẽ tìm một chuỗi có đúng 3 kí tự, thay vì dùng dấu **+** như trước là lặp lại vô số lần.
-```
+```ruby
 p "abc".match /[^a-z]{3}/
 ```
 Chuỗi “ABC” ở trên khớp với mẫu vì ABC là các kí tự in hoa, còn chuỗi “abc” là các kí tự thường nên bị loại bỏ.
@@ -285,7 +285,7 @@ Chúng ta sẽ tìm hiểu thêm qua các ví dụ ở dưới.
 
 Ví dụ 1:
 quantifiers1.rb
-```
+```ruby
 p "PHPCode open source is the future".scan /\w{3}/
 p "PHPCode open source is the future".scan /\b\w{3}\b/
 ```
@@ -297,7 +297,7 @@ Output
 ```
 Ví dụ 2:
 quantifiers2.rb
-```
+```ruby
 p "RubyCode open source is the future".scan /\b\w{2,4}\b/
 ```
 Ví dụ này cũng tương đương ví dụ trên, ở đây chúng ta dùng {2, 4} tức là tìm các chuỗi chỉ chứa các kí tự chữ cái có từ 2 đến 4 kí tự.
@@ -307,13 +307,13 @@ Output
 ```
 Ví dụ 3:
 quantifiers3.rb
-```
+```ruby
 p "color colour colors colours".scan /colou?rs/
 p "color colour colors colours".scan /colou?rs?/
 p "color colour colors colours".scan /\bcolor\b|\bcolors\b|\bcolour\b|\bcolours\b/
 ```
 Kí tự dấu chấm hỏi **"?"* cho biết kí tự đứng trước nó có thể có hoặc không có cũng được.
-```
+```ruby
 p "color colour colors colours".scan /\bcolor\b|\bcolors\b|\bcolour\b|\bcolours\b/
 ```
 Hoặc nếu muốn dễ nhìn hơn chúng ta có thể dùng kí hiệu **“|”**, kí hiệu này có chức năng giống như toán tử **OR** vậy, tức là chuỗi tìm kiếm ở trên sẽ tìm những chuỗi con là color, colors, colour, hoặc colours.
@@ -327,7 +327,7 @@ Output
 # Phân biệt chữ HOA-thường
 
 incasesensitive.rb
-```
+```ruby
 p "Jane".match /Jane/
 p "Jane".match /jane/
 p "Jane".match /JANE/
@@ -351,7 +351,7 @@ nil
 
 Trong ví dụ này chúng ta sẽ thực hiện tạo chuỗi kiểm tra email. Đây là một trong những bài toán điển hình của biểu thức chính quy.
 email.rb
-```
+```ruby
 emails = %w/ admin@example.com jane@gmail.com ioah2423^as f3444@gmail.com /
      
 pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/
@@ -367,7 +367,7 @@ emails.each do |email|
 end
 ```
 Chúng ta có một mảng emails lưu các chuỗi email mẫu để kiểm tra.
-```
+```ruby
 pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z.]{2,5}$/
 ```
 Trên đây là chuỗi **Regex** mà chúng ta dùng để kiểm tra. Chúng ta sẽ lần lượt tìm hiểu từng phần của chuỗi này.
