@@ -8,7 +8,7 @@ Xuyên suốt series này chúng ta đã thực hiện việc xuất dữ liệu
 
 Ví dụ 1:
 output1.rb
-```
+```ruby
 print "Apple "
 print "Apple\n"
  
@@ -16,7 +16,7 @@ puts "Orange"
 puts "Orange"
 ```
 Hai phương thức **print** và **puts** là 2 phương thức xuất dữ liệu là các chuỗi text ra màn hình, trong đó phương thức **puts** sẽ in chuỗi rồi xuống dòng còn phương thức **print** thì không.
-```
+```ruby
 print "Apple\n"
 ```
 Nếu muốn phương thức **print** có xuống dòng thì chúng ta thêm kí tự **\n** vào.
@@ -28,7 +28,7 @@ Orange
 ```
 Ví dụ 2:
 output2.rb
-```
+```ruby
 p "Lemon"
 p "Lemon"
  
@@ -38,15 +38,15 @@ putc 'K'
 putc 0xA
 ```
 Chúng ta tiếp tục tìm hiểu một số phương thức in dữ liệu khác.
-```
+```ruby
 p "Lemon"
 ```
 Phương thức **p** sẽ gọi phương thức **inspect** của đối tượng. Phương thức **inspect** là một phương thức của lớp **Object**, thường thì phương thức này sẽ in ra tên lớp cùng các thông tin liên quan.
-```
+```ruby
 printf "There are %d apples\n", 3
 ```
 Phương thức **printf** in chuỗi và cho phép truyền tham số vào trong chuỗi.
-```
+```ruby
 putc 'K'
 putc 0xA
 ```
@@ -63,13 +63,13 @@ K
 
 Ví dụ 1:
 input1.rb
-```
+```ruby
 print "Enter your name: "
 name = gets
 puts "Hello #{name}"
 ```
 Để đọc dữ liệu vào thì chúng ta dùng phương thức **gets**.
-```
+```ruby
 name = gets
 ```
 Phương thức **gets** sẽ nhận một chuỗi nhập vào từ bàn phím. Khi chạy chương trình, đến đoạn gọi phương thức **gets** thì chương trình sẽ dừng lại chờ chúng ta gõ một chuỗi nào đó rồi bấm **ENTER** thì chuỗi đó sẽ được truyền vào biến name.
@@ -80,7 +80,7 @@ Hello Hoang
 ```
 Ví dụ 2:
 input2.rb
-```
+```ruby
 print "Enter a string: "
 str = gets
  
@@ -96,7 +96,7 @@ Kết quả in ra là 4 trong khi chuỗi của chúng ta nhập vào chỉ là 
 
 Để loại bỏ kí tự **ENTER** này ra khỏi chuỗithì chúng ta dùng phương thức **chomp**.
 input2.rb
-```
+```ruby
 print "Enter a string: "
 str = gets.chomp
  
@@ -115,28 +115,28 @@ Tất cả các công việc nhập dữ liệu vào và xuất dữ liệu ra �
 
 Ví dụ 1:
 file_io1.rb
-```
+```ruby
 f = File.open('C:\\output.txt', 'w')
 f.puts "The Ruby tutorial"
 f.close
 ```
 Trong ví dụ này chúng ta thực hiện ghi dữ liệu lên file.
-```
+```ruby
 f = File.open('C:\\output.txt', 'w')
 ```
 Để ghi dữ liệu vào file thì trước tiên chúng ta phải mở file đó đã bằng phương thức **File.open()**, phương thức này nhận vào tham số là đường dẫn đến file và chế độ mở, ở đây tên file là output.txt và chế độ mở là **w** (write) tức là mở file để ghi.
-```
+```ruby
 f.puts "The Ruby tutorial"
 ```
 Phương thức **open** sẽ trả về một đối tượng **stream**, nói cho đơn giản thì bạn cứ hình dung **stream** chính là những thứ như **Kernel** vậy, nếu bạn đã từng làm việc với C++ thì **stream** ở đây giống như đối tượng **std::cout** ấy. Và ở đây chúng ta có thể dùng đối tượng **stream** đó để ghi dữ liệu lên file bằng phương thức **puts**. 
-```
+```ruby
 f.close
 ```
 Sau khi đã làm việc với file xong thì chúng ta đóng file lại bằng phương thức **close**.
 
 Ví dụ 2:
 file_io2.rb
-```
+```ruby
 File.open('C:\\output.txt', 'w') do |f|
     
     f.puts "Ruby"
@@ -146,7 +146,7 @@ File.open('C:\\output.txt', 'w') do |f|
 end
 ```
 Nếu chúng ta mở file trong khối lệnh **File.open()...end** thì sau khi kết thúc chúng ta không cần phải đóng file nữa mà Ruby sẽ tự đóng cho chúng ta.
-```
+```ruby
 f.puts "Ruby"
 f.write "Java\n"
 f << "Python\n"
@@ -155,7 +155,7 @@ Ngoài ra ở đây chúng ta dùng thêm phương thức **write** và toán t�
 
 Ví dụ 3:
 file_io3.rb
-```
+```ruby
 puts File.exists? 'C:\\tempfile'
  
 f = File.new 'C:\\tempfile', 'w'
@@ -167,23 +167,23 @@ File.rename 'C:\\tempfile', 'C:\\tempfile2'
 f.close
 ```
 Lớp **File** ngoài việc hỗ trợ nhập xuất còn có một số phương thức khác.
-```
+```ruby
 puts File.exists? 'C:\\tempfile'
 ```
 Phương thức **exists?** kiểm tra xem một file có tồn tại hay không.
-```
+```ruby
 f = File.new 'C:\\tempfile', 'w'
 ```
 Phương thức **new** sẽ tạo một file mới trên đĩa cứng.
-```
+```ruby
 puts File.mtime 'C:\\tempfile'
 ```
 Phương thức **mtime** lấy thời gian chỉnh sửa file lần cuối cùng.
-```
+```ruby
 puts f.size
 ```
 Phương thức **size** trả về kích thước của file.
-```
+```ruby
 File.rename 'C:\\tempfile', 'C:\\tempfile2'
 ```
 Phương thức **rename** sẽ đổi tên file.
@@ -195,7 +195,7 @@ false
 ```
 Ví dụ 4:
 file_io4.rb
-```
+```ruby
 f = File.open("C:\\input.txt")
  
 while line = f.gets do
@@ -205,11 +205,11 @@ end
 f.close
 ```
 Trong ví dụ này chúng ta sẽ đọc một file.
-```
+```ruby
 f = File.open("C:\\input")
 ```
 Để đọc một file thì trước tiên chúng ta cũng phải mở file đó đã, ở đây chúng ta không đưa vào tham số chế độ mở là vì mặc định Ruby sẽ mở file theo chế độ đọc.
-```
+```ruby
 while line = f.gets do
     puts line
 end
@@ -222,7 +222,7 @@ Java
 Python
 ```
 Ngoài phương thức **gets** có chức năng đọc từng dòng thì còn có phương thức **readlines** sẽ đọc tất cả các dòng trong file và lưu vào một mảng. Cũng vì thế nên bạn **lưu ý đối với các file có kích thước lớn**.
-```
+```ruby
 file = 'C:\\input'
  
 File.readlines(file).each do |line|
@@ -240,7 +240,7 @@ Python
 
 Ruby có lớp **Dir** hỗ trợ làm việc với thư mục.
 directory.rb
-```
+```ruby
 Dir.mkdir "tmp"
 puts Dir.exists? "tmp"
  
@@ -254,23 +254,23 @@ Dir.rmdir "tmp"
 puts Dir.exists? "tmp"
 ```
 Trong ví dụ trên chúng ta làm việc với 4 phương thức của lớp **Dir**.
-```
+```ruby
 Dir.mkdir "tmp"
 ```
 Phương thức **mkdir** sẽ tạo một thư mục mới.
-```
+```ruby
 puts Dir.exists? "tmp"
 ```
 Phương thức **exists?** kiểm tra xem một thư mục có tồn tại hay không.
-```
+```ruby
 puts Dir.pwd
 ```
 Phương thức **pwd** in ra đường dẫn đến thư mục hiện tại. Đây là thư mục chứa file code Ruby mà chúng ta đang viết.
-```
+```ruby
 Dir.chdir '..'
 ```
 Phương thức **chdir** thay đổi thư mục hiện tại thành thư mục khác. Ở đây dấu **".."** tức là lùi về thư mục cha.
-```
+```ruby
 Dir.rmdir "tmp"
 puts Dir.exists? "tmp"
 ```
@@ -290,7 +290,7 @@ false
 Như bình thường chúng ta dùng phương thức **puts, print...** để in dữ liệu lên màn hình. Trong các bài trước chúng ta đã biết phương thức puts là phương thức của **module Kernel**, tức là gọi **Kernel.puts** "Ruby" sẽ tương đương với puts "Ruby". Ngoài ra Ruby còn có một số biến toàn cục tham chiếu tới các module đó nữa, biến $stdout là một ví dụ, đây là biến tham chiếu tới **module Kernel**, tức là bây giờ chúng ta có 3 cách dùng phương thức **puts** khác nhau là **Kernel.puts** “”, **$stdout.puts** "" hoặc **puts** "".
 
 Chính vì biến $stdout tham chiếu tới **module Kernel** nên phương thức **puts** gọi từ biến này sẽ xuất dữ liệu lên màn hình nhưng chúng ta cũng có thể chuyển hướng để biến này xuất dữ liệu ra nơi khác.
-```
+```ruby
 $stdout = File.open "C:\\output.log", "a"
  
 puts "Ruby"
@@ -302,16 +302,16 @@ $stdout = STDOUT
 puts "Python"
 ```
 Trong ví dụ trên chúng ta chuyển hướng dòng dữ liệu xuất ra từ màn hình sang file output.log.
-```
+```ruby
 $stdout = File.open "C:\\output.log", "a"
 ```
 Như chúng ta đã biết, phương thức **File.open** sẽ trả về một đối tượng **stream**, chúng ta gán **stream** đó vào biến $stdout.
-```
+```ruby
 puts "Ruby"
 puts "Java"
 ```
 Khi chúng ta gọi phương thức **puts**, dữ liệu xuất ra sẽ được tự động ghi vào file thay vì ghi lên màn hình như trước.
-```
+```ruby
 $stdout = STDOUT
  
 puts "Python"
