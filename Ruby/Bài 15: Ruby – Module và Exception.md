@@ -11,12 +11,12 @@ Thường thì chúng ta sẽ gộp các lớp, phương thức và hằng số 
 Ngoài ra chúng ta còn có thể sử dụng **module** trong Ruby để thực hiện đa thừa kế nữa.
 
 Ví dụ 1:
-```
+```ruby
 puts Math::PI
 puts Math.sin 2
 ```
 Math là một **module** có sẵn trong Ruby, **module** này chứa các hằng số và phương thức hỗ trợ thực hiện các phép tính toán học. Ở đoạn code trên chúng ta in ra hằng số PI và dùng phương thức sin.
-```
+```ruby
 include Math
 
 puts PI
@@ -28,7 +28,7 @@ Nếu không muốn ghi tên **module** ra trực tiếp thì chúng ta có th�
 0.9092974268256817
 ```
 Ví dụ 2:
-```
+```ruby
 module Forest
  
     class Rock ; end
@@ -55,7 +55,7 @@ p Forest::Animal.new
 p Town::Animal.new
 ```
 Để định nghĩa một **module** thì chúng ta dùng cặp từ khóa **module…end**, tên **module** được đặt sau từ khóa **module**.
-```
+```ruby
 module Forest
  
     class Rock ; end
@@ -65,13 +65,13 @@ module Forest
 end
 ```
 Thường thì chúng ta sẽ nhóm những thứ có liên quan với nhau lại vào trong một **module**. Như trong đoạn code trên chúng ta định nghĩa các lớp Rock (đá), Tree (cây) và Animal (động vật) vào trong **module** Forest (rừng).
-```
+```ruby
 p Forest::Tree.new
 p Forest::Rock.new
 p Town::Cinema.new
 ```
 Để truy xuất một đối tượng trong một **module** thì chúng ta dùng toán tử **::**
-```
+```ruby
 p Forest::Animal.new
 p Town::Animal.new
 ```
@@ -86,7 +86,7 @@ Như bình thường thì chúng ta không thể định nghĩa 2 lớp có tên
 Ví dụ 3:
 
 Hướng đối tượng trong C++ có hỗ trợ đa thừa kế, trong Java cũng hỗ trợ đa thừa kế thông qua **Interface**, còn Ruby hỗ trợ đa thừa kế thông qua **module**.
-```
+```ruby
 module Device
     def switch_on ; puts "on" end    
     def switch_off ; puts "off" end
@@ -118,7 +118,7 @@ cph.ring
 Đa thừa kế tức là một lớp có thể thừa kế từ nhiều lớp khác, chúng ta có thể sử dụng **module** của Ruby để thực hiện đa thừa kế.
 
 Ở đây chúng ta định nghĩa một lớp, sau đó **include** các **module** bên trong lớp này và lớp đó sẽ có thể sử dụng những phương thức, hằng số… của các **module** đã được **include**.
-```
+```ruby
 class CellPhone
     include Device, Volume, Pluggable
    
@@ -128,7 +128,7 @@ class CellPhone
 end
 ```
 Trong ví dụ này chúng ta có 3 **module** Device, Volume và Pluggable, mỗi **module** có một số phương thức in chuỗi. Chúng ta cũng định nghĩa lớp CellPhone và **include** cả 3 **module** trên vào.
-```
+```ruby
 cph = CellPhone.new
 cph.switch_on
 cph.volume_up
@@ -148,7 +148,7 @@ Trong lập trình **có 3 loại lỗi là lỗi biên dịch, lỗi ngữ ngh�
 Trong Ruby các lỗi **exception** thường gặp được định nghĩa thành một lớp riêng, và tất cả chúng đều được kế thừa từ lớp **Exception**. Ngoài ra chúng ta cũng có thể định nghĩa lớp **exception** của riêng chúng ta.
 
 Ví dụ 1:
-```
+```ruby
 x = 35
 y = 0
 
@@ -160,13 +160,13 @@ rescue => e
 end
 ```
 Trong ví dụ này chúng ta sẽ thử thực hiện một phép chia với mẫu số là 0.
-```
+```ruby
 begin
     z = x / y
     puts z
 ```
 Những câu lệnh mà có khả năng giải phóng **exception** sẽ được đặt trong cặp từ khóa **begin...end**.
-```
+```ruby
 rescue => e
     puts "Error: #{e}"
 end
@@ -176,7 +176,7 @@ end
 Error: divided by 0
 ```
 Ví dụ 2:
-```
+```ruby
 age = 17
 begin
     if age < 18 
@@ -190,7 +190,7 @@ rescue => e
 end
 ```
 Chúng ta có thể tự giải phóng một lỗi **exception** bằng cách dùng từ khóa **raise**.
-```
+```ruby
 begin
     if age < 18
         raise "Under 18 is not allowed"
@@ -199,7 +199,7 @@ begin
     puts "Allowed"
 ```
 Theo sau từ khóa **raise** chúng ta đưa vào tham số là một chuỗi, Ruby sẽ tạo một đối tượng **RuntimeException** và truyền vào đó chuỗi này. **Khi một exception được giải phóng, chương trình sẽ bị ngắt ngay tại đó**.
-```
+```ruby
 rescue => e
     puts e
     p e    
@@ -213,7 +213,7 @@ Under 18 is not allowed
 #<RuntimeError: Under 18 is not allowed>
 ```
 Ví dụ 3:
-```
+```ruby
 age = 17
 
 begin
@@ -229,7 +229,7 @@ ensure
 end
 ```
 Ruby còn có từ khóa **ensure**, **những câu lệnh nằm sau từ khóa ensure sẽ được thực thi cho dù có xảy ra lỗi hay không**. Từ khóa **ensure** có tác dụng **giống như từ khóa finally trong các ngôn ngữ như C#, Java…**
-```
+```ruby
 ensure
     exit 0
 end
@@ -237,7 +237,7 @@ end
 Chúng ta thực thi câu lệnh **exit** để thoát chương trình trong từ khóa **ensure**, khi chương trình chạy, cho dù có lỗi xảy ra hay không thì câu lệnh exit cũng sẽ được thực thi, mặc dù ở đây câu lệnh này cũng không có ý nghĩa mấy vì dù gì chương trình cũng tự thoát.
 
 Ví dụ 4:
-```
+```ruby
 age = 17
 
 class NotOver18Exception < StandardError
@@ -256,12 +256,12 @@ ensure
 end
 ```
 Chúng ta có thể định nghĩa lớp **exception** của riêng chúng ta và giải phóng đối tượng thuộc lớp đó.
-```
+```ruby
 class NotOver18Exception < StandardError
 end
 ```
 Một lớp **exception** phải được kế thừa từ lớp **StandardError**, trong ví dụ này chúng ta định nghĩa lớp **NotOver18Exception** kế thừa từ lớp **StandardError**.
-```
+```ruby
 if age < 18
     raise NotOver18Exception, "Under 18 is not allowed"
 end
