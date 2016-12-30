@@ -68,7 +68,7 @@ Name = "Juliet"
 Trong ví dụ trên chúng ta định nghĩa hằng Name và AGE, sau đó thay đổi giá trị của Name và Ruby sẽ báo lỗi tương tự như sau.
 Output
 
-```ruby
+```
 C:\Project\Ruby>irb constants.rb
 constants.rb:4: warning: already initialized constant Name
 ```
