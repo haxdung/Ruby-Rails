@@ -7,7 +7,7 @@ Câu lệnh điều kiện **if**
 
 Từ khóa **if** được dùng để kiểm tra xem một biểu thức có đúng hay không. Nếu đúng thì thực thi một câu lệnh hoặc một khối lệnh, một khối lệnh phải được đặt trước từ khóa end.
 if_keyword.rb
-```
+```ruby
 puts "Enter a number: "
 num = gets.to_i
  
@@ -26,7 +26,7 @@ num variable equals to 4
 ```
 Chúng ta có thể sử dụng từ khóa **else** để thực thi một khối lệnh khác nếu biểu thức trong **if** là sai:
 if_else_keyword.rb
-```
+```ruby
 age = 17
  
 if age > 18
@@ -42,7 +42,7 @@ Not Adult
 ```
 Ngoài ra chúng ta còn có thể dùng từ khóa **elseif** để thực hiện kiểm tra nhiều biểu thức khác nhau:
 if_elseif_else_keyword.rb
-```
+```ruby
 print "Enter a number: "
  
 num = gets.to_i
@@ -60,7 +60,7 @@ Trong ví dụ trên chúng ta cho nhận một số được nhập từ bàn p
 # Câu lệnh điều kiện case
 
 Câu lệnh **case** có tác dụng lựa chọn các câu lệnh để thực thi dựa vào điều kiện đặt ra, do đó câu lệnh **case** cũng có tác dụng tương tự như câu lệnh **if..elseif** vậy. Cú pháp:
-```
+```ruby
 case <biến>
 when <giátrị>
 else  
@@ -68,7 +68,7 @@ end
 ```
 Bên trong khối lệnh **case..end** là các từ khóa **when** và **else**, theo sau các từ khóa **when** là các giá trị, Khi chạy, Ruby sẽ so sánh biến theo sau từ khóa **case** với từng giá trị ở từng từ khóa **when**, nếu trùng tại đâu thì chạy câu lệnh phía sau từ khóa **when** đó, nếu không có từ khóa **when** nào khớp thì chạy câu lệnh mặc định sau từ khóa **else**.
 case_keyword.rb
-```
+```ruby
 print "Enter a domain: "
  
 domain = gets.chomp
@@ -87,7 +87,7 @@ case domain
 end
 ```
 Trong đoạn code trên chúng ta nhận một chuỗi được nhập từ bàn phím và gán vào biến domain, sau đó kiểm tra với từng giá trị trong câu lệnh **case**, nếu domain trùng với giá trị nào thì in một chuỗi string ra màn hình tương ứng với gái trị đó, nếu không trùng với giá trị nào thì in chuỗi “Unknown”.
-```
+```ruby
 domain = gets.chomp
 ```
 Phương thức **chomp** sẽ nhận một chuỗi từ bàn phím, kể cá kí tự ENTER nhưng sau đó phương thức này sẽ tự loại bỏ kí tự ENTER ra khỏi chuỗi.
@@ -103,7 +103,7 @@ Câu lệnh **while** cho phép một câu lệnh hoặc một khối lệnh đ�
 
 Theo sau từ khóa **while** là một biểu thức, nếu biểu thức này trả về **true** thì thực hiện câu lệnh theo sau nó rồi lặp lại biểu thức **cho đến khi biểu thức trả về false** thì thôi.
 while_keyword.rb
-```
+```ruby
 i = 0
 sum = 0
  
@@ -117,19 +117,19 @@ puts "Sum of 0..9 is #{sum}"
 Đoạn code trên sẽ tính tổng của các số từ 0 đến 9.
 
 Cứ mỗi lần lặp, các biến i và sum sẽ được tính lại giá trị mới cho đến khi điều kiện i < 10 sai thì dừng vòng lặp.
-```
+```ruby
 while i < 10  do
    ...
 end
 ```
 Từ khóa **do** là tùy chọn, **không có cũng được**.
 Output
-```
+```ruby
 Sum of 0..9 is 55
 ```
 Câu lệnh **until** thì cũng có cấu trúc cú pháp giống như câu lệnh **while**, chỉ khác là **until** sẽ thực hiện các câu lệnh nếu điều kiện sai (**false**), nếu biểu thức sau **until** trả về **true** thì dừng vòng lặp.
 until_keyword.rb
-```
+```ruby
 hours_left = 12
  
 until hours_left == 0
@@ -164,7 +164,7 @@ Output
 
 Khác với câu lệnh **while** và **until** là số lần lặp không được biết trước, câu lệnh **for** sẽ chạy vòng lặp với số lần nhất định. Cũng giống các câu lệnh trên, câu lệnh **for** cũng kết thúc với từ khóa **end** và có thể có từ khóa **do** nếu muốn.
 for_keyword.rb
-```
+```ruby
 for i in 0..9 do
  
     puts "#{i}"
@@ -186,7 +186,7 @@ Output
 ```
 Thường chúng ta dùng vòng lặp **for** để duyệt qua một danh sách các phần tử.
 for_keyword2.rb
-```
+```ruby
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter",
     "Saturn", "Uranus", "Neptune"]
  
@@ -196,7 +196,7 @@ for i in 0...planets.length
 end
 ```
 Trong ví dụ trên chúng ta có một biến mảng, chúng ta duyệt qua mảng này bằng vòng lặp **for** với số lần lặp được lấy từ phương thức **length**, phương thức này cho biết số phần tử có trong mảng.
-```
+```ruby
 for i in 0...planets.length
 ```
 Mảng được đánh số từ 0 nên biến i sẽ có giá trị từ 0 đến n-1, với n là số phần tử của mảng. Do dó chúng ta sử dụng toán tử ... để tạo một danh sách các con số từ 0 đến length-1.
@@ -216,7 +216,7 @@ Neptune
 
 Mảng trong Ruby có phương thức each cho phép chúng ta duyệt qua mảng một cách dễ dàng.
 each_method.rb
-```
+```ruby
 planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter",
     "Saturn", "Uranus", "Neptune"]
  
@@ -226,7 +226,7 @@ planets.each do |iter|
 end
 ```
 Phương thức này nhận vào 2 tham số là tên mảng và một khối lệnh, khối lệnh sẽ thực hiện các câu lệnh trong mỗi lần duyệt qua mảng.
-```
+```ruby
 planets.each do |iter| 
  
     puts iter
@@ -237,7 +237,7 @@ Câu lệnh **break, next**
 
 Câu lệnh **break** có tác dụng kết thúc vòng lặp **while**, **for** hoặc **case** cho dù vòng lặp đó có chạy xong hay chưa.
 break_keyword.rb
-```
+```ruby
 while true
  
     r = 1 + rand(30)
@@ -249,7 +249,7 @@ while true
 end
 ```
 Trong ví dụ trên chúng ta có một vòng lặp chạy vô thời hạn vì điều kiện sau while luôn luôn là **true**, do đó bên trong vòng lặp này chúng ta đặt một câu lệnh if để kiểm tra điều kiện, ở đây trong mỗi lần lặp chúng ta tạo một số ngẫu nhiên rồi gán vào biến r, sau đó chúng ta kiểm tra nếu r = 22 thì dừng vòng lặp bằng câu lệnh **break**.
-```
+```ruby
 r = 1 + rand(30)
 print "#{r} "
 ```
@@ -260,7 +260,7 @@ Output
 ```
 Câu lệnh next có tác dụng bỏ qua vòng lặp hiện tại và thực hiện vòng lặp tiếp theo, các câu lệnh sau từ khóa next sẽ không được thực thi.
 next_keyword.rb
-```
+```ruby
 num = 0
  
 while num < 100
@@ -275,7 +275,7 @@ while num < 100
 end   
 ```
 Trong ví dụ trên chúng ta in ra những số lẻ từ 1 đến 99.
-```
+```ruby
 if (num % 2 == 0)
     next
 end
