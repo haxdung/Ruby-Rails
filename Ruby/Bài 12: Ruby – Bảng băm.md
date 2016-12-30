@@ -1,12 +1,13 @@
 # Ruby – Bảng băm
 Bảng băm là một kiểu dữ liệu lưu trữ theo dạng tập hợp giống như mảng, nhưng các phần tử không được lưu chỉ số mà lưu theo khóa, tức là các phần tử của bảng băm có 2 thành phần là khóa và giá trị.
-Khởi tạo bảng băm
+
+# Khởi tạo bảng băm
 
 Ví dụ 1:
 
 Để tạo một đối tượng bảng băm thì chúng ta có thể dùng phương thức **new** với lớp **Hash**.
 create_hash1.rb
-```
+```ruby
 hash = Hash.new
 hash[1] = "Jane"
 hash.store(2, "Thomas")
@@ -14,12 +15,12 @@ hash.store(2, "Thomas")
 puts hash
 ```
 Trong đoạn code trên chúng ta tạo một bảng băm từ lớp Hash với phương thức **new**.
-```
+```ruby
 hash[1] = "Jane"
 hash.store(2, "Thomas")
 ```
 Để tạo các phần tử trong bảng băm thì chúng ta có thể dùng toán tử **[]** với tên khóa bên trong. Ở trên chúng ta dùng khóa là các số nguyên, nhưng nếu muốn chúng ta có thể dùng khóa là các kí tự. Ngoài ra lớp **Hash** còn có phương thức **store** để tạo các phần tử của bảng băm tương tự như toán tử **[]**.
-```
+```ruby
 puts hash
 ```
 Phương thức puts sẽ in các phần tử của bảng băm ra trong cặp dấu **{}**. Các phần tử của bảng băm sẽ được in theo dạng **<khóa> => <giá trị>**.
@@ -29,7 +30,7 @@ Output
 ```
 Ví dụ 2:
 create_hash2.rb
-```
+```ruby
 hash = { "de" => "Germany",
     "sk" => "Slovakia",
     "hu" => "Hungary",
@@ -41,7 +42,7 @@ puts hash["de"]
 puts hash["no"]
 ```
 Chúng ta có thể tạo nhanh các phần tử của bảng băm bằng theo cú pháp {<khóa>=><giá trị>}.
-```
+```ruby
 hash = { "de" => "Germany",
     "sk" => "Slovakia",
     "hu" => "Hungary",
@@ -50,7 +51,7 @@ hash = { "de" => "Germany",
 }
 ```
 Trong ví dụ này chúng ta tạo các khóa và giá trị là các chuỗi string.
-```
+```ruby
 puts hash["de"]
 ```
 Chúng ta có thể in từng giá trị của từng phần tử nhất định thông qua khóa của chúng với toán tử **[]**.
@@ -64,7 +65,7 @@ Norway
 
 Ví dụ 1:
 hash_methods1.rb
-```
+```ruby
 hash = Hash.new
  
 hash[1] = "Jane"
@@ -79,11 +80,11 @@ puts hash.keys.inspect
 puts hash.values.inspect
 ```
 Trong ví dụ này chúng ta sử dụng một số phương thức cơ bản của bảng băm.
-```
+```ruby
 puts "Hash size: #{names.size}"
 ```
 Phương thưc size sẽ trả về số lượng phần tử của bảng băm.
-```
+```ruby
 puts hash.keys.inspect
 puts hash.values.inspect
 ```
@@ -96,7 +97,7 @@ Hash size: 5
 ```
 Ví dụ 2:
 hash_methods2.rb
-```
+```ruby
 hash = Hash.new
  
 hash[1] = "Jane"
@@ -114,19 +115,19 @@ hash.clear
 puts hash.empty?
 ```
 Trong ví dụ này chúng ta sử dụng một số phương thức khác của bảng băm.
-```
+```ruby
 hash2 = hash.dup
 ```
 Phương thức **dup** sẽ tạo một bảng băm khác có các phần tử giống như bảng băm gốc.
-```
+```ruby
 puts hash.eql? hash2
 ```
 Phương thức **eql?** cho biết 2 bảng băm có các cặp khóa-giá trị giống nhau hay không.
-```
+```ruby
 puts hash.empty?
 ```
 Phương thức **empty?** cho biết bảng băm có rỗng hay không, dòng code trên sẽ trả về **false**.
-```
+```ruby
 hash.clear
 puts hash.empty?
 ```
@@ -139,7 +140,7 @@ true
 ```
 Ví dụ 3:
 hash_methods3.rb
-```
+```ruby
 hash = { :de => "Germany", 
     :sk => "Slovakia",
     :no => "Norway", 
@@ -155,14 +156,14 @@ puts hash.has_value? "Slovakia"
 puts hash.value? "Germany"
 ```
 Trong ví dụ này chúng ta kiểm tra sự tồn tại của các phần tử. Ngoài ra ở đây chúng ta sử dụng các đối tượng **Symbol** để làm khóa vì **Symbol dễ dùng hơn và cũng tốn ít bộ nhớ hơn**.
-```
+```ruby
 puts hash.has_key? :de
 puts hash.include? :no
 puts hash.key? :me
 puts hash.member? :sk
 ```
 Phương thức **has_key?**, **include?**, **key?** và **member?** đều kiểm tra xem một khóa nào đó có tồn tại trong bảng băm hay không.
-```
+```ruby
 puts hash.has_value? "Slovakia"
 puts hash.value? "Germany"
 ```
@@ -178,7 +179,7 @@ true
 ```
 Ví dụ 4:
 hash_methods4.rb
-```
+```ruby
 hash = { 1 => "Germany", 
     2 => "Norway", 
     3 => "United Kingdom", 
@@ -190,15 +191,15 @@ puts hash[2]
 puts hash.values_at 1, 2, 3
 ```
 Trong ví dụ này chúng ta sử dụng các phương thức đọc dữ liệu từ bảng băm.
-```
+```ruby
 puts hash.fetch 1
 ```
 Phương thức **fetch** nhận vào khóa và trả về giá trị.
-```
+```ruby
 puts hash[2]
 ```
 Như chúng ta đã biết, toán tử **[]** sẽ trả về giá trị với khóa được chỉ định.
-```
+```ruby
 puts hash.values_at 1, 2, 3
 ```
 Phương thức **values_at** sẽ trả về các phần tử có khóa được chỉ định.
@@ -211,11 +212,11 @@ Norway
 United Kingdom
 ```
 
-Duyệt bảng băm
+# Duyệt bảng băm
 
 Có rất nhiều cách để duyệt qua từng phần tử trong bảng băm.
 browse_hash.rb
-```
+```ruby
 hash = { 1 => "Germany", 
     2 => "Norway", 
     3 => "United Kingdom", 
@@ -228,19 +229,19 @@ hash.each_value { |val| puts "#{val}" }
 hash.each_pair { |k, v| puts "Key: #{k}, Value: #{v}" }
 ```
 Trong ví dụ này chúng ta sử dụng 4 phương thức khác nhau để duyệt qua bảng băm.
-```
+```ruby
 hash.each { |k, v| puts "Key: #{k}, Value: #{v}" }
 ```
 Phương thức each sẽ duyệt qua toàn bộ từng phần tử trong bảng băm, mỗi lần duyệt chúng ta thực thi đoạn lênh bên trong cặp dấu **{}**. Trong đó |k, v| đại diện cho khóa và giá trị, k và v chỉ là những cái tên thay thế, chúng ta có thể dùng tên bất kì do chúng ta đặt như |key, value|...
-```
+```ruby
 hash.each_key { |key| puts "#{key}" }
 ```
 Tương tự, phương thức **each_key** sẽ duyệt qua từng phần tử nhưng chỉ lấy khóa chứ không thể lấy được giá trị của từng khóa.
-```
+```ruby
 hash.each_value { |val| puts "#{val}" }
 ```
 Phương thức **each_value** sẽ duyệt qua từng phần tử và lấy giá trị, không lấy khóa.
-```
+```ruby
 hash.each_pair { |k, v| puts "Key: #{k}, Value: #{v}" }
 ```
 Phương thức **each_pair** duyệt qua từng phần tử giống hệt như phương thức **each**.
@@ -267,7 +268,7 @@ Key: 4, Value: United States
 # Xóa phần tử trong bảng băm
 
 delete_hash.rb
-```
+```ruby
 hash = Hash.new
  
 hash[1] = "Jane"
@@ -282,11 +283,11 @@ hash.shift
 puts hash
 ```
 Lớp **Hash** có một số phương thức để xóa các phần tử ra khỏi bảng băm.
-```
+```ruby
 hash.delete 4
 ```
 Phương thức **delete** sẽ xóa phần tử có khóa được chỉ định.
-```
+```ruby
 hash.shift
 ```
 Phương thức **shift** sẽ xóa phần tử ở vị trí đầu tiên.
@@ -295,11 +296,11 @@ Output
 {2=>"Thomas", 3=>"Robert", 5=>"Rebecca"}
 ```
 
-Trộn bảng băm vào nhau
+# Trộn bảng băm vào nhau
 
 Chúng ta có thể trộn các bảng băm vào nhau để tạo thành một bảng băm mới.
 mix_hashes.rb
-```
+```ruby
 hash1 = Hash.new
  
 hash1[1] = "Jane"
@@ -317,7 +318,7 @@ hash = hash1.update hash2
 puts hash
 ```
 Trong ví dụ này chúng ta sử dụng 2 phương thức là **merge** và **update**.
-```
+```ruby
 hash = hash1.merge hash2
 puts hash
 ```
