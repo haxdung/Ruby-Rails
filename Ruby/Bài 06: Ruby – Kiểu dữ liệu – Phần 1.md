@@ -20,7 +20,7 @@ Tất cả các kiểu dữ liệu trong Ruby đều là lớp. Ruby hỗ trợ 
 
 Ví dụ:
 types.rb
-```
+```ruby
 h = { :name => "Jane", :age => 17 }
  
 p true.class, false.class
@@ -33,27 +33,27 @@ p [1, 2, 3].class
 p h.class
 ```
 Trong đoạn code trên chúng ta in tên lớp của từng kiểu dữ liệu khác nhau.
-```
+```ruby
 p true.class, false.class
 ```
 Kiểu boolean có 2 giá trị là **True** hoặc **False**.
-```
+```ruby
 p "Ruby".class
 ```
 Kiểu string, chúng ta đã làm việc với kiểu này trong các bài trước.
-```
+```ruby
 p 1.class
 p 4.5.class
 p 3_463_456_457.class
 ```
 Kiểu số, gồm số nguyên và số thực.
-```
+```ruby
 p :age.class
 ```
 
 # Kiểu Symbol.
 
-```
+```ruby
 p [1, 2, 3].class
 p h.class
 ```
@@ -77,7 +77,7 @@ Nói một cách “triết lý” thì trên thế giới này có một số t
 
 Ví dụ:
 kid.rb
-```
+```ruby
 bool = [true, false]
  
 male = bool[rand(2)]
@@ -90,15 +90,15 @@ else
 end
 ```
 Trong đoạn code trên chúng ta sử dụng phương thức **rand()** để lấy giá trị ngẫu nhiên từ 0→1.
-```
+```ruby
 bool = [true, false]
 ```
 Chúng ta có một biến tên là bool, đây là một mảng có 2 giá trị là **true** hoặc **false**. Một mảng được tạo bằng cách sử dụng cặp dấu **[]**.
-```
+```ruby
 male = bool[rand(2)]
 ```
 Khi phương thức **rand()** trả về 0 hoặc 1, chúng ta dùng kết quả đó để lấy giá trị tương ứng trong mảng bool, tức là nếu 0 thì biến male có giá tri là **true**, nếu 1 thì male là **false**.
-```
+```ruby
 if male
     puts "We will use name John"
 else
@@ -117,7 +117,7 @@ Nếu bạn biết kiểu **enum** trong C++, Java… thì trong Ruby chúng đ�
 
 **Symbol không thể thay đổi được giá trị. Thường thì symbol được dùng để làm khóa trong bảng băm**.
 symbols.rb
-```
+```ruby
 p :name
 p :name.class
 p :name.methods.size
@@ -129,17 +129,17 @@ p "name".object_id
 p "name".object_id
 ```
 Trong đoạn code trên chúng ta thực hiện một số thao tác với symbol.
-```
+```ruby
 p :name
 p :name.class
 ```
 Chúng ta in symbol và tên của chúng ra màn hình.
-```
+```ruby
 p :name.methods.size
 p "Jane".methods.size
 ```
 Chúng ta so sánh kích thước dữ liệu của một symbol và một string. Rõ ràng là một string có kích thước lớn hơn một symbol.
-```
+```ruby
 p :name.object_id
 p :name.object_id
 p "name".object_id
@@ -159,7 +159,7 @@ Symbol
 ```
 Ngoài ra Symbol cũng thường được dùng để dánh dấu, chẳng hạn như thay vì khai báo biến number = 1 rồi thực hiện if number == 1... thì ở đây chúng ta dùng symbol sẽ tiết kiệm được bộ nhớ cũng như dễ code hơn.
 light.rb
-```
+```ruby
 light = :on
  
 if light == :on
@@ -180,7 +180,7 @@ Trong đoạn code trên chúng ta in các đoạn text khác nhau tùy theo gi�
 
 Symbol còn được dùng để làm khóa trong bảng băm.
 symbol_hash.rb
-```
+```ruby
 domains = {:sk => "Slovakia", :no => "Norway", :hu => "Hungary"}
  
 puts domains[:sk]
@@ -188,7 +188,7 @@ puts domains[:no]
 puts domains[:hu]
 ```
 Trong đoạn code trên chúng ta có một đối tượng bảng băm là domains, đối tượng này dùng khóa là các Symbol.
-```
+```ruby
 puts domains[:sk]
 puts domains[:no]
 puts domains[:hu]
@@ -207,7 +207,7 @@ Trong lập trình thì thì integer là một kiểu dữ liệu cơ bản, m�
 
 Trong Ruby thì số nguyên là các đối tượng thuộc lớp Fixnum hoặc Bignum, 2 lớp này có độ lớn khác nhau, độ lớn là khoảng giá trị của một đối tượng, ví dụ như trong C++, Java thì một số nguyên thường có độ lớn từ -2^32 đến 2^32, trong Ruby thì độ lớn của Fixnum tùy thuộc vào hệ điều hành, nếu một số nguyên có giá trị lớn hơn ngưỡng cho phép thì sẽ tự động được chuyển thành kiểu Bignum nên chúng ta cũng không cần phải quan tâm lắm đến vấn đề này.
 integers.rb
-```
+```ruby
 p -2
 p 121
 p 123265
@@ -223,7 +223,7 @@ p 5 / 2
 p 5.div 2
 ```
 Đoạn code trên thực hiện một số thao tác với số nguyên.
-```
+```ruby
 p -2
 p 121
 p 123265
@@ -231,14 +231,14 @@ p -34253464356
 p 34867367893463476
 ```
 Trên đây là các con số cả âm lẫn không âm với các độ lớn khác nhau.
-```
+```ruby
 p 1.class
 p 23453246.class
 p 234532423563456346.class
 p 2345324235632363463456456346.class
 ```
 Chúng ta in ra tên lớp của các số nguyên. Hai số đầu tiên có kiểu Fixnum trong khi 2 số sau có kiểu Bignum.
-```
+```ruby
 p 5 / 2
 p 5.div 2
 ```
@@ -259,7 +259,7 @@ Bignum
 ```
 Số nguyên còn có thể được biểu diễn trong nhiều hệ cơ số khác nhau như hệ thập phân (10), hệ thập lục phân (16), hệ bát phân (8), và hệ nhị phân (2). Hệ thập phân là hệ cơ số mà chúng ta thường dùng nhất, hệ thập lục phân được biểu diễn với kí tự 0x ở đầu, hệ bát phân dùng kí tự 0 và hệ nhị phân dùng kí tự 0b.
 notations.rb
-```
+```ruby
 puts 122
 puts 0x7a
 puts 0172
@@ -275,7 +275,7 @@ Output
 ```
 Bignum hay “số nguyên lớn” là các con số có số lượng chữ số rất lớn, thường là vài trăm chữ số, đọc số nguyên lớn cũng rất khó chịu, chẳng hạn như số 936758346345906394… do đó Ruby cho phép số nguyên lớn có thể có dấu gạch dưới “_” để chúng ta dễ đọc hơn, khi dịch thì trình thông dịch Ruby sẽ bỏ qua các dấu gạch dưới đó.
 underscore.rb
-```
+```ruby
 p 23482345629
 p 23_482_345_629
  
@@ -292,7 +292,7 @@ true
 
 Số chấm động tức là số thực, số thực thường được dùng để đo các giá trị liên tục như trọng lượng, tốc độ, chiều dài… Trong Ruby thì số thực được biểu diễn bởi lớp Float hoặc BigDecimal.
 floating_point.rb
-```
+```ruby
 p 15.4
 p 0.3455
 p -343.4563
@@ -305,19 +305,19 @@ p 5.fdiv 2
 p 12.to_f
 ```
 Đoạn code trên thực hiện một số thao tác với số chấm động.
-```
+```ruby
 p 15.4
 p 0.3455
 p -343.4563
 ```
 Chúng ta in 3 số chấm động, số chấm động có phần thập phân nằm phía sau dấu chấm.
-```
+```ruby
 p 12.5.class
 p -12.5.class
 p (5.0 / 2).class
 ```
 Chúng ta in tên lớp biểu diễn số chấm động. Ngoài ra nếu chúng ta thực hiện tính toán một số nguyên với một số chấm động thì kết quả sẽ cho ra một số chấm động.
-```
+```ruby
 p 5.fdiv 2
 p 12.to_f
 ```
@@ -335,7 +335,7 @@ Float
 ```
 Mặc định thì phần thập phân chỉ hiển thị tối đa 16 chữ số nhưng chúng ta có thể định dạng kiểu hiển thị theo ý chúng ta với phương thức **sprintf** hoặc **printf**.
 format_float.rb
-```
+```ruby
 p 1/3.0
 p 1.fdiv 2
  
@@ -343,13 +343,13 @@ puts sprintf "%.4f" % (1/3.0)
 puts sprintf "%.7f" % (5/3.0)
 ```
 Đoạn code trên sẽ định dạng hiển thị số chấm động.
-```
+```ruby
 p 1/3.0
 p 13.fdiv 4
 p 1.fdiv 2
 ```
 Phương thức p sẽ in các số chấm động một cách mặc định.
-```
+```ruby
 puts sprintf "%.4f" % (1/3.0)
 puts sprintf "%.7f" % (5/3.0)
 ```
