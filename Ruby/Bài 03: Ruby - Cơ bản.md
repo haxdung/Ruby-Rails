@@ -52,7 +52,7 @@ Hello Hoang
 
 Ngoài cách chạy code Ruby từ file script thì chúng ta cũng có thể chạy code từng dòng trong terminal:
 
-```ruby
+```
 C:\User\xRuby>ruby -e "puts RUBY_VERSION"
 2.2.4
 ```
@@ -68,7 +68,7 @@ puts "This is Ruby
 
 Đoạn có trên có lỗi cú pháp là thiếu dấu " kết thúc chuỗi.
 
-```ruby
+```
 C:\User\xRuby>ruby -c syntax_check.rb 
 syntax_check.rb:1: unterminated string meets end of file
 ```
@@ -92,7 +92,7 @@ puts ARGV
 
 Chúng ta in toàn bộ tham số được đưa vào chương trình.
 
-```ruby
+```
 C:\User\xRuby>ruby args.rb 1 2 3
 1
 2
@@ -111,7 +111,7 @@ puts $*
 
 Trong Ruby các biến toàn cục có tên bắt đầu bằng kí tự $ theo sau là tên biến. Ngoài ra Ruby còn có sẵn một số biến đặc biệt, chẳng hạn như $0 lưu tên file script được thực thi, $* cũng lưu các tham số truyền vào như ARGV.
 
-```ruby
+```
 C:\User\xRuby>ruby args2.rb Ruby Python Perl
 Ruby
 Python
